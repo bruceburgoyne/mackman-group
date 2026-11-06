@@ -1,0 +1,143 @@
+{
+    "key": "group_mg_site_settings",
+    "title": "Site settings",
+    "fields": [
+        {
+            "key": "field_mg_site_settings_tab_branding",
+            "label": "Branding",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_logo",
+            "label": "Header logo",
+            "name": "logo",
+            "type": "image",
+            "instructions": "Leave blank to use the Mackman Group logo built into the theme.",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium",
+            "mime_types": "svg, png, webp"
+        },
+        {
+            "key": "field_mg_site_settings_tab_header",
+            "label": "Header",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_header_button",
+            "label": "Header button",
+            "name": "header_button",
+            "type": "link",
+            "instructions": "Button at the right of the navigation, for example Contact us. Leave blank to hide it.",
+            "return_format": "array"
+        },
+        {
+            "key": "field_mg_site_settings_tab_contact",
+            "label": "Contact",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_phone",
+            "label": "Phone",
+            "name": "phone",
+            "type": "text",
+            "wrapper": {
+                "width": "50"
+            }
+        },
+        {
+            "key": "field_mg_site_settings_email",
+            "label": "Email",
+            "name": "email",
+            "type": "email",
+            "wrapper": {
+                "width": "50"
+            }
+        },
+        {
+            "key": "field_mg_site_settings_address",
+            "label": "Address",
+            "name": "address",
+            "type": "textarea",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_mg_site_settings_tab_social",
+            "label": "Social",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_social_links",
+            "label": "Social links",
+            "name": "social_links",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add link",
+            "sub_fields": [
+                {
+                    "key": "field_mg_site_settings_social_links_label",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "parent_repeater": "field_mg_site_settings_social_links"
+                },
+                {
+                    "key": "field_mg_site_settings_social_links_url",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "parent_repeater": "field_mg_site_settings_social_links"
+                }
+            ]
+        },
+        {
+            "key": "field_mg_site_settings_tab_footer",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_footer_text",
+            "label": "Footer text",
+            "name": "footer_text",
+            "type": "textarea",
+            "instructions": "Small print at the foot of every page, such as the company number. Leave blank to show the copyright line.",
+            "rows": 2,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Global settings shown in the header and footer.",
+    "show_in_rest": 0,
+    "modified": 1794000000
+}

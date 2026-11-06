@@ -1,0 +1,81 @@
+{
+    "key": "group_mg_default",
+    "title": "Standard page",
+    "fields": [
+        {
+            "key": "field_mg_default_page_header",
+            "label": "Page header",
+            "name": "page_header",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_default_page_header_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Optional small label above the heading."
+                },
+                {
+                    "key": "field_mg_default_page_header_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "Leave blank to use the page title."
+                },
+                {
+                    "key": "field_mg_default_page_header_intro",
+                    "label": "Introduction",
+                    "name": "intro",
+                    "type": "textarea",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_mg_default_body",
+            "label": "Body text",
+            "name": "body",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "Page header and body text for any page until its own template is built.",
+    "show_in_rest": 0,
+    "modified": 1794000000
+}
