@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+node_modules/
+vendor/
+
+# Never commit plugin zips, licence keys, credentials or databases
+*.zip
+.env
+wp-config.php
+*.sql
+*.sql.gz

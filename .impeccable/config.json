@@ -1,0 +1,41 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/style-guide.html"
+        ],
+        "createdAt": "2026-11-06T19:37:26.015Z",
+        "reason": "Claude: the only low-contrast pairs are the two deliberate 'Not used' examples (gold on base, base on gold, 2.2:1) in the style guide's contrast table, which document what the system avoids"
+      },
+      {
+        "rule": "overused-font",
+        "value": "lato",
+        "createdAt": "2026-11-06T19:39:44.545Z",
+        "reason": "Claude: Lato is the existing Mackman Group brand font on mackmangroup.co.uk (measured on the live site), kept for brand continuity and matched by the ui-ux-pro-max pairing; documented in docs/design-system.md"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "docs/style-guide.html"
+        ],
+        "createdAt": "2026-11-06T19:40:42.104Z",
+        "reason": "User confirmed on 6 November 2026: keep the gold kicker above the hero headline, an existing Mackman Group brand pattern on the live site"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "docs/style-guide.html"
+        ],
+        "createdAt": "2026-11-06T19:40:57.951Z",
+        "reason": "Claude: measured in the browser; contrast chips now 8px/12px padding, and the remaining match is .site-footer__base, whose only border is on top with 24px space below it"
+      }
+    ]
+  }
+}

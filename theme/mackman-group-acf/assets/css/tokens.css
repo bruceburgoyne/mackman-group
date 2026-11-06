@@ -1,0 +1,130 @@
+/**
+ * Mackman Group design tokens.
+ *
+ * The single source for colour, type, spacing and motion. The site, the
+ * block editor (blog articles) and the style guide all load this file.
+ * See docs/design-system.md for the reasoning and contrast checks.
+ */
+
+:root {
+	/* ------------------------------------------------------------------
+	 * Brand colours (unchanged from the current site)
+	 * ------------------------------------------------------------------ */
+	--mg-green: #1a382e;
+	--mg-gold: #bca35d;
+	--mg-base: #f4f4f4;
+	--mg-white: #ffffff;
+	--mg-mint: #e4eeed;
+
+	/* Shades derived from the brand colours, for accessibility and states */
+	--mg-green-hover: #152d25;   /* button hover */
+	--mg-green-soft: #465e56;    /* secondary text: 6.4:1 on base, 5.9:1 on mint */
+	--mg-gold-deep: #826e36;     /* gold text on base or white only: 4.5:1 / 5.0:1 */
+	--mg-gold-hover: #c6b175;    /* gold button hover on green */
+	--mg-mint-soft: #bccac7;     /* secondary text on green: 7.5:1 */
+	--mg-line: #d5dad8;          /* thin rules and card borders (decorative) */
+	--mg-line-on-dark: #3c564d;  /* thin rules on green (decorative) */
+	--mg-border-input: #71837d;  /* form field borders: 3.6:1 on base */
+	--mg-error: #b42318;         /* form errors: 6.0:1 on base */
+
+	/* ------------------------------------------------------------------
+	 * Surface roles. Components use these, never the raw colours, so a
+	 * section only needs a surface class to restyle everything inside it.
+	 * Default surface: base (light grey).
+	 * ------------------------------------------------------------------ */
+	--surface-bg: var(--mg-base);
+	--surface-text: var(--mg-green);
+	--surface-heading: var(--mg-green);
+	--surface-soft: var(--mg-green-soft);
+	--surface-kicker: var(--mg-gold-deep);
+	--surface-accent: var(--mg-gold);          /* rules, quote marks, underlines */
+	--surface-line: var(--mg-line);
+	--surface-link-underline: var(--mg-gold);
+	--surface-focus: var(--mg-green);
+
+	/* ------------------------------------------------------------------
+	 * Type
+	 * Headings: EB Garamond. Body and labels: Lato.
+	 * ------------------------------------------------------------------ */
+	--font-heading: "EB Garamond", Garamond, "Times New Roman", serif;
+	--font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+
+	/* Fluid scale, 360px to 1440px viewports */
+	--step--1: 0.875rem;                                    /* 14px: small print, captions */
+	--step-0: clamp(1rem, 0.958rem + 0.185vw, 1.125rem);    /* 16 to 18px: body */
+	--step-1: clamp(1.125rem, 1.042rem + 0.37vw, 1.375rem); /* 18 to 22px: lead, H4 */
+	--step-2: clamp(1.375rem, 1.25rem + 0.556vw, 1.75rem);  /* 22 to 28px: H3, quotes */
+	--step-3: clamp(1.75rem, 1.5rem + 1.111vw, 2.5rem);     /* 28 to 40px: H2 */
+	--step-4: clamp(2.25rem, 1.833rem + 1.852vw, 3.5rem);   /* 36 to 56px: H1 */
+	--step-5: clamp(2.5rem, 1.917rem + 2.593vw, 4.25rem);   /* 40 to 68px: hero */
+
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-bold: 700;
+
+	--leading-body: 1.65;
+	--leading-tight: 1.15;
+	--tracking-kicker: 0.18em;
+	--measure: 65ch;
+
+	/* ------------------------------------------------------------------
+	 * Space (spacious density: 24 to 96px for sections)
+	 * ------------------------------------------------------------------ */
+	--space-3xs: 0.25rem;
+	--space-2xs: 0.5rem;
+	--space-xs: 0.75rem;
+	--space-s: 1rem;
+	--space-m: 1.5rem;
+	--space-l: 2rem;
+	--space-xl: 3rem;
+	--space-2xl: 4rem;
+	--space-3xl: 6rem;
+
+	--section-space: clamp(3rem, 1.667rem + 5.926vw, 7rem);
+	--gutter: clamp(1rem, 0.333rem + 2.963vw, 3rem);
+	--container: 80rem;      /* 1280px, as on the current site */
+	--container-wide: 90rem; /* 1440px */
+	--grid-gap: clamp(1.5rem, 1rem + 2.222vw, 3rem);
+
+	/* ------------------------------------------------------------------
+	 * Shape and motion
+	 * ------------------------------------------------------------------ */
+	--radius: 0;               /* square corners, as on the current site */
+	--rule-thick: 3px;
+	--rule-thin: 1px;
+	--focus-width: 3px;
+	--focus-offset: 3px;
+	--tap-min: 48px;
+
+	--ease: cubic-bezier(0.2, 0, 0, 1);
+	--duration-fast: 150ms;
+	--duration: 200ms;
+}
+
+/* Surface overrides ---------------------------------------------------- */
+
+.surface-white {
+	--surface-bg: var(--mg-white);
+}
+
+.surface-mint {
+	--surface-bg: var(--mg-mint);
+	--surface-kicker: var(--mg-green); /* gold-deep is only 4.2:1 on mint */
+}
+
+.surface-green {
+	--surface-bg: var(--mg-green);
+	--surface-text: var(--mg-white);
+	--surface-heading: var(--mg-white);
+	--surface-soft: var(--mg-mint-soft);
+	--surface-kicker: var(--mg-gold);          /* 5.2:1 on green */
+	--surface-line: var(--mg-line-on-dark);
+	--surface-focus: var(--mg-gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--duration-fast: 0ms;
+		--duration: 0ms;
+	}
+}

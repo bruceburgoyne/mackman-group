@@ -1,0 +1,681 @@
+/**
+ * Mackman Group: base styles and shared components.
+ *
+ * Depends on tokens.css. Components read the --surface-* roles, so they
+ * restyle themselves inside .surface-white, .surface-mint or .surface-green.
+ */
+
+/* ======================================================================
+ * Base
+ * ====================================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--surface-bg);
+	color: var(--surface-text);
+	font-family: var(--font-body);
+	font-size: var(--step-0);
+	font-weight: var(--weight-regular);
+	line-height: var(--leading-body);
+	-webkit-font-smoothing: antialiased;
+}
+
+[class*="surface-"] {
+	background: var(--surface-bg);
+	color: var(--surface-text);
+}
+
+img,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+p,
+li {
+	text-wrap: pretty;
+}
+
+::selection {
+	background: var(--mg-green);
+	color: var(--mg-white);
+}
+
+.surface-green ::selection {
+	background: var(--mg-gold);
+	color: var(--mg-green);
+}
+
+/* Focus: always visible for keyboard users, never removed */
+:focus-visible {
+	outline: var(--focus-width) solid var(--surface-focus);
+	outline-offset: var(--focus-offset);
+}
+
+.skip-link {
+	position: absolute;
+	top: var(--space-s);
+	left: var(--space-s);
+	z-index: 100;
+	padding: var(--space-xs) var(--space-s);
+	background: var(--mg-green);
+	color: var(--mg-white);
+	font-weight: var(--weight-bold);
+	transform: translateY(-200%);
+}
+
+.skip-link:focus {
+	transform: none;
+	outline-color: var(--mg-gold);
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+/* ======================================================================
+ * Type
+ * ====================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+	margin: 0 0 var(--space-s);
+	color: var(--surface-heading);
+	font-family: var(--font-heading);
+	font-weight: var(--weight-medium);
+	line-height: var(--leading-tight);
+	letter-spacing: -0.01em;
+	text-wrap: balance;
+}
+
+h1,
+.h1 { font-size: var(--step-4); }
+h2,
+.h2 { font-size: var(--step-3); }
+h3,
+.h3 { font-size: var(--step-2); }
+h4,
+.h4 { font-size: var(--step-1); font-weight: var(--weight-bold); }
+
+.display {
+	font-size: var(--step-5);
+	letter-spacing: -0.015em;
+}
+
+p {
+	margin: 0 0 var(--space-s);
+}
+
+.kicker {
+	display: block;
+	margin: 0 0 var(--space-s);
+	color: var(--surface-kicker);
+	font-family: var(--font-body);
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+	line-height: 1.4;
+	letter-spacing: var(--tracking-kicker);
+	text-transform: uppercase;
+}
+
+/* A short gold rule before the kicker, echoing the logo emblem */
+.kicker--ruled::before {
+	content: "";
+	display: inline-block;
+	width: 2rem;
+	height: var(--rule-thick);
+	margin-right: var(--space-xs);
+	vertical-align: middle;
+	background: var(--surface-accent);
+}
+
+.lead {
+	max-width: var(--measure);
+	color: var(--surface-soft);
+	font-size: var(--step-1);
+	line-height: 1.55;
+}
+
+.small {
+	font-size: var(--step--1);
+}
+
+.soft {
+	color: var(--surface-soft);
+}
+
+/* Running text from WYSIWYG fields */
+.prose {
+	max-width: var(--measure);
+}
+
+.prose > * + * {
+	margin-top: var(--space-s);
+}
+
+.prose h2,
+.prose h3 {
+	margin-top: var(--space-xl);
+}
+
+.prose ul,
+.prose ol {
+	padding-left: 1.25em;
+}
+
+.prose li + li {
+	margin-top: var(--space-2xs);
+}
+
+.prose li::marker {
+	color: var(--surface-kicker);
+}
+
+/* ======================================================================
+ * Links
+ * Underlined so they never rely on colour alone. The gold underline is
+ * decorative: the link text itself keeps the full text colour.
+ * ====================================================================== */
+
+a {
+	color: inherit;
+	text-decoration-line: underline;
+	text-decoration-color: var(--surface-link-underline);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.2em;
+	transition: text-decoration-thickness var(--duration-fast) var(--ease),
+		text-decoration-color var(--duration-fast) var(--ease);
+}
+
+a:hover {
+	text-decoration-color: currentColor;
+	text-decoration-thickness: 3px;
+}
+
+/* "Find out more" style link with an arrow */
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2xs);
+	min-height: var(--tap-min);
+	font-weight: var(--weight-bold);
+	text-decoration: none;
+}
+
+.text-link .arrow {
+	color: var(--surface-kicker);
+	transition: transform var(--duration) var(--ease);
+}
+
+.text-link:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: var(--surface-link-underline);
+}
+
+.text-link:hover .arrow {
+	transform: translateX(3px);
+}
+
+/* ======================================================================
+ * Buttons
+ * ====================================================================== */
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-xs);
+	min-height: var(--tap-min);
+	padding: 0.75rem 1.5rem;
+	border: 2px solid var(--mg-green);
+	border-radius: var(--radius);
+	background: var(--mg-green);
+	color: var(--mg-white);
+	font-family: var(--font-body);
+	font-size: var(--step-0);
+	font-weight: var(--weight-bold);
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color var(--duration-fast) var(--ease),
+		border-color var(--duration-fast) var(--ease),
+		color var(--duration-fast) var(--ease);
+}
+
+.button:hover {
+	border-color: var(--mg-green-hover);
+	background: var(--mg-green-hover);
+	color: var(--mg-white);
+}
+
+.button .arrow {
+	transition: transform var(--duration) var(--ease);
+}
+
+.button:hover .arrow {
+	transform: translateX(3px);
+}
+
+/* Gold: green text on gold (5.2:1). Use on green sections. */
+.button--gold {
+	border-color: var(--mg-gold);
+	background: var(--mg-gold);
+	color: var(--mg-green);
+}
+
+.button--gold:hover {
+	border-color: var(--mg-gold-hover);
+	background: var(--mg-gold-hover);
+	color: var(--mg-green);
+}
+
+/* Outline: secondary action */
+.button--outline {
+	border-color: currentColor;
+	background: transparent;
+	color: var(--surface-text);
+}
+
+.button--outline:hover {
+	border-color: var(--surface-text);
+	background: var(--surface-text);
+	color: var(--surface-bg);
+}
+
+.button-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-s) var(--space-m);
+}
+
+/* ======================================================================
+ * Layout
+ * ====================================================================== */
+
+.container {
+	width: 100%;
+	max-width: calc(var(--container) + 2 * var(--gutter));
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+.container--wide {
+	max-width: calc(var(--container-wide) + 2 * var(--gutter));
+}
+
+.section {
+	padding-block: var(--section-space);
+}
+
+/* Two plain sections in a row share one gap rather than two */
+.section:not([class*="surface-"]) + .section:not([class*="surface-"]) {
+	padding-top: 0;
+}
+
+/* Section heading: kicker, heading, optional intro */
+.section-head {
+	max-width: 48rem;
+	margin-bottom: var(--space-xl);
+}
+
+.section-head > :last-child {
+	margin-bottom: 0;
+}
+
+/* Two columns: heading on the left, content on the right */
+.split {
+	display: grid;
+	gap: var(--grid-gap);
+}
+
+@media (min-width: 60rem) {
+	.split {
+		grid-template-columns: 5fr 7fr;
+		align-items: start;
+	}
+
+	.split--even {
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+}
+
+.grid {
+	display: grid;
+	gap: var(--grid-gap);
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+/* ======================================================================
+ * Card
+ * White panel with a gold top rule. The whole card is clickable through
+ * the title link, so there is one link per card for screen readers.
+ * ====================================================================== */
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: var(--space-l);
+	border: var(--rule-thin) solid var(--mg-line);
+	border-top: var(--rule-thick) solid var(--mg-gold);
+	background: var(--mg-white);
+	color: var(--mg-green);
+	transition: border-color var(--duration-fast) var(--ease);
+}
+
+.card__media {
+	margin: calc(-1 * var(--space-l)) calc(-1 * var(--space-l)) var(--space-m);
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	background: var(--mg-mint);
+}
+
+.card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card .kicker {
+	color: var(--mg-gold-deep);
+}
+
+.card__title {
+	margin-bottom: var(--space-xs);
+	color: var(--mg-green);
+	font-size: var(--step-2);
+}
+
+.card__title a {
+	text-decoration: none;
+}
+
+.card__title a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.card__text {
+	color: var(--mg-green-soft);
+}
+
+.card__more {
+	margin-top: auto;
+	padding-top: var(--space-s);
+	font-weight: var(--weight-bold);
+}
+
+.card__more .arrow {
+	display: inline-block;
+	margin-left: var(--space-2xs);
+	color: var(--mg-gold-deep);
+	transition: transform var(--duration) var(--ease);
+}
+
+.card:hover {
+	border-color: var(--mg-green);
+	border-top-color: var(--mg-gold);
+}
+
+.card:hover .card__title a {
+	text-decoration: underline;
+	text-decoration-color: var(--mg-gold);
+	text-decoration-thickness: 2px;
+}
+
+.card:hover .card__more .arrow {
+	transform: translateX(3px);
+}
+
+.card:focus-within {
+	outline: var(--focus-width) solid var(--mg-green);
+	outline-offset: var(--focus-offset);
+}
+
+.card__title a:focus-visible {
+	outline: none;
+}
+
+/* ======================================================================
+ * Quote
+ * ====================================================================== */
+
+.quote {
+	margin: 0;
+	padding-left: var(--space-l);
+	border-left: var(--rule-thick) solid var(--surface-accent);
+}
+
+.quote p {
+	margin-bottom: var(--space-m);
+	color: var(--surface-heading);
+	font-family: var(--font-heading);
+	font-size: var(--step-2);
+	font-style: italic;
+	line-height: 1.35;
+}
+
+.quote footer {
+	font-size: var(--step--1);
+}
+
+.quote cite {
+	display: block;
+	font-style: normal;
+	font-weight: var(--weight-bold);
+}
+
+/* ======================================================================
+ * Proof: figures and credentials
+ * Rule-divided columns rather than boxed cards.
+ * ====================================================================== */
+
+.stats {
+	display: grid;
+	gap: var(--space-l) var(--grid-gap);
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+	margin: 0;
+}
+
+.stat {
+	display: flex;
+	flex-direction: column;
+	padding-top: var(--space-s);
+	border-top: var(--rule-thick) solid var(--surface-accent);
+}
+
+.stat dt {
+	color: var(--surface-soft);
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+	letter-spacing: 0.04em;
+}
+
+.stat dd {
+	order: -1;
+	margin: 0 0 var(--space-3xs);
+	color: var(--surface-heading);
+	font-family: var(--font-heading);
+	font-size: var(--step-4);
+	line-height: 1.1;
+}
+
+/* ======================================================================
+ * Call to action band
+ * ====================================================================== */
+
+.cta {
+	display: grid;
+	gap: var(--space-l);
+	align-items: end;
+}
+
+.cta__title {
+	margin-bottom: var(--space-xs);
+	font-size: var(--step-4);
+}
+
+.cta__text {
+	max-width: 40rem;
+	margin-bottom: 0;
+	color: var(--surface-soft);
+	font-size: var(--step-1);
+}
+
+@media (min-width: 60rem) {
+	.cta {
+		grid-template-columns: 1fr auto;
+	}
+}
+
+/* ======================================================================
+ * Forms
+ * Visible labels, hints under the label, errors next to the field.
+ * ====================================================================== */
+
+.field {
+	display: grid;
+	gap: var(--space-2xs);
+	max-width: 32rem;
+	margin-bottom: var(--space-m);
+}
+
+.field label {
+	font-weight: var(--weight-bold);
+}
+
+.field__hint {
+	color: var(--surface-soft);
+	font-size: var(--step--1);
+}
+
+.field input,
+.field select,
+.field textarea {
+	width: 100%;
+	min-height: var(--tap-min);
+	padding: 0.625rem 0.875rem;
+	border: 1px solid var(--mg-border-input);
+	border-radius: var(--radius);
+	background: var(--mg-white);
+	color: var(--mg-green);
+	font: inherit;
+}
+
+.field textarea {
+	min-height: 8rem;
+	resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+	border-color: var(--mg-green);
+	outline: var(--focus-width) solid var(--mg-green);
+	outline-offset: 0;
+}
+
+.field--error input,
+.field--error select,
+.field--error textarea {
+	border: 2px solid var(--mg-error);
+}
+
+.field__error {
+	color: var(--mg-error);
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+}
+
+/* ======================================================================
+ * Header and footer (static versions; the mobile menu comes later)
+ * ====================================================================== */
+
+.site-header {
+	border-bottom: var(--rule-thin) solid var(--mg-line);
+	background: var(--mg-base);
+}
+
+.site-header__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-s) var(--space-l);
+	padding-block: var(--space-m);
+}
+
+.site-header__logo {
+	display: block;
+	width: clamp(12rem, 10rem + 6vw, 16rem);
+}
+
+.site-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2xs) var(--space-l);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-nav a {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--tap-min);
+	font-weight: var(--weight-bold);
+	text-decoration-color: transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+	text-decoration-color: var(--mg-gold);
+	text-decoration-thickness: 3px;
+}
+
+.site-footer {
+	padding-block: var(--space-3xl) var(--space-xl);
+}
+
+.site-footer__logo {
+	width: 10rem;
+	margin-bottom: var(--space-l);
+}
+
+.site-footer__base {
+	margin-top: var(--space-2xl);
+	padding-top: var(--space-m);
+	border-top: var(--rule-thin) solid var(--surface-line);
+	color: var(--surface-soft);
+	font-size: var(--step--1);
+}

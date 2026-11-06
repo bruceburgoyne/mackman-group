@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mackman Group style guide</title>
+	<!-- Fonts load from Google here for review only. The theme will self-host them. -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+	<link rel="stylesheet" href="../theme/mackman-group-acf/assets/css/tokens.css">
+	<link rel="stylesheet" href="../theme/mackman-group-acf/assets/css/main.css">
+	<style>
+		/* Style guide only: not part of the theme */
+		.sg-label {
+			display: block;
+			margin-bottom: var(--space-2xs);
+			color: var(--surface-soft);
+			font-size: var(--step--1);
+			font-weight: 700;
+			letter-spacing: 0.04em;
+		}
+		.sg-block + .sg-block { margin-top: var(--space-2xl); }
+		.sg-swatches {
+			display: grid;
+			gap: var(--space-m);
+			grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+		}
+		.sg-swatch { border: 1px solid var(--mg-line); background: var(--mg-white); }
+		.sg-swatch__chip { height: 6rem; border-bottom: 1px solid var(--mg-line); }
+		.sg-swatch__body { padding: var(--space-s); font-size: var(--step--1); line-height: 1.5; }
+		.sg-swatch__body strong { display: block; font-size: var(--step-0); }
+		.sg-swatch__body code { font-size: 0.8125rem; }
+		.sg-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+		.sg-table th, .sg-table td { padding: var(--space-xs) var(--space-s); border-bottom: 1px solid var(--mg-line); text-align: left; vertical-align: top; }
+		.sg-table th { font-weight: 700; }
+		.sg-pair { display: inline-block; padding: 0.5rem 0.75rem; border: 1px solid var(--mg-line); font-weight: 700; }
+		.sg-fail { text-decoration: line-through; text-decoration-color: var(--mg-error); }
+		.sg-type > * { margin-bottom: var(--space-m); }
+		.sg-type .sg-label { margin-bottom: 0; }
+		.sg-states { display: flex; flex-wrap: wrap; gap: var(--space-m); align-items: center; }
+		.sg-intro { max-width: 48rem; }
+	</style>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="container site-header__inner">
+			<a href="#" class="site-header__logo" aria-label="Mackman Group home">
+				<img src="../theme/mackman-group-acf/assets/images/logo-lockup.svg" alt="The Mackman Group: Together we grow" width="271" height="36">
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="#">About us</a></li>
+					<li><a href="#" aria-current="page">Our brands</a></li>
+					<li><a href="#">Values</a></li>
+					<li><a href="#">News</a></li>
+					<li><a class="button" href="#">Contact us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- Hero: Trust & Authority pattern, step 1 (mission and credibility) -->
+		<section class="section surface-green" aria-labelledby="hero-title">
+			<div class="container split split--even">
+				<div>
+					<span class="kicker kicker--ruled">Full service business consultancy</span>
+					<h1 id="hero-title" class="display">Building stronger brands through combined expertise</h1>
+					<p class="lead">Branding and marketing, market research, HR, and training and coaching, from one group. Placeholder copy for the style guide.</p>
+					<div class="button-row">
+						<a class="button button--gold" href="#">How can we help you? <span class="arrow" aria-hidden="true">&rarr;</span></a>
+						<a class="text-link" href="#">Meet the team <span class="arrow" aria-hidden="true">&rarr;</span></a>
+					</div>
+				</div>
+				<div aria-hidden="true" style="aspect-ratio: 4 / 3; background: var(--mg-line-on-dark);"></div>
+			</div>
+		</section>
+
+		<section class="section" aria-labelledby="sg-title">
+			<div class="container">
+				<div class="sg-intro">
+					<span class="kicker">Design system</span>
+					<h2 id="sg-title">Style guide</h2>
+					<p class="lead">Brand colours, type and shared components for the new ACF theme. Every element on this page uses the theme's own stylesheets, <code>tokens.css</code> and <code>main.css</code>.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Colour -->
+		<section class="section" aria-labelledby="colour-title">
+			<div class="container">
+				<div class="section-head">
+					<span class="kicker">01 Colour</span>
+					<h2 id="colour-title">Brand colours</h2>
+					<p class="soft">The five colours from the current site, unchanged. Three shades are added for text and states, because gold fails contrast as text on light backgrounds.</p>
+				</div>
+
+				<div class="sg-block">
+					<span class="sg-label">Brand</span>
+					<div class="sg-swatches">
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#1a382e"></div><div class="sg-swatch__body"><strong>Green</strong><code>#1a382e</code><br>Text, headings, dark sections, main button</div></div>
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#bca35d"></div><div class="sg-swatch__body"><strong>Gold</strong><code>#bca35d</code><br>Accent: rules, underlines, kickers and buttons on green</div></div>
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#f4f4f4"></div><div class="sg-swatch__body"><strong>Base</strong><code>#f4f4f4</code><br>Page background</div></div>
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#ffffff"></div><div class="sg-swatch__body"><strong>White</strong><code>#ffffff</code><br>Cards, form fields, alternate sections</div></div>
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#e4eeed"></div><div class="sg-swatch__body"><strong>Mint</strong><code>#e4eeed</code><br>Soft sections and image placeholders</div></div>
+					</div>
+				</div>
+
+				<div class="sg-block">
+					<span class="sg-label">Added shades</span>
+					<div class="sg-swatches">
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#826e36"></div><div class="sg-swatch__body"><strong>Gold deep</strong><code>#826e36</code><br>Small gold text on base or white only</div></div>
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#465e56"></div><div class="sg-swatch__body"><strong>Green soft</strong><code>#465e56</code><br>Secondary text on light</div></div>
+						<div class="sg-swatch"><div class="sg-swatch__chip" style="background:#bccac7"></div><div class="sg-swatch__body"><strong>Mint soft</strong><code>#bccac7</code><br>Secondary text on green</div></div>
+					</div>
+				</div>
+
+				<div class="sg-block">
+					<span class="sg-label">Contrast checks (WCAG 2.2 AA: 4.5:1 for text, 3:1 for large text and UI)</span>
+					<table class="sg-table">
+						<thead><tr><th scope="col">Pair</th><th scope="col">Ratio</th><th scope="col">Use</th></tr></thead>
+						<tbody>
+							<tr><td><span class="sg-pair" style="background:#f4f4f4;color:#1a382e">Green on base</span></td><td>11.6:1</td><td>Body text and headings</td></tr>
+							<tr><td><span class="sg-pair" style="background:#1a382e;color:#ffffff">White on green</span></td><td>12.7:1</td><td>Text on dark sections, main button</td></tr>
+							<tr><td><span class="sg-pair" style="background:#1a382e;color:#bca35d">Gold on green</span></td><td>5.2:1</td><td>Kickers, figures and focus rings on green</td></tr>
+							<tr><td><span class="sg-pair" style="background:#bca35d;color:#1a382e">Green on gold</span></td><td>5.2:1</td><td>Gold button</td></tr>
+							<tr><td><span class="sg-pair" style="background:#f4f4f4;color:#826e36">Gold deep on base</span></td><td>4.5:1</td><td>Kickers on light (5.0:1 on white)</td></tr>
+							<tr><td><span class="sg-pair" style="background:#f4f4f4;color:#465e56">Green soft on base</span></td><td>6.4:1</td><td>Intro and secondary text</td></tr>
+							<tr><td><span class="sg-pair sg-fail" style="background:#f4f4f4;color:#bca35d">Gold on base</span></td><td>2.2:1</td><td>Not used for text</td></tr>
+							<tr><td><span class="sg-pair sg-fail" style="background:#bca35d;color:#f4f4f4">Base on gold</span></td><td>2.2:1</td><td>Not used: the current site's button</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- Type -->
+		<section class="section surface-white" aria-labelledby="type-title">
+			<div class="container">
+				<div class="section-head">
+					<span class="kicker">02 Type</span>
+					<h2 id="type-title">EB Garamond and Lato</h2>
+					<p class="soft">Headings in EB Garamond, a classic serif that sits well with the serif in the logo. Body and labels in Lato, kept from the current site. Sizes scale smoothly between phone and desktop.</p>
+				</div>
+				<div class="sg-type">
+					<span class="sg-label">Display: EB Garamond 500, 40 to 68px</span>
+					<p class="h1 display">Together we grow</p>
+					<span class="sg-label">H1: 36 to 56px</span>
+					<p class="h1">Full service business consultancy</p>
+					<span class="sg-label">H2: 28 to 40px</span>
+					<p class="h2">Our brands</p>
+					<span class="sg-label">H3: 22 to 28px</span>
+					<p class="h3">Market research that informs decisions</p>
+					<span class="sg-label">H4: Garamond bold, 18 to 22px</span>
+					<p class="h4">What's included</p>
+					<span class="sg-label">Kicker: Lato bold, capitals, 14px</span>
+					<span class="kicker">Mackman Research</span>
+					<span class="sg-label">Lead: Lato 18 to 22px</span>
+					<p class="lead">An introduction paragraph that sets out what the page is about, in one or two sentences.</p>
+					<span class="sg-label">Body: Lato 16 to 18px, line height 1.65, up to 65 characters a line</span>
+					<div class="prose">
+						<p>Body text is set in Lato at a comfortable size, with generous line spacing and a limited line length so it stays easy to read. Links are <a href="#">underlined in gold</a>, so they never rely on colour alone.</p>
+						<ul>
+							<li>List markers pick up the accent colour</li>
+							<li>Headings balance across lines</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Buttons and links -->
+		<section class="section" aria-labelledby="actions-title">
+			<div class="container">
+				<div class="section-head">
+					<span class="kicker">03 Actions</span>
+					<h2 id="actions-title">Buttons and links</h2>
+					<p class="soft">Square corners, as on the current site. Every button and link is at least 48px tall. Press Tab to see the focus rings.</p>
+				</div>
+				<span class="sg-label">On light</span>
+				<div class="sg-states">
+					<a class="button" href="#">Contact us <span class="arrow" aria-hidden="true">&rarr;</span></a>
+					<a class="button button--outline" href="#">Download the brochure</a>
+					<a class="text-link" href="#">Find out more <span class="arrow" aria-hidden="true">&rarr;</span></a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section surface-green" aria-label="Buttons on green">
+			<div class="container">
+				<span class="sg-label">On green</span>
+				<div class="sg-states">
+					<a class="button button--gold" href="#">Contact us <span class="arrow" aria-hidden="true">&rarr;</span></a>
+					<a class="button button--outline" href="#">Download the brochure</a>
+					<a class="text-link" href="#">Find out more <span class="arrow" aria-hidden="true">&rarr;</span></a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cards: Trust & Authority pattern, step 3 (solution overview) -->
+		<section class="section" aria-labelledby="cards-title">
+			<div class="container">
+				<div class="section-head">
+					<span class="kicker">04 Cards</span>
+					<h2 id="cards-title">Our brands</h2>
+					<p class="soft">For divisions, services, case studies and articles. White panel, gold top rule, one link per card. The whole card is clickable.</p>
+				</div>
+				<div class="grid">
+					<article class="card">
+						<span class="kicker">Mackman</span>
+						<h3 class="card__title"><a href="#">Branding and marketing</a></h3>
+						<p class="card__text">Placeholder description for the division card.</p>
+						<span class="card__more" aria-hidden="true">Find out more<span class="arrow">&rarr;</span></span>
+					</article>
+					<article class="card">
+						<span class="kicker">Mackman Research</span>
+						<h3 class="card__title"><a href="#">Market research</a></h3>
+						<p class="card__text">Placeholder description for the division card.</p>
+						<span class="card__more" aria-hidden="true">Find out more<span class="arrow">&rarr;</span></span>
+					</article>
+					<article class="card">
+						<span class="kicker">Red Kite</span>
+						<h3 class="card__title"><a href="#">HR services</a></h3>
+						<p class="card__text">Placeholder description for the division card.</p>
+						<span class="card__more" aria-hidden="true">Find out more<span class="arrow">&rarr;</span></span>
+					</article>
+					<article class="card">
+						<span class="kicker">Mackman Group</span>
+						<h3 class="card__title"><a href="#">Training and coaching</a></h3>
+						<p class="card__text">Placeholder description for the division card.</p>
+						<span class="card__more" aria-hidden="true">Find out more<span class="arrow">&rarr;</span></span>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Proof: Trust & Authority pattern, step 2 -->
+		<section class="section surface-green" aria-labelledby="proof-title">
+			<div class="container">
+				<div class="section-head">
+					<span class="kicker">05 Proof</span>
+					<h2 id="proof-title">Figures and credentials</h2>
+					<p class="soft">Rule-divided columns, not boxes. The figures below are placeholders, not real data.</p>
+				</div>
+				<dl class="stats">
+					<div class="stat"><dt>Placeholder label</dt><dd>00</dd></div>
+					<div class="stat"><dt>Placeholder label</dt><dd>00</dd></div>
+					<div class="stat"><dt>Placeholder label</dt><dd>00</dd></div>
+					<div class="stat"><dt>Placeholder label</dt><dd>00</dd></div>
+				</dl>
+			</div>
+		</section>
+
+		<!-- Quote -->
+		<section class="section surface-mint" aria-labelledby="quote-title">
+			<div class="container split">
+				<div>
+					<span class="kicker">06 Quote</span>
+					<h2 id="quote-title">Testimonials</h2>
+				</div>
+				<blockquote class="quote">
+					<p>Placeholder for a client testimonial. Real quotes will come from the site content, with permission.</p>
+					<footer><cite>Client name</cite>Role, organisation</footer>
+				</blockquote>
+			</div>
+		</section>
+
+		<!-- Form -->
+		<section class="section surface-white" aria-labelledby="form-title">
+			<div class="container split">
+				<div>
+					<span class="kicker">07 Forms</span>
+					<h2 id="form-title">Form fields</h2>
+					<p class="soft">Visible labels, hints under the label and errors beside the field. Contact Form 7 will be styled to match.</p>
+				</div>
+				<form onsubmit="return false" novalidate>
+					<div class="field">
+						<label for="sg-name">Your name</label>
+						<input id="sg-name" type="text" autocomplete="name">
+					</div>
+					<div class="field">
+						<label for="sg-phone">Phone number</label>
+						<span class="field__hint" id="sg-phone-hint">So we can call you back. Optional.</span>
+						<input id="sg-phone" type="tel" autocomplete="tel" aria-describedby="sg-phone-hint">
+					</div>
+					<div class="field field--error">
+						<label for="sg-email">Email address</label>
+						<span class="field__error" id="sg-email-error">Enter an email address, like name@example.co.uk</span>
+						<input id="sg-email" type="email" autocomplete="email" aria-invalid="true" aria-describedby="sg-email-error" value="name@">
+					</div>
+					<button class="button" type="submit">Send message</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- CTA: Trust & Authority pattern, step 4 (clear CTA path) -->
+		<section class="section surface-green" aria-labelledby="cta-title">
+			<div class="container cta">
+				<div>
+					<span class="kicker kicker--ruled">08 Call to action</span>
+					<h2 id="cta-title" class="cta__title">Let's talk about your next step</h2>
+					<p class="cta__text">Placeholder copy for the call to action band that closes most pages.</p>
+				</div>
+				<a class="button button--gold" href="#">Get in touch <span class="arrow" aria-hidden="true">&rarr;</span></a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer surface-green" style="border-top: 1px solid var(--mg-line-on-dark);">
+		<div class="container">
+			<img class="site-footer__logo" src="../theme/mackman-group-acf/assets/images/logo-stacked-reversed.svg" alt="The Mackman Group" width="217" height="116">
+			<p class="soft">Footer sample. Address, contact details, accreditations and links will come from Site Settings.</p>
+			<div class="site-footer__base">Style guide for the Mackman Group ACF theme.</div>
+		</div>
+	</footer>
+</body>
+</html>
