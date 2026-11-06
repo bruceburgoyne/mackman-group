@@ -1,0 +1,369 @@
+/*
+ * Article content: how blocks look inside an article.
+ *
+ * One file, two uses (see inc/news.php):
+ * - On the site it is nested inside .article-body, so it only ever touches
+ *   article content.
+ * - In the block editor WordPress scopes it to the editing canvas, so
+ *   writers see the same type, quotes, lists and images as readers.
+ *
+ * Keep selectors simple (no leading ">" combinators) so both uses work.
+ *
+ * The second half normalises content from the old page builder: spacer
+ * blocks, column layouts, and font sizes, colours and backgrounds typed
+ * into individual blocks. Those rules use !important because the old
+ * values are inline styles on the blocks themselves.
+ */
+
+/* ---------- Text ---------- */
+
+p,
+li {
+	font-size: 1.125rem;
+	line-height: 1.75;
+}
+
+p {
+	margin: 0 0 1.4em;
+}
+
+strong {
+	color: var(--mg-green);
+}
+
+a {
+	color: var(--mg-green);
+	text-decoration-color: var(--mg-gold);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.2em;
+}
+
+a:hover {
+	text-decoration-color: currentColor;
+}
+
+h2,
+h3,
+h4 {
+	max-width: 36ch;
+	margin: 2.2em 0 0.6em;
+	color: var(--mg-green);
+	line-height: 1.2;
+}
+
+h2,
+h3 {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	letter-spacing: -0.01em;
+}
+
+h2 {
+	font-size: clamp(1.625rem, 1.4rem + 1vw, 2.125rem) !important;
+}
+
+h3 {
+	font-size: clamp(1.3rem, 1.2rem + 0.5vw, 1.5rem) !important;
+}
+
+h4 {
+	font-family: var(--font-body);
+	font-size: 0.875rem !important;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--mg-gold-deep);
+}
+
+/* The first paragraph reads as an introduction */
+.article-body > p:first-child,
+.wp-block-post-content > p:first-child {
+	font-size: 1.25rem;
+	line-height: 1.6;
+	color: var(--mg-green);
+}
+
+/* ---------- Lists ---------- */
+
+ul,
+ol {
+	margin: 0 0 1.4em;
+	padding-left: 1.4em;
+}
+
+li {
+	margin-bottom: 0.4em;
+}
+
+li::marker {
+	color: var(--mg-gold-deep);
+}
+
+ol li::marker {
+	font-family: var(--font-heading);
+	font-weight: 500;
+}
+
+/* ---------- Quotes ---------- */
+
+.wp-block-quote {
+	margin: 2.25em 0;
+	padding: 0.25em 0 0.25em 1.5em;
+	border: 0;
+	border-left: 3px solid var(--mg-gold);
+}
+
+.wp-block-quote p {
+	margin-bottom: 0.6em;
+	color: var(--mg-green);
+	font-family: var(--font-heading);
+	font-size: 1.4rem !important;
+	font-style: italic;
+	line-height: 1.45;
+}
+
+.wp-block-quote cite,
+.wp-block-pullquote cite {
+	display: block;
+	color: var(--mg-green-soft);
+	font-family: var(--font-body);
+	font-size: 0.8125rem;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.wp-block-pullquote {
+	margin: 2.75em 0;
+	padding: 1.75rem 0;
+	border-top: 3px solid var(--mg-gold);
+	border-bottom: 1px solid var(--mg-line);
+	font-size: inherit;
+	text-align: left;
+}
+
+.wp-block-pullquote blockquote {
+	margin: 0;
+}
+
+.wp-block-pullquote p {
+	margin: 0 0 0.5em;
+	color: var(--mg-green);
+	font-family: var(--font-heading);
+	font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem) !important;
+	font-style: italic;
+	line-height: 1.25;
+}
+
+/* ---------- Media ---------- */
+
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-video,
+.wp-block-embed {
+	margin: 2.5em 0;
+}
+
+.wp-block-image img {
+	height: auto;
+	border-radius: 0;
+}
+
+figcaption,
+.wp-element-caption {
+	margin-top: 0.75em;
+	color: var(--mg-green-soft);
+	font-size: 0.875rem;
+	line-height: 1.5;
+	text-align: left;
+}
+
+/* ---------- Separator, table, buttons ---------- */
+
+.wp-block-separator {
+	width: 4rem;
+	margin: 3em 0;
+	border: 0;
+	border-top: 3px solid var(--mg-gold);
+	opacity: 1;
+}
+
+.wp-block-table {
+	margin: 2.5em 0;
+	overflow-x: auto;
+}
+
+.wp-block-table table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1rem;
+}
+
+.wp-block-table th,
+.wp-block-table td {
+	padding: 0.75em 1em 0.75em 0;
+	border: 0;
+	border-bottom: 1px solid var(--mg-line);
+	text-align: left;
+	vertical-align: top;
+}
+
+.wp-block-table thead th {
+	border-bottom: 2px solid var(--mg-green);
+	color: var(--mg-green);
+}
+
+.wp-block-buttons {
+	margin: 2em 0;
+}
+
+.wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 48px;
+	padding: 0.75rem 1.5rem;
+	border: 2px solid var(--mg-green);
+	border-radius: 0 !important;
+	background: var(--mg-green) !important;
+	color: #fff !important;
+	font-family: var(--font-body);
+	font-size: 1rem !important;
+	font-weight: 700;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
+.wp-block-button__link:hover {
+	border-color: var(--mg-green-hover);
+	background: var(--mg-green-hover) !important;
+}
+
+/* ---------- Rank Math: table of contents and FAQ ---------- */
+
+.wp-block-rank-math-toc-block {
+	margin: 2.5em 0;
+	padding: 1.5rem 1.75rem;
+	border-top: 3px solid var(--mg-gold);
+	background: #fff;
+}
+
+.wp-block-rank-math-toc-block h2,
+.wp-block-rank-math-toc-block h3 {
+	margin: 0 0 0.75em;
+	color: var(--mg-gold-deep);
+	font-family: var(--font-body);
+	font-size: 0.8125rem !important;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.wp-block-rank-math-toc-block nav ul,
+.wp-block-rank-math-toc-block nav ol {
+	margin: 0;
+	padding-left: 1.2em;
+}
+
+.wp-block-rank-math-toc-block li {
+	margin: 0 0 0.35em;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.wp-block-rank-math-toc-block a {
+	text-decoration-thickness: 1px;
+}
+
+.rank-math-faq-item {
+	padding: 1.25em 0;
+	border-top: 1px solid var(--mg-line);
+}
+
+.rank-math-faq-item:last-child {
+	border-bottom: 1px solid var(--mg-line);
+}
+
+.rank-math-question {
+	margin: 0 0 0.5em !important;
+}
+
+.rank-math-answer p:last-child {
+	margin-bottom: 0;
+}
+
+/* ---------- Old page-builder content ---------- */
+
+/* Spacer blocks: spacing now comes from the article styles */
+.wp-block-spacer {
+	display: none !important;
+}
+
+/* Font sizes, colours and backgrounds typed into individual blocks */
+p[class*="-font-size"],
+p[style*="font-size"],
+li[style*="font-size"] {
+	font-size: 1.125rem !important;
+	line-height: 1.75 !important;
+}
+
+.has-text-color:not(.wp-block-button__link) {
+	color: inherit !important;
+}
+
+.has-background:not(.wp-block-button__link),
+.wp-block-group[style*="background"],
+.wp-block-column[style*="background"] {
+	background: none !important;
+}
+
+.wp-block-group,
+.wp-block-column,
+.wp-block-columns {
+	padding: 0 !important;
+}
+
+.wp-block-group,
+.wp-block-columns {
+	margin: 0 0 1.4em !important;
+	gap: 0 !important;
+}
+
+/* Columns and image-beside-text blocks stack in the reading column */
+.wp-block-columns {
+	display: block !important;
+}
+
+.wp-block-column {
+	width: auto !important;
+	flex-basis: auto !important;
+}
+
+.wp-block-column + .wp-block-column {
+	margin-top: 1.4em;
+}
+
+.wp-block-media-text {
+	display: block !important;
+	margin: 2.5em 0;
+}
+
+.wp-block-media-text__media {
+	margin: 0 0 1.25em;
+}
+
+.wp-block-media-text__media img {
+	width: 100%;
+	height: auto;
+}
+
+.wp-block-media-text__content {
+	padding: 0 !important;
+}
+
+/* Images and embeds never wider than the column */
+img,
+iframe,
+video {
+	max-width: 100%;
+}

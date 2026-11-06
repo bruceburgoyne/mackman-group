@@ -96,7 +96,7 @@ All are shown in the style guide.
 - **Links:** always underlined, with a gold underline that turns solid on hover. Never colour alone.
 - **Text link:** bold with an arrow, for "Find out more".
 - **Buttons:** primary (green), gold (on green sections), outline (secondary). Minimum height 48px.
-- **Card:** white panel with a thin border and a 3px gold top rule. One link (the title) makes the whole card clickable, so screen readers hear one link per card.
+- **Card grid (hairline):** chosen on 6 November 2026 from four mock-ups. No boxes: a single hairline between cards only, plus a line above and below the grid, so the cards read as one grid. A card fills white on hover. Icons are 88px. One link (the title) makes the whole card clickable, so screen readers hear one link per card; the focus ring sits inside the card. Used for division services, the home page divisions and news. Three columns by default (two for the home page divisions), stacking on smaller screens.
 - **Quote:** large italic Garamond with a gold rule on the left.
 - **Figures and credentials:** rule-divided columns, not boxes.
 - **Call to action band:** green section with a large heading and the gold button.

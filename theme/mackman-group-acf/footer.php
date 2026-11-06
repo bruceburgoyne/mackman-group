@@ -179,6 +179,7 @@ $mg_logo_rows  = array_filter(
 		</div>
 	</div>
 </footer>
+</div><!-- .site-body -->
 </div><!-- .site-wrap -->
 
 <?php wp_footer(); ?>

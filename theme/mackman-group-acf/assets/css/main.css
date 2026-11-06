@@ -894,7 +894,7 @@ a:hover {
 
 /* ======================================================================
  * Page frame and mobile menu
- * Below 80rem (and only when JavaScript is running), a burger replaces the
+ * Below 85rem (and only when JavaScript is running), a burger replaces the
  * navigation. A panel slides in from the left and pushes the page across.
  * ====================================================================== */
 
@@ -915,11 +915,15 @@ a:hover {
 
 .site-wrap {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
 	background: var(--mg-base);
 	transition: transform var(--panel-duration) var(--panel-ease);
+}
+
+.site-body {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	min-height: 100vh;
 }
 
 .site-main {
@@ -1048,12 +1052,12 @@ a:hover {
 	text-decoration-thickness: 3px;
 }
 
-@media (max-width: 79.99rem) {
+@media (max-width: 84.99rem) {
 	.has-js .site-nav { display: none; }
 	.has-js .nav-toggle { display: inline-flex; }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 85rem) {
 	.mobile-panel { display: none; }
 }
 
@@ -1121,8 +1125,8 @@ a:hover {
 
 /* Card icon (service icons are SVGs from the media library) */
 .card__icon {
-	width: 4rem;
-	height: 4rem;
+	width: 5.5rem;
+	height: 5.5rem;
 	margin-bottom: var(--space-m);
 }
 
@@ -1247,7 +1251,7 @@ a:hover {
 		width: auto;
 		margin: 0;
 		align-self: center;
-		padding-left: max(var(--gutter), (100vw - var(--container)) / 2);
+		padding-left: max(var(--gutter), (100vw - var(--rail-width) - var(--container)) / 2);
 		padding-right: clamp(2rem, 4vw, 5rem);
 	}
 
@@ -1577,4 +1581,449 @@ html:not(.has-js) .site-nav .menu-item-has-children:focus-within > .sub-menu {
 
 @media (prefers-reduced-motion: reduce) {
 	.submenu-toggle__chevron { transition: none; }
+}
+
+/* ======================================================================
+ * Side panel
+ * A green rail down the left on wide screens (64rem and up), staying in
+ * view as the page scrolls: logo at the top, telephone running up the
+ * side. Below 64rem it becomes a slim bar across the top of the page.
+ * ====================================================================== */
+
+:root {
+	--rail-width: 0px;
+}
+
+.site-rail {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-s);
+	padding: var(--space-2xs) var(--gutter);
+}
+
+.site-rail a {
+	text-decoration: none;
+}
+
+.site-rail__logo {
+	display: inline-flex;
+	align-items: center;
+	flex: none;
+}
+
+.site-rail__img {
+	display: block;
+	width: auto;
+	height: 2.75rem;
+}
+
+.site-rail__phone {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: flex-end;
+	gap: 0 0.5em;
+	min-height: var(--tap-min);
+	align-content: center;
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+	letter-spacing: var(--tracking-kicker);
+	text-transform: uppercase;
+}
+
+.site-rail__label {
+	color: var(--mg-white);
+}
+
+.site-rail__number {
+	color: var(--mg-gold);
+	white-space: nowrap;
+}
+
+.site-rail__phone:hover .site-rail__number {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.25em;
+}
+
+.site-rail :focus-visible {
+	outline-color: var(--mg-gold);
+}
+
+@media (min-width: 64rem) {
+	:root {
+		--rail-width: 5.5rem;
+	}
+
+	.site-wrap {
+		display: grid;
+		grid-template-columns: var(--rail-width) minmax(0, 1fr);
+		align-items: start;
+	}
+
+	.site-rail {
+		position: sticky;
+		top: 0;
+		z-index: 20;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 0;
+		height: 100vh;
+		height: 100dvh;
+		padding: var(--space-l) var(--space-s);
+	}
+
+	.site-rail__logo {
+		padding: var(--space-2xs);
+	}
+
+	.site-rail__img {
+		width: 3.25rem;
+		height: auto;
+	}
+
+	/* Telephone reads bottom to top, as on the current site */
+	.site-rail__phone {
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		min-width: var(--tap-min);
+		min-height: 0;
+		/* Centred in the space below the logo. Physical margins, because in
+		 * vertical text "block" margins run left to right. */
+		margin-top: auto;
+		margin-bottom: auto;
+		padding: var(--space-xs) 0;
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+	}
+}
+
+/* ======================================================================
+ * Card grid (hairline)
+ * Cards without boxes: a single hairline between cards only, and a line
+ * above and below the whole grid. Each card draws its top and left line;
+ * the wrapper hides the ones on the outer edge.
+ *
+ *   <div class="card-grid"><div class="grid">…cards…</div></div>
+ * ====================================================================== */
+
+.card-grid {
+	overflow: hidden;
+	border-top: var(--rule-thin) solid var(--surface-line);
+	border-bottom: var(--rule-thin) solid var(--surface-line);
+}
+
+.card-grid > .grid {
+	gap: 0;
+	margin: -1px 0 0 -1px;
+}
+
+.card-grid .card {
+	padding: var(--space-xl) var(--space-l);
+	border: 0;
+	border-top: var(--rule-thin) solid var(--surface-line);
+	border-left: var(--rule-thin) solid var(--surface-line);
+	background: transparent;
+	transition: background-color var(--duration-fast) var(--ease);
+}
+
+.card-grid .card:hover {
+	border-color: var(--surface-line);
+	background: var(--mg-white);
+}
+
+.card-grid .card--static:hover {
+	background: transparent;
+}
+
+/* The wrapper clips anything outside it, so the focus ring sits inside */
+.card-grid .card:focus-within {
+	outline-offset: -3px;
+}
+
+/* Images sit inside the cell, so the hairlines stay visible between cards */
+.card-grid .card__media {
+	margin: 0 0 var(--space-m);
+}
+
+/* ======================================================================
+ * News: archive, lead article, topic filter
+ * ====================================================================== */
+
+/* Topic and date above a title, separated by a short rule */
+.news-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.25rem 0.75rem;
+}
+
+.news-meta > * + *::before {
+	content: "";
+	display: inline-block;
+	width: 1rem;
+	height: 1px;
+	margin-right: 0.75rem;
+	vertical-align: middle;
+	background: currentColor;
+	opacity: 0.6;
+}
+
+.news-meta a {
+	text-decoration: none;
+}
+
+.news-meta a:hover {
+	text-decoration: underline;
+}
+
+/* Topic filter: a row of links below the page header */
+.topic-nav {
+	border-bottom: var(--rule-thin) solid var(--mg-line);
+	background: var(--mg-white);
+}
+
+.topic-nav__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 var(--space-l);
+	margin: 0;
+	padding: var(--space-2xs) 0;
+	list-style: none;
+}
+
+.topic-nav__list a {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--tap-min);
+	font-weight: var(--weight-bold);
+	text-decoration-color: transparent;
+	text-decoration-thickness: 3px;
+}
+
+.topic-nav__list a:hover,
+.topic-nav__list a[aria-current="page"] {
+	text-decoration-color: var(--mg-gold);
+}
+
+/* Lead article: the newest article, large, above the grid */
+.news-lead {
+	position: relative;
+	display: grid;
+	gap: var(--space-l) var(--grid-gap);
+	align-items: center;
+	margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 60rem) {
+	.news-lead {
+		grid-template-columns: 7fr 5fr;
+	}
+}
+
+.news-lead__media {
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	background: var(--mg-mint);
+}
+
+.news-lead__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.news-lead__title {
+	margin-bottom: var(--space-s);
+	font-size: var(--step-4);
+}
+
+.news-lead__title a {
+	text-decoration: none;
+}
+
+.news-lead__title a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.news-lead:hover .news-lead__title a {
+	text-decoration: underline;
+	text-decoration-color: var(--mg-gold);
+	text-decoration-thickness: 3px;
+}
+
+.news-lead:focus-within {
+	outline: var(--focus-width) solid var(--mg-green);
+	outline-offset: var(--focus-offset);
+}
+
+.news-lead__title a:focus-visible {
+	outline: none;
+}
+
+.news-lead__standfirst {
+	color: var(--mg-green-soft);
+	font-size: var(--step-1);
+	line-height: 1.55;
+}
+
+.news-lead .card__more .arrow {
+	display: inline-block;
+	margin-left: var(--space-2xs);
+	color: var(--mg-gold-deep);
+	transition: transform var(--duration) var(--ease);
+}
+
+.news-lead:hover .card__more .arrow {
+	transform: translateX(3px);
+}
+
+.news-card .card__title {
+	font-size: var(--step-1);
+	line-height: 1.3;
+}
+
+.news-archive .pagination .page-numbers.prev,
+.news-archive .pagination .page-numbers.next {
+	padding-inline: var(--space-s);
+}
+
+/* Byline: author, date, reading time */
+.byline {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1.25rem;
+	margin: 0 0 var(--space-m);
+	color: var(--surface-soft);
+	font-size: var(--step--1);
+}
+
+.byline strong {
+	color: var(--surface-text);
+}
+
+/* ======================================================================
+ * Single article
+ * A narrower measure than the rest of the site: the header and body text
+ * share a 42rem column, and the featured image runs wider, up to 64rem.
+ * ====================================================================== */
+
+.article {
+	--article-measure: 42rem;
+	--article-wide: 64rem;
+}
+
+.article-header {
+	padding-block: var(--space-3xl) var(--space-xl);
+}
+
+.article-header__inner {
+	max-width: var(--article-measure);
+	margin-inline: auto;
+}
+
+.article-title {
+	margin-bottom: var(--space-m);
+	font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem);
+	line-height: 1.08;
+	letter-spacing: -0.015em;
+}
+
+.article-standfirst {
+	max-width: var(--article-measure);
+	margin-bottom: var(--space-l);
+	color: var(--mg-green-soft);
+	font-family: var(--font-heading);
+	font-size: var(--step-2);
+	line-height: 1.4;
+}
+
+.article-header .byline {
+	margin: 0;
+	padding-top: var(--space-s);
+	border-top: var(--rule-thin) solid var(--mg-line);
+}
+
+.article-image {
+	max-width: calc(var(--article-wide) + 2 * var(--gutter));
+	margin: 0 auto var(--space-2xl);
+}
+
+.article-image__img {
+	width: 100%;
+	height: auto;
+	max-height: 70vh;
+	object-fit: cover;
+}
+
+.article-image figcaption {
+	margin-top: var(--space-xs);
+	color: var(--mg-green-soft);
+	font-size: var(--step--1);
+}
+
+.article-body {
+	max-width: calc(var(--article-measure) + 2 * var(--gutter));
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+.article-body .alignwide {
+	width: min(var(--article-wide), 100vw - var(--rail-width) - 2 * var(--gutter));
+	max-width: none;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.article-body .alignfull {
+	width: calc(100vw - var(--rail-width));
+	max-width: none;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.article-footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-s) var(--space-l);
+	max-width: calc(var(--article-measure) + 2 * var(--gutter));
+	margin: var(--space-2xl) auto 0;
+	padding: var(--space-m) var(--gutter) 0;
+	border-top: var(--rule-thin) solid var(--mg-line);
+}
+
+.article-footer__terms {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2xs);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.article-footer__terms a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 2.75rem;
+	padding: 0 var(--space-s);
+	border: var(--rule-thin) solid var(--mg-border-input);
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+	text-decoration: none;
+}
+
+.article-footer__terms a:hover {
+	border-color: var(--mg-green);
+	background: var(--mg-green);
+	color: var(--mg-white);
+}
+
+.article + .related {
+	padding-top: var(--space-2xl);
 }

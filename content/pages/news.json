@@ -1,0 +1,22 @@
+{
+    "path": "news",
+    "template": "",
+    "source": "Created on 6 November 2026. The heading is the page title; the call to action matches the home page.",
+    "fields": {
+        "page_header": {
+            "kicker": "Mackman Group",
+            "heading": "News",
+            "intro": ""
+        },
+        "cta": {
+            "kicker": "",
+            "heading": "Together we grow",
+            "text": "",
+            "button": {
+                "title": "Contact our senior consultants",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            }
+        }
+    }
+}

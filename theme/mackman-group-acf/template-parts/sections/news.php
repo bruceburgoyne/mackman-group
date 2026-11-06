@@ -38,23 +38,16 @@ $mg_id        = 'news-' . wp_unique_id();
 				<a class="text-link" href="<?php echo esc_url( get_permalink( $mg_news_page ) ); ?>"><?php esc_html_e( 'All news', 'mackman-group-acf' ); ?> <span class="arrow" aria-hidden="true">&rarr;</span></a>
 			<?php endif; ?>
 		</div>
-		<div class="grid grid--3">
+		<div class="card-grid"><div class="grid grid--3">
 			<?php
 			while ( $mg_query->have_posts() ) :
 				$mg_query->the_post();
 				?>
-				<article class="card">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="card__media"><?php the_post_thumbnail( 'medium_large', array( 'alt' => '', 'sizes' => '(min-width: 64rem) 25vw, (min-width: 40rem) 50vw, 100vw' ) ); ?></div>
-					<?php endif; ?>
-					<p class="kicker"><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></p>
-					<h3 class="card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<span class="card__more" aria-hidden="true"><?php esc_html_e( 'Read more', 'mackman-group-acf' ); ?><span class="arrow">&rarr;</span></span>
-				</article>
+				<?php get_template_part( 'template-parts/news/card', null, array( 'excerpt' => false ) ); ?>
 				<?php
 			endwhile;
 			wp_reset_postdata();
 			?>
-		</div>
+		</div></div>
 	</div>
 </section>

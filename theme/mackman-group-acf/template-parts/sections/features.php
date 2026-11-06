@@ -23,7 +23,7 @@ if ( ! $mg_items ) {
 }
 
 $mg_surface = ! empty( $args['surface'] ) ? ' ' . sanitize_html_class( $args['surface'] ) : '';
-$mg_grid    = ! empty( $args['columns'] ) ? ' grid--' . (int) $args['columns'] : '';
+$mg_grid    = ' grid--' . ( ! empty( $args['columns'] ) ? (int) $args['columns'] : 3 );
 $mg_id      = 'features-' . wp_unique_id();
 ?>
 <section class="section features<?php echo esc_attr( $mg_surface ); ?>"<?php echo ! empty( $mg_data['heading'] ) ? ' aria-labelledby="' . esc_attr( $mg_id ) . '"' : ''; ?>>
@@ -40,7 +40,7 @@ $mg_id      = 'features-' . wp_unique_id();
 			</div>
 		<?php endif; ?>
 
-		<div class="grid<?php echo esc_attr( $mg_grid ); ?>">
+		<div class="card-grid"><div class="grid<?php echo esc_attr( $mg_grid ); ?>">
 			<?php foreach ( $mg_items as $mg_item ) : ?>
 				<?php $mg_has_link = ! empty( $mg_item['link']['url'] ); ?>
 				<article class="card<?php echo $mg_has_link ? '' : ' card--static'; ?>">
@@ -62,6 +62,6 @@ $mg_id      = 'features-' . wp_unique_id();
 					<?php endif; ?>
 				</article>
 			<?php endforeach; ?>
-		</div>
+		</div></div>
 	</div>
 </section>

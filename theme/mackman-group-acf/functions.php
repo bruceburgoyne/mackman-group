@@ -15,6 +15,7 @@ require_once get_template_directory() . '/inc/editor.php';
 require_once get_template_directory() . '/inc/tracking.php';
 require_once get_template_directory() . '/inc/forms.php';
 require_once get_template_directory() . '/inc/nav.php';
+require_once get_template_directory() . '/inc/news.php';
 
 /**
  * Google Fonts stylesheet: EB Garamond (headings) and Lato (body).

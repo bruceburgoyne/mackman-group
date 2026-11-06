@@ -1,0 +1,135 @@
+{
+    "key": "group_mg_news",
+    "title": "News page",
+    "fields": [
+        {
+            "key": "field_mg_news_tab_header",
+            "label": "Page header",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_news_page_header",
+            "label": "Page header",
+            "name": "page_header",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_news_page_header_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_news_page_header_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 80,
+                    "instructions": "Leave blank to use the page title.",
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_news_page_header_intro",
+                    "label": "Introduction",
+                    "name": "intro",
+                    "type": "textarea",
+                    "rows": 2,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_mg_news_tab_cta",
+            "label": "Call to action",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_news_cta",
+            "label": "Call to action",
+            "name": "cta",
+            "type": "group",
+            "layout": "block",
+            "instructions": "Shown at the end of the News page, topic pages and every article. Leave the heading empty to hide it.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_news_cta_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_news_cta_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 80,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_news_cta_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_news_cta_button",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "posts_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "The News page (set as the Posts page in Settings > Reading).",
+    "show_in_rest": 0,
+    "modified": 1794000600
+}

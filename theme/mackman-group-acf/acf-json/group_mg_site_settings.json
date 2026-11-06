@@ -22,6 +22,56 @@
             "mime_types": "svg, png, webp"
         },
         {
+            "key": "field_mg_site_settings_tab_side",
+            "label": "Side panel",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_side_logo",
+            "label": "Logo",
+            "name": "side_logo",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "instructions": "The white logo at the top of the green side panel (a bar across the top on phones). Use a white version.",
+            "wrapper": {
+                "width": "33"
+            }
+        },
+        {
+            "key": "field_mg_site_settings_side_logo_name",
+            "label": "Logo name",
+            "name": "side_logo_name",
+            "type": "text",
+            "instructions": "Read out by screen readers, for example Certified B Corporation.",
+            "wrapper": {
+                "width": "33"
+            }
+        },
+        {
+            "key": "field_mg_site_settings_side_logo_link",
+            "label": "Logo link",
+            "name": "side_logo_link",
+            "type": "url",
+            "instructions": "Optional.",
+            "wrapper": {
+                "width": "33"
+            }
+        },
+        {
+            "key": "field_mg_site_settings_side_phone",
+            "label": "Show the telephone number",
+            "name": "side_phone",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 1,
+            "instructions": "Uses the number on the Contact tab."
+        },
+        {
             "key": "field_mg_site_settings_tab_header",
             "label": "Header",
             "name": "",
@@ -300,5 +350,5 @@
     "active": true,
     "description": "Global settings shown in the header and footer.",
     "show_in_rest": 0,
-    "modified": 1794000400
+    "modified": 1794000500
 }
