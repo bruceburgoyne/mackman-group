@@ -19,7 +19,7 @@
 		return;
 	}
 
-	var desktop = window.matchMedia( '(min-width: 64rem)' );
+	var desktop = window.matchMedia( '(min-width: 80rem)' );
 	var reduceMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' );
 	var openLabel = toggle.querySelector( '.screen-reader-text' );
 	var openText = openLabel ? openLabel.textContent : '';

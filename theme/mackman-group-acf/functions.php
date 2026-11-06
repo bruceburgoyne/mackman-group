@@ -14,6 +14,7 @@ require_once get_template_directory() . '/inc/acf.php';
 require_once get_template_directory() . '/inc/editor.php';
 require_once get_template_directory() . '/inc/tracking.php';
 require_once get_template_directory() . '/inc/forms.php';
+require_once get_template_directory() . '/inc/nav.php';
 
 /**
  * Google Fonts stylesheet: EB Garamond (headings) and Lato (body).
@@ -46,14 +47,38 @@ add_action(
 	'wp_enqueue_scripts',
 	function () {
 		wp_enqueue_style( 'mg-fonts', mg_fonts_url(), array(), null );
-		wp_enqueue_style( 'mg-tokens', get_template_directory_uri() . '/assets/css/tokens.css', array(), MG_VERSION );
-		wp_enqueue_style( 'mg-main', get_template_directory_uri() . '/assets/css/main.css', array( 'mg-fonts', 'mg-tokens' ), MG_VERSION );
+		wp_enqueue_style( 'mg-tokens', mg_asset( 'css/tokens.css' ), array(), mg_asset_version( 'css/tokens.css' ) );
+		wp_enqueue_style( 'mg-main', mg_asset( 'css/main.css' ), array( 'mg-fonts', 'mg-tokens' ), mg_asset_version( 'css/main.css' ) );
+
+		if ( is_front_page() ) {
+			wp_enqueue_script(
+				'mg-video',
+				mg_asset( 'js/video.js' ),
+				array(),
+				mg_asset_version( 'js/video.js' ),
+				array(
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				)
+			);
+		}
+
+		wp_enqueue_script(
+			'mg-nav',
+			mg_asset( 'js/nav.js' ),
+			array(),
+			mg_asset_version( 'js/nav.js' ),
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
+		);
 
 		wp_enqueue_script(
 			'mg-menu',
-			get_template_directory_uri() . '/assets/js/menu.js',
+			mg_asset( 'js/menu.js' ),
 			array(),
-			MG_VERSION,
+			mg_asset_version( 'js/menu.js' ),
 			array(
 				'in_footer' => true,
 				'strategy'  => 'defer',

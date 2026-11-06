@@ -1,0 +1,308 @@
+{
+    "key": "group_mg_division",
+    "title": "Division page",
+    "fields": [
+        {
+            "key": "field_mg_division_tab_intro",
+            "label": "Intro",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_division_intro",
+            "label": "Intro",
+            "name": "intro",
+            "type": "group",
+            "instructions": "The top of the page, on green.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_division_intro_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Short label above the heading, for example Market research consultants.",
+                    "maxlength": 60
+                },
+                {
+                    "key": "field_mg_division_intro_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "The page's main heading (H1). Leave blank to use the page title.",
+                    "maxlength": 80
+                },
+                {
+                    "key": "field_mg_division_intro_text",
+                    "label": "Introduction",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_mg_division_intro_button",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "instructions": "Optional.",
+                    "return_format": "array",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_division_intro_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "A photo, shown beside the text. Portrait or square crops work best.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_mg_division_tab_services",
+            "label": "Services",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_division_services",
+            "label": "Services",
+            "name": "services",
+            "type": "group",
+            "instructions": "A section heading and a card for each service. Leave the cards empty to hide the section.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_division_services_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_division_services_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 80,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_division_services_intro",
+                    "label": "Introduction",
+                    "name": "intro",
+                    "type": "textarea",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_division_services_items",
+                    "label": "Services",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "block",
+                    "button_label": "Add service",
+                    "collapsed": "field_mg_division_services_items_title",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_division_services_items_icon",
+                            "label": "Icon",
+                            "name": "icon",
+                            "type": "image",
+                            "instructions": "Optional. An SVG icon from the icon library.",
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "wrapper": {
+                                "width": "25"
+                            },
+                            "parent_repeater": "field_mg_division_services_items"
+                        },
+                        {
+                            "key": "field_mg_division_services_items_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "required": 1,
+                            "maxlength": 60,
+                            "wrapper": {
+                                "width": "75"
+                            },
+                            "parent_repeater": "field_mg_division_services_items"
+                        },
+                        {
+                            "key": "field_mg_division_services_items_text",
+                            "label": "Description",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "Two or three sentences.",
+                            "rows": 4,
+                            "new_lines": "",
+                            "parent_repeater": "field_mg_division_services_items"
+                        },
+                        {
+                            "key": "field_mg_division_services_items_link",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "Optional. The link text shows at the foot of the card; leave it blank for Find out more.",
+                            "return_format": "array",
+                            "parent_repeater": "field_mg_division_services_items"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_mg_division_tab_testimonial",
+            "label": "Testimonial",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_division_testimonial",
+            "label": "Testimonial",
+            "name": "testimonial",
+            "type": "group",
+            "instructions": "Leave the quote empty to hide the section. Only use quotes the client has approved.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_division_testimonial_quote",
+                    "label": "Quote",
+                    "name": "quote",
+                    "type": "textarea",
+                    "instructions": "Without quotation marks.",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_division_testimonial_name",
+                    "label": "Name or organisation",
+                    "name": "name",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_division_testimonial_role",
+                    "label": "Role or description",
+                    "name": "role",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_mg_division_tab_closing",
+            "label": "Closing",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_division_closing",
+            "label": "Closing",
+            "name": "closing",
+            "type": "group",
+            "instructions": "The call to action at the end of the page.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_division_closing_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 80
+                },
+                {
+                    "key": "field_mg_division_closing_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_mg_division_closing_button",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "return_format": "array",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_division_closing_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Optional photo beside the text.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/division.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "Mackman, Mackman Research, Red Kite HR, Training and Coaching.",
+    "show_in_rest": 0,
+    "modified": 1794000100
+}

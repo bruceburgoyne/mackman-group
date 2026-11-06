@@ -83,6 +83,31 @@ function mg_text( $text ) {
 }
 
 /**
+ * The video ID from a YouTube URL (watch, youtu.be, embed or shorts).
+ *
+ * @param string $url YouTube URL.
+ * @return string Empty when it is not a YouTube URL.
+ */
+function mg_youtube_id( $url ) {
+	if ( preg_match( '~(?:youtube(?:-nocookie)?\.com/(?:watch\?(?:.*&)?v=|embed/|shorts/)|youtu\.be/)([A-Za-z0-9_-]{11})~', (string) $url, $m ) ) {
+		return $m[1];
+	}
+	return '';
+}
+
+/**
+ * Version string for a theme asset: the file's last-modified time, so
+ * browsers fetch a fresh copy whenever the file changes.
+ *
+ * @param string $path Path inside assets/.
+ * @return string
+ */
+function mg_asset_version( $path ) {
+	$file = get_template_directory() . '/assets/' . ltrim( $path, '/' );
+	return file_exists( $file ) ? (string) filemtime( $file ) : MG_VERSION;
+}
+
+/**
  * URL of a file in the theme's assets folder.
  *
  * @param string $path Path inside assets/.

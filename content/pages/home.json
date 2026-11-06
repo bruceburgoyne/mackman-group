@@ -1,0 +1,106 @@
+{
+    "path": "homepage",
+    "template": "",
+    "source": "Copied on 6 November 2026 from page 38's block content and the old theme's front-page template (hero). Wording kept as on the live site, apart from sentence-case headings and splitting Who we are into paragraphs. New copy, for review: the Standards heading and label, and the call to action heading.",
+    "fields": {
+        "hero": {
+            "kicker": "Full service business consultancy",
+            "heading": "Building stronger brands through",
+            "heading_emphasis": "combined expertise",
+            "text": "Mackman Group combine business consultancy, market research, brand expertise, marketing strategies and HR into an extension of your business.",
+            "button": {
+                "title": "How can we help you?",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            },
+            "video_url": "https://www.youtube.com/watch?v=6uomqGQ15N8",
+            "video_label": "Watch our introduction video",
+            "image": 929
+        },
+        "about": {
+            "kicker": "Who we are",
+            "heading": "One business consultancy, three divisions",
+            "text": "<p>Mackman Group is a premier full-service business consultancy dedicated to the growth of premium brands and the individuals within them. We specialise in developing bespoke programs tailored for ambitious brands seeking growth, whether through upscaling, mergers and acquisitions, preparing for sale, or attracting investment.</p>\n<p>With a foundation built on strategy, insight, and expertise, we empower brands to reach new heights, surpass their goals and develop stronger relationships with key audiences. What sets Mackman Group Business Consultancy apart is our unwavering commitment to delivering exceptional results, honed over two decades of industry experience.</p>\n<p>Our blended business consultancy projects bring together the diverse talents of our divisional directors, ensuring a holistic approach to every project. Key specialisms include market research, brand strategies, strategic marketing, and human resources.</p>\n<p>At Mackman Group, we take pride in our ethical approach, demonstrating that profitability and social responsibility can go hand in hand. We operate with a triple bottom line perspective, considering the impacts on People, Planet, and Profit in all that we do.</p>"
+        },
+        "divisions": {
+            "kicker": "",
+            "heading": "Our brands",
+            "intro": "",
+            "items": [
+                {
+                    "icon": 379,
+                    "title": "Market research consultancy services",
+                    "text": "Mackman Research Market Research Agency is East Anglia's leading market research company, conducting employee research, customer research, perception and satisfaction surveys, engagement benchmarking, and recommending strategies to improve organisational excellence. Our data-driven insights drive business growth and bring brands closer to their audiences.",
+                    "link": {
+                        "title": "Find out more",
+                        "url": "{{page:our-brands/mackman-research}}",
+                        "target": ""
+                    }
+                },
+                {
+                    "icon": 399,
+                    "title": "Branding and marketing consultancy services",
+                    "text": "Mackman Branding & Marketing Agency is our targeted and strategic-led branding & marketing agency. The multidisciplinary team provides a full-service partner that can act as a complete outsourced marketing department or interface with existing in-house resources.",
+                    "link": {
+                        "title": "Find out more",
+                        "url": "{{page:our-brands/strategic-marketing-consultants}}",
+                        "target": ""
+                    }
+                },
+                {
+                    "icon": 372,
+                    "title": "HR consultancy services",
+                    "text": "Red Kite HR Services provides all the benefits of an in-house professional with the flexibility of an expert consultant. Our HR specialist offers reliable, personalised, practical HR support with clear direction to work seamlessly with internal management.",
+                    "link": {
+                        "title": "Find out more",
+                        "url": "{{page:our-brands/red-kite-hr-services}}",
+                        "target": ""
+                    }
+                },
+                {
+                    "icon": 392,
+                    "title": "Training and coaching",
+                    "text": "Training is delivered across our range of divisional specialisms with bespoke programmes directly aligned with your business needs. They are designed to unlock the full potential of internal teams and embed best practice.",
+                    "link": {
+                        "title": "Find out more",
+                        "url": "{{page:our-brands/training-and-coaching}}",
+                        "target": ""
+                    }
+                }
+            ]
+        },
+        "standards": {
+            "kicker": "Who we work with",
+            "heading": "Consistent quality across every sector",
+            "text": "<p>Mackman Group has worked with clients from all sectors, from government bodies to international businesses, to scale up enterprises and charitable organisations. We have decades of experience working with business-to-business and business-to-consumer brands.</p>\n<p>To assure our business partners of consistent service quality, we have embedded processes to ensure we adhere to quality standards. These are defined by:</p>",
+            "image": 1130,
+            "items": [
+                { "name": "ISO 20252", "detail": "" },
+                { "name": "Investors in People", "detail": "" },
+                { "name": "Market Research Society", "detail": "" },
+                { "name": "Chartered Institute of Marketing", "detail": "" },
+                { "name": "Chartered Institute of Public Relations", "detail": "" },
+                { "name": "Chartered Institute of Personnel and Development", "detail": "" }
+            ]
+        },
+        "testimonial": {
+            "quote": "Clients tell us that they value our plain speaking, collaborative, problem-solving capabilities and our ability to generate long-term growth.",
+            "name": "Paul Mackman",
+            "role": "Mackman Group"
+        },
+        "news": {
+            "heading": "Latest news",
+            "count": 3
+        },
+        "cta": {
+            "kicker": "",
+            "heading": "Together we grow",
+            "text": "",
+            "button": {
+                "title": "Contact our senior consultants",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            }
+        }
+    }
+}

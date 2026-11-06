@@ -1,0 +1,66 @@
+{
+    "path": "our-brands/mackman-research",
+    "template": "page-templates/division.php",
+    "source": "Copied from the block content of page 122 on 6 November 2026. Wording kept as on the live site, apart from sentence-case headings, ISO 20252 and master's level.",
+    "fields": {
+        "intro": {
+            "kicker": "Market research consultants",
+            "heading": "Transforming business decisions",
+            "text": "<p>Today's consumers have a lot of power when making product or service purchases. Our Market Research Consultants team of experts offer unparalleled insight for organisations of all sectors, from external views of customer behaviour to internal explorations of workplace culture. Using a mixed methodology, our research projects translate data insights and analytics to deliver results that shape effective business strategies.</p>\n<p>All of our research projects translate data insights and analytics to deliver results that shape effective business strategies, using a mixed methodology created over 20 years of experience in the field of research. Our leadership team is educated to master's level and above, ensuring the highest project management and output quality.</p>",
+            "button": null,
+            "image": 823
+        },
+        "services": {
+            "kicker": "Services",
+            "heading": "Our research",
+            "intro": "Our research team has a proven track record. We have over 20 years of experience gathering data and market research techniques such as surveys, focus groups, interviews, and design research that delivers meaningful and user-friendly insight that meets organisational objectives.",
+            "items": [
+                {
+                    "icon": 367,
+                    "title": "B2B market research",
+                    "text": "Our B2B market research is designed to produce actionable and practical strategies for growth based on reliable data, reducing risk for businesses. It provides the information and understanding to support data-driven decisions.",
+                    "link": null
+                },
+                {
+                    "icon": 368,
+                    "title": "Bespoke research",
+                    "text": "Our market research team understands the importance of developing a research approach tailored to clients' needs. Whether you're looking to understand your target market better or need to evaluate your marketing campaign's effectiveness, we have the expertise to help you succeed.",
+                    "link": null
+                },
+                {
+                    "icon": 373,
+                    "title": "Competitor research",
+                    "text": "Our tailored approach to competitor research that delivers valuable insights into your competitors' activities, giving you the edge you need to succeed in the present and the future.",
+                    "link": null
+                },
+                {
+                    "icon": 385,
+                    "title": "Organisational research",
+                    "text": "Organisational research ensures you gain valuable insights into your business goals. This data can help you make effective decisions and provide the necessary support to back them up. With insight from the inside, you can make crucial judgements and ensure success for your company.",
+                    "link": null
+                },
+                {
+                    "icon": 389,
+                    "title": "Research training courses",
+                    "text": "Our training program is designed to assist businesses, and in-house marketing teams in conducting research projects. We take pride in adhering to the MRS codes of conduct and meeting the requirements of ISO 20252 standard in our market research training.",
+                    "link": null
+                }
+            ]
+        },
+        "testimonial": {
+            "quote": "Mackman Research carry out their work with complete confidentiality; the quality of the reports and presentations they have completed for us have been to a very high standard and have enabled us to proactively improve our customer relationship management.",
+            "name": "Twinings",
+            "role": "International tea brand"
+        },
+        "closing": {
+            "heading": "",
+            "text": "<p>Market Research aims to reduce the risk for your business by providing data-supported decisions. Our decisions are recommendations built on a genuine understanding of your industry and business objectives. Mackman Research has worked with clients across a broad section of professional services, consumer and e-commerce and charitable organisations.</p>",
+            "button": {
+                "title": "Contact our senior consultants to future-proof your business",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            },
+            "image": 827
+        }
+    }
+}

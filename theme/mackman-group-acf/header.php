@@ -36,7 +36,8 @@ $mg_header_button = mg_option( 'header_button' );
 				'container'      => false,
 				'menu_class'     => 'mobile-panel__list',
 				'fallback_cb'    => false,
-				'depth'          => 1,
+				'depth'          => 2,
+				'walker'         => new MG_Nav_Walker(),
 			)
 		);
 		?>
@@ -65,7 +66,8 @@ $mg_header_button = mg_option( 'header_button' );
 					'container'      => false,
 					'menu_class'     => 'site-nav__list',
 					'fallback_cb'    => false,
-					'depth'          => 1,
+					'depth'          => 2,
+					'walker'         => new MG_Nav_Walker(),
 				)
 			);
 			?>

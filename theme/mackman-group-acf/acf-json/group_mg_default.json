@@ -55,6 +55,16 @@
                 "param": "page_type",
                 "operator": "!=",
                 "value": "posts_page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates/division.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -77,5 +87,5 @@
     "active": true,
     "description": "Page header and body text for any page until its own template is built.",
     "show_in_rest": 0,
-    "modified": 1794000000
+    "modified": 1794000200
 }
