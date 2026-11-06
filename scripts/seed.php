@@ -1,14 +1,17 @@
 <?php
 /**
- * Push page content from content/pages/*.json into existing WordPress pages.
+ * Push content from the content/ folder into WordPress: page fields from
+ * content/pages/*.json, and Site Settings from content/site-settings.json.
  *
  * Run with WP-CLI from the site's app/public folder (Local's site shell):
  *
  *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php
  *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php mackman-research
+ *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
  *
- * The optional argument is a file name in content/pages (without .json), to
- * push one page only.
+ * With no argument, every page and Site Settings are pushed. Otherwise the
+ * argument is a file name in content/pages (without .json) to push one page,
+ * or "site-settings" to push Site Settings only.
  *
  * Each JSON file has:
  * - path:     the page's path, for example "our-brands/mackman-research".
@@ -33,9 +36,15 @@ if ( ! function_exists( 'acf_get_field_groups' ) ) {
 	WP_CLI::error( 'ACF Pro is not active.' );
 }
 
-$mg_dir  = dirname( __DIR__ ) . '/content/pages';
-$mg_only = isset( $args[0] ) ? sanitize_file_name( $args[0] ) : '';
-$mg_files = $mg_only ? array( "{$mg_dir}/{$mg_only}.json" ) : glob( "{$mg_dir}/*.json" );
+$mg_content  = dirname( __DIR__ ) . '/content';
+$mg_dir      = $mg_content . '/pages';
+$mg_only     = isset( $args[0] ) ? sanitize_file_name( $args[0] ) : '';
+$mg_settings = ( '' === $mg_only || 'site-settings' === $mg_only );
+if ( 'site-settings' === $mg_only ) {
+	$mg_files = array();
+} else {
+	$mg_files = $mg_only ? array( "{$mg_dir}/{$mg_only}.json" ) : glob( "{$mg_dir}/*.json" );
+}
 
 /**
  * Replace {{page:path}} tokens with permalinks, recursively.
@@ -115,4 +124,30 @@ foreach ( $mg_files as $mg_file ) {
 
 	clean_post_cache( $mg_page->ID );
 	WP_CLI::success( "Updated {$mg_def['path']} (page {$mg_page->ID})." );
+}
+
+// Site Settings (the ACF options page).
+if ( $mg_settings && is_readable( $mg_content . '/site-settings.json' ) ) {
+	$mg_def = json_decode( file_get_contents( $mg_content . '/site-settings.json' ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	if ( ! is_array( $mg_def ) ) {
+		WP_CLI::error( 'content/site-settings.json is not valid JSON: ' . json_last_error_msg() );
+	}
+
+	$mg_map = array();
+	foreach ( acf_get_field_groups( array( 'options_page' => 'site-settings' ) ) as $mg_group ) {
+		foreach ( acf_get_fields( $mg_group ) as $mg_field ) {
+			if ( '' !== $mg_field['name'] ) {
+				$mg_map[ $mg_field['name'] ] = $mg_field['key'];
+			}
+		}
+	}
+
+	foreach ( (array) ( $mg_def['fields'] ?? array() ) as $mg_name => $mg_value ) {
+		if ( empty( $mg_map[ $mg_name ] ) ) {
+			WP_CLI::warning( "'{$mg_name}' is not a Site Settings field. Skipped." );
+			continue;
+		}
+		update_field( $mg_map[ $mg_name ], mg_seed_resolve( $mg_value ), 'option' );
+	}
+	WP_CLI::success( 'Updated Site Settings.' );
 }

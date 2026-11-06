@@ -37,7 +37,8 @@ add_action(
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary navigation', 'mackman-group-acf' ),
-				'footer'  => __( 'Footer links', 'mackman-group-acf' ),
+				'brands'  => __( 'Footer: our brands', 'mackman-group-acf' ),
+				'footer'  => __( 'Footer: useful links', 'mackman-group-acf' ),
 			)
 		);
 	}

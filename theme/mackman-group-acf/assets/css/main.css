@@ -693,7 +693,7 @@ a:hover {
 .site-footer__grid {
 	display: grid;
 	gap: var(--space-xl) var(--grid-gap);
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
 }
 
 .site-footer__brand {
@@ -702,7 +702,7 @@ a:hover {
 
 @media (min-width: 64rem) {
 	.site-footer__grid {
-		grid-template-columns: 2fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1.5fr 1.2fr 1fr;
 	}
 
 	.site-footer__brand {
@@ -734,11 +734,109 @@ a:hover {
 }
 
 .site-footer__base {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-m) var(--space-xl);
 	margin-top: var(--space-2xl);
 	padding-top: var(--space-m);
 	border-top: var(--rule-thin) solid var(--surface-line);
 	color: var(--surface-soft);
 	font-size: var(--step--1);
+}
+
+.site-footer__small {
+	margin: 0;
+}
+
+.site-footer__certs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-l);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-footer__certs a {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--tap-min);
+}
+
+.site-footer__cert {
+	width: auto;
+	max-width: 10rem;
+	height: auto;
+	max-height: 3.5rem;
+}
+
+.site-footer__label {
+	display: block;
+	color: var(--surface-soft);
+	font-size: var(--step--1);
+}
+
+.site-footer__list .site-footer__label + a {
+	min-height: 0;
+	overflow-wrap: break-word;
+}
+
+.site-footer__list li + li {
+	margin-top: var(--space-2xs);
+}
+
+.site-footer__newsletter {
+	margin-top: var(--space-l);
+}
+
+/* Logo strip above the footer: professional bodies, then accreditations
+ * and awards, in full colour on white. */
+.logo-strip {
+	padding-block: var(--space-2xl);
+	border-top: var(--rule-thin) solid var(--mg-line);
+}
+
+.logo-strip__group + .logo-strip__group {
+	margin-top: var(--space-xl);
+	padding-top: var(--space-xl);
+	border-top: var(--rule-thin) solid var(--mg-line);
+}
+
+.logo-strip__title {
+	margin-bottom: var(--space-m);
+}
+
+.logo-strip__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-l) clamp(1.5rem, 3vw, 3rem);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.logo-strip__item {
+	display: flex;
+	align-items: center;
+}
+
+.logo-strip__link {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--tap-min);
+	text-decoration: none;
+}
+
+.logo-strip__img {
+	width: auto;
+	max-width: 13rem;
+	height: auto;
+	max-height: 4.5rem;
+	object-fit: contain;
 }
 
 /* ======================================================================

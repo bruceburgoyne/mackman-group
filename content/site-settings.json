@@ -1,0 +1,38 @@
+{
+    "source": "Copied on 6 November 2026 from the live footer (the old theme's footer template part). Images are attachment IDs in the media library, which match the live site.",
+    "fields": {
+        "header_button": {
+            "title": "Contact us",
+            "url": "{{page:contact-mackman-group}}",
+            "target": ""
+        },
+        "phone": "01787 388038",
+        "email": "customerservice@mackmangroup.co.uk",
+        "address": "Meadow House\n1 Meadow Lane\nSudbury\nSuffolk\nCO10 2TD",
+        "newsletter": {
+            "title": "Join our newsletter",
+            "url": "{{page:newsletter}}",
+            "target": ""
+        },
+        "professional_bodies": [
+            { "logo": 2924, "name": "MRS Evidence Matters Company Partner", "url": "https://www.mrs.org.uk/company-partner/Accredited-Companies" },
+            { "logo": 2925, "name": "MRS CEO Inclusion Pledge", "url": "https://www.mrs.org.uk/resources/ceo-inclusion-pledge" },
+            { "logo": 891, "name": "CIM Company Affiliate", "url": "https://www.cim.co.uk/for-business/company-affiliate/" },
+            { "logo": 2928, "name": "Chartered Institute of Public Relations (CIPR)", "url": "https://cipr.co.uk" }
+        ],
+        "accreditations": [
+            { "logo": 2326, "name": "Living Wage Employer", "url": "https://www.livingwage.org.uk" },
+            { "logo": 2883, "name": "Living Hours Employer", "url": "https://www.livingwage.org.uk/living-hours" },
+            { "logo": 2926, "name": "MRS Fair Data", "url": "https://www.mrs.org.uk/standards/fairdata" },
+            { "logo": 2927, "name": "Cyber Essentials", "url": "https://www.ncsc.gov.uk/cyberessentials/overview" },
+            { "logo": 2884, "name": "CIM Marketing Excellence Awards", "url": "" },
+            { "logo": 454, "name": "Business Awards Suffolk", "url": "" },
+            { "logo": 456, "name": "MRS Operations Awards 2021 winner", "url": "" }
+        ],
+        "certifications": [
+            { "logo": 3730, "name": "ISO 27001:2022 and ISO 42001:2023 certified", "url": "" },
+            { "logo": 1578, "name": "Certified B Corporation", "url": "https://www.bcorporation.net/en-us/" }
+        ],
+        "footer_text": ""
+    }
+}

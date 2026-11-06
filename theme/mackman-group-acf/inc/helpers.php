@@ -69,6 +69,28 @@ function mg_image( $image, $size = 'large', $class = '', $attr = array() ) {
 	if ( empty( $image['ID'] ) ) {
 		return '';
 	}
+
+	// SVGs scale on their own, so they need no resized copies or srcset. This
+	// also avoids the broken srcset the SVG Support plugin can produce.
+	if ( 'image/svg+xml' === get_post_mime_type( $image['ID'] ) ) {
+		$meta  = wp_get_attachment_metadata( $image['ID'] );
+		$attr  = array_merge(
+			array(
+				'class'    => $class,
+				'alt'      => get_post_meta( $image['ID'], '_wp_attachment_image_alt', true ),
+				'loading'  => 'lazy',
+				'decoding' => 'async',
+			),
+			$attr
+		);
+		$extra = '';
+		foreach ( $attr as $name => $value ) {
+			$extra .= sprintf( ' %s="%s"', esc_attr( $name ), esc_attr( $value ) );
+		}
+		$dims = ( ! empty( $meta['width'] ) && ! empty( $meta['height'] ) ) ? sprintf( ' width="%d" height="%d"', (int) $meta['width'], (int) $meta['height'] ) : '';
+		return sprintf( '<img src="%s"%s%s>', esc_url( wp_get_attachment_url( $image['ID'] ) ), $dims, $extra );
+	}
+
 	return wp_get_attachment_image( $image['ID'], $size, false, array_merge( array( 'class' => $class ), $attr ) );
 }
 

@@ -104,6 +104,112 @@
             ]
         },
         {
+            "key": "field_mg_site_settings_tab_logos",
+            "label": "Memberships and awards",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_professional_bodies",
+            "label": "Professional bodies",
+            "name": "professional_bodies",
+            "type": "repeater",
+            "instructions": "Shown in the white strip above the footer. Only list current memberships we can evidence.",
+            "layout": "table",
+            "button_label": "Add logo",
+            "collapsed": "field_mg_site_settings_professional_bodies_name",
+            "sub_fields": [
+                {
+                    "key": "field_mg_site_settings_professional_bodies_logo",
+                    "label": "Logo",
+                    "name": "logo",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "required": 1,
+                    "parent_repeater": "field_mg_site_settings_professional_bodies",
+                    "wrapper": {
+                        "width": "20"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_professional_bodies_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "required": 1,
+                    "instructions": "Read out by screen readers, for example CIM Company Affiliate.",
+                    "parent_repeater": "field_mg_site_settings_professional_bodies",
+                    "wrapper": {
+                        "width": "40"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_professional_bodies_url",
+                    "label": "Link",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "Optional. The body's page about the membership.",
+                    "parent_repeater": "field_mg_site_settings_professional_bodies",
+                    "wrapper": {
+                        "width": "40"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_mg_site_settings_accreditations",
+            "label": "Accreditations and awards",
+            "name": "accreditations",
+            "type": "repeater",
+            "instructions": "Shown in the white strip above the footer, after the professional bodies.",
+            "layout": "table",
+            "button_label": "Add logo",
+            "collapsed": "field_mg_site_settings_accreditations_name",
+            "sub_fields": [
+                {
+                    "key": "field_mg_site_settings_accreditations_logo",
+                    "label": "Logo",
+                    "name": "logo",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "required": 1,
+                    "parent_repeater": "field_mg_site_settings_accreditations",
+                    "wrapper": {
+                        "width": "20"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_accreditations_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "required": 1,
+                    "instructions": "Read out by screen readers, for example CIM Company Affiliate.",
+                    "parent_repeater": "field_mg_site_settings_accreditations",
+                    "wrapper": {
+                        "width": "40"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_accreditations_url",
+                    "label": "Link",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "Optional. The body's page about the membership.",
+                    "parent_repeater": "field_mg_site_settings_accreditations",
+                    "wrapper": {
+                        "width": "40"
+                    }
+                }
+            ]
+        },
+        {
             "key": "field_mg_site_settings_tab_footer",
             "label": "Footer",
             "name": "",
@@ -112,11 +218,66 @@
             "endpoint": 0
         },
         {
+            "key": "field_mg_site_settings_newsletter",
+            "label": "Newsletter button",
+            "name": "newsletter",
+            "type": "link",
+            "return_format": "array",
+            "instructions": "Optional button under the contact details."
+        },
+        {
+            "key": "field_mg_site_settings_certifications",
+            "label": "Certifications",
+            "name": "certifications",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add certification",
+            "collapsed": "field_mg_site_settings_certifications_name",
+            "instructions": "Shown at the foot of the green footer, so use white versions of the logos.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_site_settings_certifications_logo",
+                    "label": "Logo",
+                    "name": "logo",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "required": 1,
+                    "parent_repeater": "field_mg_site_settings_certifications",
+                    "wrapper": {
+                        "width": "20"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_certifications_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "required": 1,
+                    "parent_repeater": "field_mg_site_settings_certifications",
+                    "wrapper": {
+                        "width": "40"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_certifications_url",
+                    "label": "Link",
+                    "name": "url",
+                    "type": "url",
+                    "parent_repeater": "field_mg_site_settings_certifications",
+                    "wrapper": {
+                        "width": "40"
+                    }
+                }
+            ]
+        },
+        {
             "key": "field_mg_site_settings_footer_text",
             "label": "Footer text",
             "name": "footer_text",
             "type": "textarea",
-            "instructions": "Small print at the foot of every page, such as the company number. Leave blank to show the copyright line.",
+            "instructions": "Optional small print after the copyright line, such as the company number. The copyright line and year are added automatically.",
             "rows": 2,
             "new_lines": ""
         }
@@ -139,5 +300,5 @@
     "active": true,
     "description": "Global settings shown in the header and footer.",
     "show_in_rest": 0,
-    "modified": 1794000000
+    "modified": 1794000400
 }
