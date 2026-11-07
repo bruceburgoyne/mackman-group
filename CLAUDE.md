@@ -16,7 +16,7 @@ Rebuild of mackmangroup.co.uk as a classic WordPress theme driven by ACF Pro, re
 |---|---|
 | Local site | **MACKMANG - Mackman Group**, id `pT1uusCH_` |
 | Site folder | `~/Local Sites/mackmang-mackman-group/app/public` |
-| URL | https://mackmang-mackman-group.test (self-signed; the browser pane does not trust it, so use `scripts/preview.sh`) |
+| URL | https://mackmang-mackman-group.test (Local's certificate is trusted, so open it directly in the browser pane) |
 | Theme | `theme/mackman-group-acf`, symlinked into the site's `wp-content/themes` |
 | Shell setup | `source ~/"Local Sites/mackmang-mackman-group/app/.envrc"` puts Local's PHP 8.5, MySQL and WP-CLI on the PATH. Run `wp` from `app/public` |
 | PHP error log | `~/Local Sites/mackmang-mackman-group/logs/php/error.log` |
@@ -35,7 +35,7 @@ docs/design-system.md       colour, type, components, rules (read before design 
 docs/style-guide.html       every token and component, rendered with the theme CSS
 scripts/seed.php            pushes content/ into WordPress (never creates pages, never touches post_content)
 scripts/check.sh            lint, JSON, render key pages, report new PHP errors
-scripts/preview.sh          snapshot pages and serve them on http://localhost:8766
+scripts/preview.sh          fallback only: snapshot pages to localhost:8766 if the certificate stops being trusted
 theme/mackman-group-acf/
   acf-json/                 field groups (ACF local JSON, synced both ways)
   assets/css/tokens.css     design tokens
@@ -64,7 +64,7 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 3. Add `page_template != page-templates/<name>.php` to `group_mg_default.json`'s location.
 4. `content/pages/<slug>.json` with the original content (extract it from the page's blocks with `wp eval` and `parse_blocks`), then seed.
 
-**Check work**: `scripts/check.sh` after every change. For visual checks, `scripts/preview.sh` then open http://localhost:8766/home.html (or the page's name). For small changes, a desktop check is enough; keep phone checks for layout work. Screenshots are expensive: prefer measuring with JavaScript.
+**Check work**: `scripts/check.sh` after every change. For visual checks, open the page on https://mackmang-mackman-group.test in the browser pane. For small changes, a desktop check is enough; keep phone checks for layout work. Screenshots are expensive: prefer measuring with JavaScript.
 
 **Menus and Site Settings live in the database**, not the repo. Menus: Main navigation (primary), Our brands (brands), Footer links (footer). Site Settings values are mirrored in `content/site-settings.json`.
 
