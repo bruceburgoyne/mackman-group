@@ -9,3 +9,6 @@ vendor/
 wp-config.php
 *.sql
 *.sql.gz
+
+# Local page previews (scripts/preview.sh)
+.preview/
