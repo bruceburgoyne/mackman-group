@@ -15,7 +15,7 @@
             "label": "Intro",
             "name": "intro",
             "type": "group",
-            "instructions": "The top of the page, on green.",
+            "instructions": "The top of the page, on green: a label, the page's main heading, a short introduction and a photo.",
             "layout": "block",
             "sub_fields": [
                 {
@@ -42,7 +42,8 @@
                     "tabs": "visual",
                     "toolbar": "basic",
                     "media_upload": 0,
-                    "delay": 0
+                    "delay": 0,
+                    "instructions": "One or two sentences."
                 },
                 {
                     "key": "field_mg_division_intro_button",
@@ -60,13 +61,66 @@
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "A photo, shown beside the text. Portrait or square crops work best.",
+                    "instructions": "A photo, shown beside the text. It is cropped to portrait on wide screens, so keep the subject near the centre.",
                     "return_format": "array",
                     "preview_size": "medium",
                     "library": "all",
                     "wrapper": {
                         "width": "50"
                     }
+                }
+            ]
+        },
+        {
+            "key": "field_mg_division_tab_overview",
+            "label": "Overview",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_division_overview",
+            "label": "Overview",
+            "name": "overview",
+            "type": "group",
+            "instructions": "Straight after the intro, on white: what the division does. Leave the heading empty to hide the section.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_division_overview_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Short label above the heading, for example Market research consultants.",
+                    "maxlength": 60
+                },
+                {
+                    "key": "field_mg_division_overview_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 80
+                },
+                {
+                    "key": "field_mg_division_overview_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_mg_division_overview_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Optional. A photo, shown beside the text. Portrait or square crops work best.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
                 }
             ]
         },
@@ -304,5 +358,5 @@
     "active": true,
     "description": "Mackman, Mackman Research, Red Kite HR, Training and Coaching.",
     "show_in_rest": 0,
-    "modified": 1794000100
+    "modified": 1794240135
 }

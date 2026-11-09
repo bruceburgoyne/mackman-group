@@ -1,0 +1,72 @@
+{
+    "path": "our-brands/strategic-marketing-consultants",
+    "template": "page-templates/division.php",
+    "source": "Overview onwards copied from the block content of page 190 (Mackman) on 9 November 2026. Wording kept as on the live site, apart from sentence-case headings. The links inside the card text (to mackman.co.uk) are not carried over, as on the Mackman Research page. The testimonial's funding figure needs checking with the client before launch. Hero (intro) copied on 9 November 2026 from the live page's masthead: its kicker and caption fields, the page title as the H1 and the featured image. The intro heading is left blank so the H1 is the page title, as on the live site.",
+    "fields": {
+        "intro": {
+            "kicker": "Strategic marketing",
+            "heading": "",
+            "text": "<p>Our strategic marketing business is focused on growing premium brands and the people that work in them, with core specialisms centred around business and marketing strategy and brand development.</p>",
+            "button": null,
+            "image": 820
+        },
+        "overview": {
+            "kicker": "Marketing consultancy",
+            "heading": "Strategic marketing consultants",
+            "text": "<p>Working in collaboration with businesses, we help leadership teams understand how to achieve their targets for business growth and communicate them to wider audiences and employees. The strategic marketing team create sector-leading brands using a tried and tested combination of marketing workshops, digital expertise, and creative output to build distinctive brands.</p>",
+            "image": 1133
+        },
+        "services": {
+            "kicker": "Services",
+            "heading": "Marketing strategy",
+            "intro": "We collaborate with your organisation to ensure the marketing strategy aligns with your brand's core principles. Our strategic marketing consultants use a full marketing mix to combine tools and methodologies to achieve your business marketing objectives.",
+            "items": [
+                {
+                    "icon": 369,
+                    "title": "Brand development",
+                    "text": "If you're looking to build a successful brand as part of your growth strategy, it's important to clearly understand your target audience and what they're looking for in a brand. Our senior creative consultant will help you tailor your messaging and visual identity to resonate with your ideal customers.",
+                    "link": null
+                },
+                {
+                    "icon": 376,
+                    "title": "Digital marketing strategy",
+                    "text": "Creating a digital marketing strategy is essential for any business. By utilising various online channels, brands can effectively reach their target audience. Whether through website, social media, email marketing, or SEO, developing a comprehensive plan is crucial for success in today's digital landscape.",
+                    "link": null
+                },
+                {
+                    "icon": 382,
+                    "title": "Marketing communications and content marketing",
+                    "text": "Our consultants work closely with you to develop content marketing strategies customised to your marketing, commercial, and business objectives. We understand that every business is unique so we get to know your company and its goals to create a plan to help you succeed.",
+                    "link": null
+                },
+                {
+                    "icon": 377,
+                    "title": "Marketing consultancy",
+                    "text": "Our marketing consultancy develops customer-centric strategic marketing plans to increase return on marketing investment. Our approach to consultancy involves collaborative, interactive workshops, training, and insight that foster a sense of ownership over the marketing strategies we develop together.",
+                    "link": null
+                },
+                {
+                    "icon": 383,
+                    "title": "Marketing insight",
+                    "text": "Our marketing insight services are perfect for businesses at any stage of growth. Whether you're a new or established business, we can help you connect with your target audience and take the next step towards success.",
+                    "link": null
+                }
+            ]
+        },
+        "testimonial": {
+            "quote": "Without doubt, their work helped to secure the £1.6 million National Lottery Heritage Fund.",
+            "name": "Amanda Gerry",
+            "role": "Head of Churches Conservation Trust's Regeneration team"
+        },
+        "closing": {
+            "heading": "",
+            "text": "<p>Our aim is to support you and your business by blending insights, best practice strategies and a genuine understanding of your industry and business objectives to create the best possible approach to reach your target audience.</p>",
+            "button": {
+                "title": "Contact our senior consultants to future-proof your business",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            },
+            "image": 830
+        }
+    }
+}

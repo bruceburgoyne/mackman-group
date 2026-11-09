@@ -1,13 +1,19 @@
 {
     "path": "our-brands/mackman-research",
     "template": "page-templates/division.php",
-    "source": "Copied from the block content of page 122 on 6 November 2026. Wording kept as on the live site, apart from sentence-case headings, ISO 20252 and master's level.",
+    "source": "Overview onwards copied from the block content of page 122 on 6 November 2026. Wording kept as on the live site, apart from sentence-case headings, ISO 20252 and master's level. Hero (intro) copied on 9 November 2026 from the live page's masthead: its kicker field, the page title as the H1 and the featured image. The live hero shows no caption. The intro heading is left blank so the H1 is the page title, as on the live site.",
     "fields": {
         "intro": {
+            "kicker": "Marketing insights",
+            "heading": "",
+            "text": "",
+            "button": null,
+            "image": 846
+        },
+        "overview": {
             "kicker": "Market research consultants",
             "heading": "Transforming business decisions",
             "text": "<p>Today's consumers have a lot of power when making product or service purchases. Our Market Research Consultants team of experts offer unparalleled insight for organisations of all sectors, from external views of customer behaviour to internal explorations of workplace culture. Using a mixed methodology, our research projects translate data insights and analytics to deliver results that shape effective business strategies.</p>\n<p>All of our research projects translate data insights and analytics to deliver results that shape effective business strategies, using a mixed methodology created over 20 years of experience in the field of research. Our leadership team is educated to master's level and above, ensuring the highest project management and output quality.</p>",
-            "button": null,
             "image": 823
         },
         "services": {

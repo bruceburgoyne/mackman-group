@@ -1,0 +1,72 @@
+{
+    "path": "our-brands/red-kite-hr-services",
+    "template": "page-templates/division.php",
+    "source": "Overview onwards copied from the block content of page 904 (Red Kite HR Services) on 9 November 2026. Wording kept as on the live site, apart from sentence-case headings. The live page has no descriptions under the service titles, so the cards show titles only until descriptions are written. Hero (intro) copied on 9 November 2026 from the live page's masthead: its kicker and caption fields, the page title as the H1 and the featured image. The intro heading is left blank so the H1 is the page title, as on the live site.",
+    "fields": {
+        "intro": {
+            "kicker": "Red Kite HR Services",
+            "heading": "",
+            "text": "<p>Red Kite HR Services provides all the benefits of an in-house professional with the flexibility of an expert consultant. Our HR Consultancy specialist offers reliable, personalised, practical HR support with clear direction to work seamlessly with internal management.</p>",
+            "button": null,
+            "image": 824
+        },
+        "overview": {
+            "kicker": "Red Kite HR Services",
+            "heading": "HR consultancy",
+            "text": "<p>Red Kite HR Services is an independent HR consultancy based in Sudbury, providing professional and legal solutions to your human resources issues. Working in partnership with businesses, we get to know your business and help leadership teams understand how to achieve their targets for business growth and communicate them to wider audiences and employees.</p>",
+            "image": 821
+        },
+        "services": {
+            "kicker": "Services",
+            "heading": "Our HR",
+            "intro": "HR issues in companies can be wide-reaching and harm your business. We collaborate with your organisation to ensure the HR strategy aligns with your business's core objectives and principles. Our strategic HR consultants can help with specific one-off problems, HR projects and ongoing support.",
+            "items": [
+                {
+                    "icon": 373,
+                    "title": "HR consultancy",
+                    "text": "",
+                    "link": null
+                },
+                {
+                    "icon": 370,
+                    "title": "Employment contracts and HR policies",
+                    "text": "",
+                    "link": null
+                },
+                {
+                    "icon": 385,
+                    "title": "HR training and coaching",
+                    "text": "",
+                    "link": null
+                },
+                {
+                    "icon": 387,
+                    "title": "HR software",
+                    "text": "",
+                    "link": null
+                },
+                {
+                    "icon": 389,
+                    "title": "HR and people strategy",
+                    "text": "",
+                    "link": null
+                }
+            ]
+        },
+        "testimonial": {
+            "quote": "The support we get from Lydia and the team gives us the confidence that we are doing the right thing legally and in the interests of our staff. We are in a position where we know our HR processes are robust and compliant.",
+            "name": "Dave Jackson",
+            "role": "CEO, The Bridge Project"
+        },
+        "closing": {
+            "heading": "",
+            "text": "<p>Our HR consultancy will support you and your business by aligning your HR services with your business strategy and operational plans. Working together, we ensure that we understand your workforce needs and objectives to future-proof your business and solve human resources problems.</p>",
+            "button": {
+                "title": "Contact our senior consultants to future-proof your business",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            },
+            "image": 827
+        }
+    }
+}

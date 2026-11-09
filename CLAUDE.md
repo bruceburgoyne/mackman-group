@@ -84,10 +84,11 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 
 ## Status and open items
 
-Done: design system, theme scaffold, Division template (Mackman Research seeded), Home, drop-down navigation, footer and logos, side panel, card grid, News archive and articles, case study template (Disaster Care Brand Repositioning seeded).
+Done: design system, theme scaffold, Division template (all four brand pages seeded: Mackman Research, Mackman, Red Kite HR Services, Training and Coaching), Home, drop-down navigation, footer and logos, side panel, card grid, News archive and articles, case study template (Disaster Care Brand Repositioning seeded).
 
 Open:
-- Division template for Mackman, Red Kite and Training and Coaching; About, Values, Accreditations, Contact, team members.
+- About, Values, Accreditations, Contact, team members.
+- Brand pages: Red Kite's service cards have titles only (no descriptions on the live page); Training and Coaching's second testimonial was not carried over (the template has one); photos 821, 827, 830 and 1133 have no alt text in the media library. The intro (green, H1) holds the live site's masthead (kicker and caption fields, page title, featured image); the Overview below it holds the first block of the old page content.
 - Case studies: move William Blyth, The Property Institute, Disaster Care Three Month Strategic Programme and Holmes & Hills (draft) into the template; build a case studies index page and set it in Site Settings > Case studies. Disaster Care needs client sign-off on the testimonial and the Aviva line, and alt text on its photos.
 - Copy review: unevidenced claims and testimonial approvals flagged in earlier work.
 - Clean-up of the 56 posts (old spacers, columns, inline styles are only hidden by CSS).

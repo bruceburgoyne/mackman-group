@@ -1088,6 +1088,16 @@ a:hover {
 	font-size: var(--step-5);
 }
 
+/* Further down the page (a division's overview): section spacing, H2 size */
+.intro--h2 {
+	padding-block: var(--section-space);
+}
+
+.intro--h2 .intro__title {
+	max-width: 22ch;
+	font-size: var(--step-4);
+}
+
 .intro__body {
 	max-width: 36rem;
 	margin-bottom: var(--space-l);

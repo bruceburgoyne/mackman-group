@@ -1,0 +1,72 @@
+{
+    "path": "our-brands/training-and-coaching",
+    "template": "page-templates/division.php",
+    "source": "Overview onwards copied from the block content of page 906 (Training and Coaching) on 9 November 2026. Wording kept as on the live site, apart from sentence-case headings, lower-case 'training' mid-sentence, and 'one-off sessions or more detailed programmes' (the live page has 'for'). The two paragraphs of the services introduction are joined into one. The template has one testimonial, so the shorter second quote (Nadezhda Beaumont-Lockley, Mosaic Foster Care: 'A huge thank you to the team for today's training, I found it incredibly useful!') and the Together We Grow badge in the services grid are not carried over. Hero (intro) copied on 9 November 2026 from the live page's masthead: its kicker and caption fields, the page title as the H1 and the featured image. The intro heading is left blank so the H1 is the page title, as on the live site.",
+    "fields": {
+        "intro": {
+            "kicker": "Professional training and coaching",
+            "heading": "",
+            "text": "<p>The Mackman Group training service allows businesses to compile bespoke training sessions unique to you and your team. Our training will provide your business with the resources to tailor the marketing, HR services, research and reporting to enhance your business objectives.</p>",
+            "button": null,
+            "image": 1133
+        },
+        "overview": {
+            "kicker": "Training",
+            "heading": "Professional training and coaching",
+            "text": "<p>If your business is struggling with the rate of change within the Marketing and HR industry, our professional training and coaching services support the professional development within your teams and help existing employees overcome the skills gap.</p>\n<p>Mackman Training works with businesses to create bespoke training and coaching opportunities to unlock the potential in your workforce. Holding industry memberships within the expert fields of our professionals ensures that we are up to date with our professional development and work to best practice policies.</p>",
+            "image": 865
+        },
+        "services": {
+            "kicker": "Services",
+            "heading": "Our training",
+            "intro": "Our practical training methods will equip you with theory and practical-based training, which you can start implementing when you are back in the office. Our training sessions offer your employees a supportive space to form new ideas, see the theory in action, and up-skill knowledge to build out their broader knowledge base. Working with you to identify your training needs, we can create one-off sessions or more detailed programmes.",
+            "items": [
+                {
+                    "icon": 373,
+                    "title": "Data insights",
+                    "text": "Our bespoke insight and data training will explain how to get accurate reports from GA4 and insights that help boost your marketing campaigns.",
+                    "link": null
+                },
+                {
+                    "icon": 370,
+                    "title": "Business development in the digital world",
+                    "text": "Digital innovations are creating opportunities quicker and quicker every day. Business development in the digital age uses digital technology and networking platforms to build, grow, and improve a business.",
+                    "link": null
+                },
+                {
+                    "icon": 385,
+                    "title": "HR training and coaching",
+                    "text": "Our bespoke HR training and coaching solutions are designed to suit the needs of your business and employees.",
+                    "link": null
+                },
+                {
+                    "icon": 387,
+                    "title": "Media workshop",
+                    "text": "Our media training covers various mediums, from handling multiple media encounters, such as radio interviews, print or online news articles, and social media interactions. We also have experts who will show your business to upskill and get the best results from your media devices.",
+                    "link": null
+                },
+                {
+                    "icon": 389,
+                    "title": "Digital marketing",
+                    "text": "Designed explicitly around you and your business, our digital marketing experts offer support, mentoring and guidance to create campaigns, understand data analytics and track emerging trends to market your business.",
+                    "link": null
+                }
+            ]
+        },
+        "testimonial": {
+            "quote": "Over the 12-week programme, I learned so much at Mackman, from marketing fundamentals to social media to SEO. It has broadened my knowledge, and all the staff are really friendly and helpful. I couldn't have asked for a better experience.",
+            "name": "Eavan Taylor-Willis",
+            "role": "WillisPalmer"
+        },
+        "closing": {
+            "heading": "",
+            "text": "<p>If you want to ensure your business isn't losing out because of core marketing skills and knowledge gaps, the Mackman Group training offering might be the right fit for you. Our clients come from professional services to scale up enterprises and charitable organisations. In addition, several of our senior managers have in-house experience within the B2B sector.</p>",
+            "button": {
+                "title": "Contact our senior consultants to future-proof your business",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            },
+            "image": 827
+        }
+    }
+}
