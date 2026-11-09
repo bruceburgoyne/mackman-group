@@ -1,0 +1,957 @@
+{
+    "key": "group_mg_case_study",
+    "title": "Case study",
+    "fields": [
+        {
+            "key": "field_mg_cs_tab_opening",
+            "label": "Opening",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_opening",
+            "label": "Opening",
+            "name": "opening",
+            "type": "group",
+            "instructions": "The top of the page, on green. Set the sector and location in the boxes on the right.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_opening_kicker",
+                    "label": "Type of work",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Shown after \"Case study\" above the heading, for example Brand repositioning.",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_opening_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "The page's main heading (H1): the story in one line. Leave blank to use the title.",
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_opening_lead",
+                    "label": "Lead line",
+                    "name": "lead",
+                    "type": "textarea",
+                    "instructions": "One sentence, shown large. Also used on case study cards.",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_opening_summary",
+                    "label": "Summary",
+                    "name": "summary",
+                    "type": "wysiwyg",
+                    "instructions": "Two short paragraphs: the situation, and what we did.",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_mg_cs_opening_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Optional. Shown large under the opening, and used as the film's thumbnail when there is a film. Landscape, at least 1600px wide.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_opening_video_url",
+                    "label": "Film",
+                    "name": "video_url",
+                    "type": "url",
+                    "instructions": "Optional. A YouTube link. The film plays on the page in YouTube's privacy-enhanced player, loaded only when a visitor presses play.",
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_opening_video_label",
+                    "label": "Film button text",
+                    "name": "video_label",
+                    "type": "text",
+                    "instructions": "Leave blank for Watch the case study film.",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "34"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_opening_caption",
+                    "label": "Caption",
+                    "name": "caption",
+                    "type": "text",
+                    "instructions": "Optional. Shown under the image or film."
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_facts",
+            "label": "Overview panel",
+            "name": "facts",
+            "type": "group",
+            "instructions": "The panel beside the heading. Sector and location come from the boxes on the right. Empty rows are hidden.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_facts_logo",
+                    "label": "Client logo",
+                    "name": "logo",
+                    "type": "image",
+                    "instructions": "Optional. The white (reversed) version, as it sits on green.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_facts_client",
+                    "label": "Client name",
+                    "name": "client",
+                    "type": "text",
+                    "instructions": "Leave blank to use the title.",
+                    "maxlength": 80,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_facts_services",
+                    "label": "Services",
+                    "name": "services",
+                    "type": "text",
+                    "instructions": "What we provided, for example Research, strategy, brand and website.",
+                    "maxlength": 120,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_facts_period",
+                    "label": "When",
+                    "name": "period",
+                    "type": "text",
+                    "instructions": "For example 2023 to 2025, or Ongoing since 2023.",
+                    "maxlength": 40,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_facts_note_label",
+                    "label": "Note label",
+                    "name": "note_label",
+                    "type": "text",
+                    "instructions": "For example Next chapter.",
+                    "maxlength": 30,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_facts_note",
+                    "label": "Note",
+                    "name": "note",
+                    "type": "text",
+                    "instructions": "One factual line, shown in gold. Check the client is happy for it to be published.",
+                    "maxlength": 120,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_results",
+            "label": "Results",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_results",
+            "label": "Results",
+            "name": "results",
+            "type": "group",
+            "instructions": "Two to four figures, straight after the opening. Only use figures we can evidence, and say where each comes from. Leave empty to hide the section.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_results_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Leave blank for Results.",
+                    "maxlength": 60
+                },
+                {
+                    "key": "field_mg_cs_results_items",
+                    "label": "Figures",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "table",
+                    "max": 4,
+                    "button_label": "Add figure",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_cs_results_items_figure",
+                            "label": "Figure",
+                            "name": "figure",
+                            "type": "text",
+                            "instructions": "For example 42% or 3x.",
+                            "required": 1,
+                            "maxlength": 12,
+                            "parent_repeater": "field_mg_cs_results_items"
+                        },
+                        {
+                            "key": "field_mg_cs_results_items_label",
+                            "label": "What it measures",
+                            "name": "label",
+                            "type": "text",
+                            "maxlength": 80,
+                            "parent_repeater": "field_mg_cs_results_items"
+                        },
+                        {
+                            "key": "field_mg_cs_results_items_source",
+                            "label": "Source",
+                            "name": "source",
+                            "type": "text",
+                            "instructions": "For example Client survey, 2025.",
+                            "maxlength": 80,
+                            "parent_repeater": "field_mg_cs_results_items"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_challenge",
+            "label": "Challenge",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_challenge",
+            "label": "The challenge",
+            "name": "challenge",
+            "type": "group",
+            "instructions": "Where the client was and why it mattered.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_challenge_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Leave blank for The challenge.",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_challenge_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_challenge_lead",
+                    "label": "Lead",
+                    "name": "lead",
+                    "type": "textarea",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_challenge_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_mg_cs_challenge_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Optional. Shown beside the text. Portrait or square crops work best.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_challenge_pull",
+                    "label": "Pull line",
+                    "name": "pull",
+                    "type": "textarea",
+                    "instructions": "Optional. One short sentence, shown large under the text.",
+                    "rows": 2,
+                    "new_lines": "",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_question",
+            "label": "The question",
+            "name": "question",
+            "type": "group",
+            "instructions": "Optional. The one question the work had to answer, in a green panel at the end of the challenge.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_question_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "textarea",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_question_text",
+                    "label": "Text beside the question",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_work",
+            "label": "The work",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_stages",
+            "label": "Stages",
+            "name": "stages",
+            "type": "repeater",
+            "instructions": "The work, told through the stages of our approach that applied: Understand, Shape, Deliver, Grow. Use one to four, in order. Each stage can have points, a green highlight panel, an image and a closing line; empty parts are hidden.",
+            "layout": "block",
+            "max": 4,
+            "collapsed": "field_mg_cs_stages_heading",
+            "button_label": "Add stage",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_stages_stage",
+                    "label": "Stage",
+                    "name": "stage",
+                    "type": "select",
+                    "required": 1,
+                    "choices": {
+                        "understand": "01 Understand",
+                        "shape": "02 Shape",
+                        "deliver": "03 Deliver",
+                        "grow": "04 Grow"
+                    },
+                    "default_value": "understand",
+                    "return_format": "value",
+                    "ui": 0,
+                    "wrapper": {
+                        "width": "33"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "required": 1,
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_lead",
+                    "label": "Lead",
+                    "name": "lead",
+                    "type": "textarea",
+                    "rows": 2,
+                    "new_lines": "",
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Optional. Shown full width after the text. Landscape.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "50"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_caption",
+                    "label": "Image caption",
+                    "name": "caption",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "50"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_points_kicker",
+                    "label": "Points label",
+                    "name": "points_kicker",
+                    "type": "text",
+                    "instructions": "Optional, for example Four perspectives.",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_points_layout",
+                    "label": "Points layout",
+                    "name": "points_layout",
+                    "type": "select",
+                    "choices": {
+                        "grid": "Grid: side by side",
+                        "list": "List: numbered rows"
+                    },
+                    "default_value": "grid",
+                    "return_format": "value",
+                    "ui": 0,
+                    "wrapper": {
+                        "width": "33"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_points_intro",
+                    "label": "Points introduction",
+                    "name": "points_intro",
+                    "type": "textarea",
+                    "instructions": "Optional. One sentence before the points.",
+                    "rows": 2,
+                    "new_lines": "",
+                    "wrapper": {
+                        "width": "34"
+                    },
+                    "parent_repeater": "field_mg_cs_stages"
+                },
+                {
+                    "key": "field_mg_cs_stages_points",
+                    "label": "Points",
+                    "name": "points",
+                    "type": "repeater",
+                    "instructions": "Optional. Two to four short points, for example the questions we asked or what was delivered.",
+                    "layout": "block",
+                    "max": 6,
+                    "collapsed": "field_mg_cs_stages_points_title",
+                    "button_label": "Add point",
+                    "parent_repeater": "field_mg_cs_stages",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_cs_stages_points_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Optional small label above the title.",
+                            "maxlength": 40,
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "parent_repeater": "field_mg_cs_stages_points"
+                        },
+                        {
+                            "key": "field_mg_cs_stages_points_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "required": 1,
+                            "maxlength": 60,
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "parent_repeater": "field_mg_cs_stages_points"
+                        },
+                        {
+                            "key": "field_mg_cs_stages_points_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": "",
+                            "parent_repeater": "field_mg_cs_stages_points"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_mg_cs_stages_panel",
+                    "label": "Highlight panel",
+                    "name": "panel",
+                    "type": "group",
+                    "instructions": "Optional. A green panel for the central idea of this stage. Leave the heading empty to hide it.",
+                    "layout": "block",
+                    "parent_repeater": "field_mg_cs_stages",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_cs_stages_panel_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "maxlength": 120,
+                            "wrapper": {
+                                "width": "67"
+                            }
+                        },
+                        {
+                            "key": "field_mg_cs_stages_panel_position",
+                            "label": "Position",
+                            "name": "position",
+                            "type": "select",
+                            "choices": {
+                                "after": "After the points",
+                                "before": "Before the points"
+                            },
+                            "default_value": "after",
+                            "return_format": "value",
+                            "ui": 0,
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        },
+                        {
+                            "key": "field_mg_cs_stages_panel_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_mg_cs_stages_panel_steps",
+                            "label": "Linked items",
+                            "name": "steps",
+                            "type": "textarea",
+                            "instructions": "Optional. One per line, shown joined by a gold line, for example the parts of a framework.",
+                            "rows": 4,
+                            "new_lines": "",
+                            "wrapper": {
+                                "width": "50"
+                            }
+                        },
+                        {
+                            "key": "field_mg_cs_stages_panel_pull",
+                            "label": "Pull line",
+                            "name": "pull",
+                            "type": "textarea",
+                            "instructions": "Optional. A few words, shown large in gold.",
+                            "rows": 2,
+                            "new_lines": "",
+                            "wrapper": {
+                                "width": "50"
+                            }
+                        },
+                        {
+                            "key": "field_mg_cs_stages_panel_image",
+                            "label": "Diagram",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "Optional. A diagram drawn for this case study (SVG, white and gold, on green). Give it alt text that describes what it shows.",
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_mg_cs_stages_pull",
+                    "label": "Closing line",
+                    "name": "pull",
+                    "type": "textarea",
+                    "instructions": "Optional. One or two sentences, shown large at the end of the stage.",
+                    "rows": 2,
+                    "new_lines": "",
+                    "parent_repeater": "field_mg_cs_stages"
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_testimonial",
+            "label": "Testimonial",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_testimonial",
+            "label": "Testimonial",
+            "name": "testimonial",
+            "type": "group",
+            "instructions": "Shown after the work, on mint. Leave the quote empty to hide the section.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_testimonial_quote",
+                    "label": "Quote",
+                    "name": "quote",
+                    "type": "textarea",
+                    "instructions": "Without quotation marks.",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_testimonial_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_testimonial_role",
+                    "label": "Role and organisation",
+                    "name": "role",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_testimonial_approved",
+                    "label": "Approved",
+                    "name": "approved",
+                    "type": "true_false",
+                    "instructions": "The person quoted has approved this wording for our website. Until this is ticked, the quote is hidden from visitors (signed-in editors still see it, marked as awaiting approval).",
+                    "message": "Approved for use on the website",
+                    "default_value": 0,
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_outcome",
+            "label": "Outcome",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_outcome",
+            "label": "Outcome",
+            "name": "outcome",
+            "type": "group",
+            "instructions": "What changed for the client. Put evidenced figures in the Results tab.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_outcome_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Leave blank for The outcome.",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_outcome_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_outcome_lead",
+                    "label": "Lead",
+                    "name": "lead",
+                    "type": "textarea",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_outcome_items",
+                    "label": "What was delivered",
+                    "name": "items",
+                    "type": "textarea",
+                    "instructions": "Optional. One per line, shown joined by a gold line.",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_outcome_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_team",
+            "label": "Who was involved",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_team",
+            "label": "Who was involved",
+            "name": "team",
+            "type": "group",
+            "instructions": "Which parts of the Group did what on this project. A card for each, linking to its page. Leave the cards empty to hide the section.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_team_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Leave blank for Who was involved.",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_team_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_team_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_team_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Optional. A photo of the team at work.",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_team_items",
+                    "label": "Cards",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "block",
+                    "max": 4,
+                    "collapsed": "field_mg_cs_team_items_name",
+                    "button_label": "Add card",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_cs_team_items_role",
+                            "label": "Role on this project",
+                            "name": "role",
+                            "type": "text",
+                            "instructions": "For example Specialist research.",
+                            "maxlength": 60,
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "parent_repeater": "field_mg_cs_team_items"
+                        },
+                        {
+                            "key": "field_mg_cs_team_items_name",
+                            "label": "Name",
+                            "name": "name",
+                            "type": "text",
+                            "instructions": "The division, for example Mackman Research.",
+                            "required": 1,
+                            "maxlength": 60,
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "parent_repeater": "field_mg_cs_team_items"
+                        },
+                        {
+                            "key": "field_mg_cs_team_items_text",
+                            "label": "What they did",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": "",
+                            "parent_repeater": "field_mg_cs_team_items"
+                        },
+                        {
+                            "key": "field_mg_cs_team_items_link",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "Optional. Usually the division's page. Leave the link text blank for Find out more.",
+                            "return_format": "array",
+                            "parent_repeater": "field_mg_cs_team_items"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_mg_cs_tab_cta",
+            "label": "Call to action",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_cta",
+            "label": "Call to action",
+            "name": "cta",
+            "type": "group",
+            "instructions": "The end of the page, on green: turn the client's problem into a question for the reader. Leave the heading empty to use the default from Site Settings > Case studies.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_cs_cta_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_cta_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_cs_cta_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_cs_cta_button",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case-study"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "Case studies: opening, results, challenge, the work by stage, testimonial, outcome, who was involved, call to action.",
+    "show_in_rest": 0,
+    "modified": 1794200000
+}

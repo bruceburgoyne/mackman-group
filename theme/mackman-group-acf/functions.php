@@ -16,6 +16,7 @@ require_once get_template_directory() . '/inc/tracking.php';
 require_once get_template_directory() . '/inc/forms.php';
 require_once get_template_directory() . '/inc/nav.php';
 require_once get_template_directory() . '/inc/news.php';
+require_once get_template_directory() . '/inc/case-studies.php';
 
 /**
  * Google Fonts stylesheet: EB Garamond (headings) and Lato (body).
@@ -52,7 +53,7 @@ add_action(
 		wp_enqueue_style( 'mg-tokens', mg_asset( 'css/tokens.css' ), array(), mg_asset_version( 'css/tokens.css' ) );
 		wp_enqueue_style( 'mg-main', mg_asset( 'css/main.css' ), array( 'mg-fonts', 'mg-tokens' ), mg_asset_version( 'css/main.css' ) );
 
-		if ( is_front_page() ) {
+		if ( is_front_page() || is_singular( 'case-study' ) ) {
 			wp_enqueue_script(
 				'mg-video',
 				mg_asset( 'js/video.js' ),

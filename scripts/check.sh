@@ -46,6 +46,8 @@ paths=(
 	/category/news/
 	/iso-42001-and-iso-27001-certification/
 	/contact-mackman-group/
+	/case-study/disaster-care-brand-repositioning/
+	/case-study/william-blyth/
 	/no-such-page/
 	"$@"
 )

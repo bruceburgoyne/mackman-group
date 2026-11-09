@@ -1,0 +1,249 @@
+{
+    "post_type": "case-study",
+    "path": "disaster-care-brand-repositioning",
+    "source": "Copied on 9 November 2026 from the block content of case study 3753 and the Disaster Care case study redesign concept. Wording kept, apart from sentence-case headings and these edits: the Aviva line appears once (overview panel), the generic Mackman approach section and the professional standards paragraph are left out (the footer carries the logos), and the claim that the model is unusual for a consultancy of our size is removed. The testimonial is not marked approved. Before going live: confirm the testimonial and the Aviva line with Disaster Care, and add alt text to images 3508, 3528, 3758 and 3768.",
+    "terms": {
+        "sector": [
+            "Disaster Recovery & Property Restoration"
+        ],
+        "location": [
+            "Nationwide, UK"
+        ]
+    },
+    "fields": {
+        "opening": {
+            "kicker": "Brand repositioning",
+            "heading": "When a business outgrows the way it presents itself",
+            "lead": "Some businesses change long before their reputation catches up.",
+            "summary": "<p>Disaster Care had invested in its people, expertise, capability and leadership. The organisation had become more sophisticated, but the way it looked, sounded and presented itself still belonged to an earlier stage of the business.</p><p>Mackman Group helped close that gap through evidence led strategic marketing consultancy, supported by specialist research, brand development, digital delivery, marketing communications and ongoing partnership.</p>",
+            "image": 3758,
+            "video_url": "https://youtu.be/dqsjF8RmjjM",
+            "video_label": "Watch the case study film",
+            "caption": ""
+        },
+        "facts": {
+            "logo": 3772,
+            "client": "Disaster Care",
+            "services": "Research, strategy, brand, website and marketing",
+            "period": "",
+            "note_label": "Next chapter",
+            "note": "In 2026, Disaster Care became part of Aviva."
+        },
+        "results": {
+            "kicker": "",
+            "items": []
+        },
+        "challenge": {
+            "kicker": "",
+            "heading": "A business the market had not caught up with",
+            "lead": "The work was strong. The reputation was earned. But the way Disaster Care looked, sounded and described itself belonged to an earlier version of the business.",
+            "text": "<p>Built over two decades as an independently owned, second generation disaster recovery business, Disaster Care had developed into a substantial national organisation with strong technical expertise, an established network and a reputation built on helping people recover after fire, flood and other major property incidents.</p><p><strong>But its outward presentation had not kept pace.</strong></p><p>The identity, website and language were increasingly disconnected from the scale, expertise and ambition of the organisation behind them.</p><p>That matters because when the way a business presents itself falls behind the reality inside it, customers, employees, partners, referrers and prospective clients can form an incomplete picture of its capability.</p>",
+            "image": 3768,
+            "pull": "A good business can begin to undersell itself."
+        },
+        "question": {
+            "question": "What did this business now stand for, how should it compete and communicate, and how should that be expressed?",
+            "text": "<p>For Disaster Care, the visible problem was the way the business presented itself. But the answer needed to start deeper than design.</p><p>This was not simply a branding problem. It was a strategic marketing challenge: understanding where the organisation wanted to go, what its audiences valued, how employees experienced the business, how the market saw it, and what choices Disaster Care should make as a result.</p><p>Brand identity and the website would become important outputs, but only after those strategic marketing questions had been properly understood.</p>"
+        },
+        "stages": [
+            {
+                "stage": "understand",
+                "heading": "Start with the organisation, not the deliverable",
+                "lead": "Repositioning is a business decision before it becomes a creative one.",
+                "text": "<p>Understand is therefore not simply a research service. It is the consultancy discipline of deciding what needs to be understood before making strategic marketing recommendations about what should change.</p><p>For Disaster Care, Mackman Group framed the strategic questions and looked at the organisation from four perspectives. Specialist research delivery from Mackman Research then provided the evidence needed to test assumptions and deepen that understanding.</p>",
+                "image": "",
+                "caption": "",
+                "points_kicker": "Four perspectives",
+                "points_layout": "grid",
+                "points_intro": "",
+                "points": [
+                    {
+                        "label": "",
+                        "title": "Intended direction",
+                        "text": "Where did the Board and senior leadership want to take the organisation?"
+                    },
+                    {
+                        "label": "",
+                        "title": "Inside the organisation",
+                        "text": "What was Disaster Care really like from the perspective of its people, operations, leadership and network?"
+                    },
+                    {
+                        "label": "",
+                        "title": "Clients and referrers",
+                        "text": "What did the people who experienced, commissioned and recommended Disaster Care genuinely value?"
+                    },
+                    {
+                        "label": "",
+                        "title": "The market",
+                        "text": "How was the organisation currently understood externally and in relation to its competitors?"
+                    }
+                ],
+                "panel": {
+                    "heading": "The opportunity was in none of those views alone. It was in the gaps between them.",
+                    "position": "after",
+                    "text": "<p><strong>No single perspective could provide the answer on its own.</strong></p><p>Those gaps showed where organisational reality, leadership ambition and external perception needed to be brought into closer alignment.</p><p>The evidence gathering was rigorous, but the value did not come from research in isolation. It came from bringing evidence into the wider strategic marketing consultancy process and using it to inform judgement, priorities and recommendations.</p>",
+                    "steps": "Leadership ambition\nOrganisational reality\nExternal perception",
+                    "pull": "",
+                    "image": ""
+                },
+                "pull": ""
+            },
+            {
+                "stage": "shape",
+                "heading": "Turning evidence into strategic direction",
+                "lead": "Evidence creates understanding. Strategy requires judgement.",
+                "text": "<p>Shape is where Mackman Group’s senior consultants bring the different perspectives together, identify the important gaps and opportunities, and make the strategic marketing choices that establish a clear direction.</p><p>For Disaster Care, that meant considering how the organisation should position itself, what it should prioritise, what it should communicate, how it should behave and how those decisions should be expressed.</p><p><strong>From that work we created Disaster Care’s Golden Thread and the connected strategic direction that followed.</strong></p>",
+                "image": "",
+                "caption": "",
+                "points_kicker": "",
+                "points_layout": "grid",
+                "points_intro": "From that framework came a clearer way for Disaster Care to express both what it does and why it matters.",
+                "points": [
+                    {
+                        "label": "Emotive expression",
+                        "title": "Resilience Restored",
+                        "text": "An emotive expression of the outcome Disaster Care seeks to create for people, property and communities."
+                    },
+                    {
+                        "label": "Professional descriptor",
+                        "title": "Disaster Recovery Leaders",
+                        "text": "A clear professional descriptor communicating expertise, authority and Disaster Care’s role within the disaster recovery sector."
+                    },
+                    {
+                        "label": "Organising idea",
+                        "title": "Care in Action",
+                        "text": "An organising idea that helps Disaster Care demonstrate its purpose and values through the behaviour of its people and network."
+                    }
+                ],
+                "panel": {
+                    "heading": "The Golden Thread",
+                    "position": "before",
+                    "text": "<p>The Golden Thread brought together the organisation’s vision, purpose, mission, values, guiding principles and market facing expression within one connected framework.</p><p><strong>Its purpose was not simply to describe the brand.</strong> It created a common reference point for how Disaster Care makes decisions, behaves as an organisation and communicates with its audiences, connecting thinking in the boardroom with the experience delivered on the ground.</p>",
+                    "steps": "Vision\nPurpose\nMission\nValues\nGuiding principles\nMarket facing expression",
+                    "pull": "Not a strapline, but a system.",
+                    "image": ""
+                },
+                "pull": "The Golden Thread also provided the foundation for connected strategic work across marketing, brand and ESG. These were not separate briefs. They were different expressions of the same strategic direction."
+            },
+            {
+                "stage": "deliver",
+                "heading": "Making the strategy visible",
+                "lead": "Strategy becomes useful when people can experience it.",
+                "text": "<p><strong>Once the strategic direction was clear, specialist delivery became the dominant requirement.</strong> The strategy was translated into the things people would actually see, read and use.</p><p>For Disaster Care, Mackman Branding and Marketing provided much of that capability across brand, website, content, marketing communications and campaign activity, while the senior consultancy team remained connected to the work so that the strategic intent was not lost between recommendation and execution.</p>",
+                "image": 3528,
+                "caption": "",
+                "points_kicker": "",
+                "points_layout": "list",
+                "points_intro": "",
+                "points": [
+                    {
+                        "label": "",
+                        "title": "Identity",
+                        "text": "The refreshed identity gave Disaster Care a clearer and more confident expression of the organisation it had become."
+                    },
+                    {
+                        "label": "",
+                        "title": "Website",
+                        "text": "The new website brought the positioning, messaging and visual system together in a digital experience designed around the people Disaster Care serves."
+                    },
+                    {
+                        "label": "",
+                        "title": "Language",
+                        "text": "The language of the organisation changed too, creating greater consistency in how Disaster Care describes itself, its expertise and the value it creates."
+                    }
+                ],
+                "panel": {
+                    "heading": "",
+                    "position": "after",
+                    "text": "",
+                    "steps": "",
+                    "pull": "",
+                    "image": ""
+                },
+                "pull": "Across identity, digital and communications, the objective remained the same: make the way Disaster Care presents itself better reflect the organisation behind it."
+            },
+            {
+                "stage": "grow",
+                "heading": "Continuous improvement, not an endpoint",
+                "lead": "Delivery is not the end of the relationship.",
+                "text": "<p>Mackman continued to work with Disaster Care beyond the launch of the identity and website, combining senior strategic marketing consultancy with ongoing brand stewardship, communications planning, content, tactical marketing, campaign delivery, digital support, measurement and further specialist delivery.</p><p>That continuity matters because strategy creates lasting value only when it continues to influence the decisions, communications and experiences that follow. The senior consultancy relationship retains the context across those cycles, while specialist teams provide the delivery capability required at each point.</p>",
+                "image": "",
+                "caption": "",
+                "points_kicker": "",
+                "points_layout": "grid",
+                "points_intro": "",
+                "points": [],
+                "panel": {
+                    "heading": "As an organisation, its audiences and its market change, new questions emerge.",
+                    "position": "after",
+                    "text": "<p>New evidence may be needed. Marketing priorities may change. Recommendations may need refining. Audiences, propositions, channels, messages and delivery priorities can all need to be revisited.</p><p>Grow therefore contains further iterations of the same Mackman approach:</p>",
+                    "steps": "Understand what has changed\nShape the response\nDeliver what is needed\nLearn and improve again",
+                    "pull": "",
+                    "image": ""
+                },
+                "pull": "This is what Grow means within the Mackman approach: continuous improvement rather than a project that stops at launch."
+            }
+        ],
+        "testimonial": {
+            "quote": "They gave us one clear way to say who we are. After years of saying it differently in every part of the business, that is no small thing.",
+            "name": "Chris Netherton",
+            "role": "CEO, Disaster Care",
+            "approved": false
+        },
+        "outcome": {
+            "kicker": "",
+            "heading": "Closing the gap",
+            "lead": "The clearest outcome of the work is visible.",
+            "items": "The Golden Thread\nPositioning\nMarketing direction\nIdentity\nWebsite\nCommunications",
+            "text": "<p>Disaster Care now presents itself in a way that is more consistent with the scale, expertise, ambition and character of the organisation behind it. The Golden Thread, positioning, marketing direction, identity, website and communications operate as connected parts of one strategic direction rather than isolated pieces of work.</p><p><strong>And Mackman’s involvement did not stop when those assets launched.</strong> The relationship continued through senior strategic support, brand stewardship, marketing communications, digital development, further evidence and ongoing specialist delivery as Disaster Care entered its next chapter.</p>"
+        },
+        "team": {
+            "kicker": "How the engagement was led",
+            "heading": "Senior consultancy, specialist depth",
+            "text": "<p>Mackman Group holds the senior strategic marketing consultancy relationship, while our specialist divisions provide professional research, creative, digital, communications and marketing delivery.</p><p>For clients, the value is straightforward: senior consultants remain close to the challenge, while specialist teams are available to research, create, build, communicate and deliver without the strategic thread being lost.</p>",
+            "image": 3508,
+            "items": [
+                {
+                    "role": "Senior strategic marketing consultancy",
+                    "name": "Mackman Group",
+                    "text": "Mackman Group’s consultancy projects and strategic client relationships are led by Paul Mackman, maintaining the commercial context and connecting evidence, strategy and delivery across the engagement.",
+                    "link": {
+                        "title": "",
+                        "url": "{{page:meet-the-mackman-group-business-consultants}}",
+                        "target": ""
+                    }
+                },
+                {
+                    "role": "Specialist research",
+                    "name": "Mackman Research",
+                    "text": "Mackman Research, led by Dr Gemma Mackman, operates as an MRS Company Partner, bringing specialist research expertise into the wider consultancy process.",
+                    "link": {
+                        "title": "",
+                        "url": "{{page:our-brands/mackman-research}}",
+                        "target": ""
+                    }
+                },
+                {
+                    "role": "Specialist delivery",
+                    "name": "Mackman Branding and Marketing",
+                    "text": "Mackman Branding and Marketing, led by Bruce Burgoyne CFCIM, brings senior creative direction and specialist brand, digital and marketing delivery.",
+                    "link": {
+                        "title": "",
+                        "url": "{{page:our-brands/strategic-marketing-consultants}}",
+                        "target": ""
+                    }
+                }
+            ]
+        },
+        "cta": {
+            "kicker": "Ask an expert",
+            "heading": "Has your organisation moved on faster than the way it presents itself?",
+            "text": "Businesses rarely wake up one morning and discover that their brand is suddenly wrong. More often, the business has simply changed. Mackman Group helps organisations understand what has changed, shape the right strategic response, bring in the specialist expertise needed to deliver it, and stay involved as the organisation continues to grow.",
+            "button": {
+                "title": "Start a conversation",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            }
+        }
+    }
+}

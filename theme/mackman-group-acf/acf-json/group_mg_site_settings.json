@@ -330,6 +330,72 @@
             "instructions": "Optional small print after the copyright line, such as the company number. The copyright line and year are added automatically.",
             "rows": 2,
             "new_lines": ""
+        },
+        {
+            "key": "field_mg_site_settings_tab_case_studies",
+            "label": "Case studies",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_site_settings_case_studies_page",
+            "label": "Case studies page",
+            "name": "case_studies_page",
+            "type": "page_link",
+            "instructions": "The page that lists all case studies, used in the breadcrumb and the More case studies link. Leave empty until that page exists.",
+            "post_type": [
+                "page"
+            ],
+            "allow_null": 1,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_mg_site_settings_case_study_cta",
+            "label": "Default call to action",
+            "name": "case_study_cta",
+            "type": "group",
+            "instructions": "Shown at the end of a case study that has no call to action of its own.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_site_settings_case_study_cta_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_case_study_cta_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 100,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_site_settings_case_study_cta_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_site_settings_case_study_cta_button",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "return_format": "array"
+                }
+            ]
         }
     ],
     "location": [
@@ -350,5 +416,5 @@
     "active": true,
     "description": "Global settings shown in the header and footer.",
     "show_in_rest": 0,
-    "modified": 1794000500
+    "modified": 1794200000
 }

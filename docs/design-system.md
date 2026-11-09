@@ -102,6 +102,22 @@ All are shown in the style guide.
 - **Call to action band:** green section with a large heading and the gold button.
 - **Forms:** visible labels, hints under the label, errors beside the field, 48px tall fields.
 - **Header and footer:** static versions only for now. The mobile menu will follow the wordpress-test pattern.
+- **Thread:** items joined by a gold line with a dot at each; across on wide screens, down on phones. Used for links to a case study's stages, the parts of a framework and what was delivered.
+- **Breadcrumb:** small, soft text with slashes between; links underlined like all links, each row at least 44px tall.
+
+### Case study
+
+Added on 9 November 2026 (`single-case-study.php`). Case studies tell a story in a fixed order, so they need to look different from the service (Division) pages while using the same tokens.
+
+- **Opening:** green, with a breadcrumb, "Case study" and the type of work as a ruled kicker, a large H1 and an **overview panel** beside it: a gold top rule and rule-divided rows (client logo, sector, location, services, when, one note in gold). Below a hairline, the lead line in gold Garamond beside the summary.
+- **Film or image:** overlaps the foot of the green opening. The film plays in the existing video dialog (youtube-nocookie, loaded only on press). The play mark is a gold circle; the label sits on solid green so it reads over any photo.
+- **Stage rail:** each stage (01 Understand, 02 Shape, 03 Deliver, 04 Grow) has a numbered gold circle on a gold line that runs through all the stages on screens from 64rem, ending in a dot. On phones the circle sits above the stage name and the line is hidden. Stages alternate white and base, starting with white.
+- **Highlight panel:** a green panel inside a stage for its central idea: heading and text, a pull line in gold or a diagram beside them, and an optional thread across the foot.
+- **Points:** the hairline card grid (two to four columns), or numbered rows with hairlines between.
+- **Pull line:** Garamond at H3 size under a short gold rule. Not italic, so it is not mistaken for a quote.
+- **The question:** a green panel closing the challenge, with the question in Garamond beside the supporting text.
+- **Results:** the figures component, with each figure's source in small text. Only evidenced figures.
+- **Testimonial:** the existing quote section on mint, shown to visitors only once approval is recorded.
 
 ## Motion
 

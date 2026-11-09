@@ -30,10 +30,11 @@ ACF Pro is active (the free ACF plugin is installed but inactive). The live site
 ```
 CLAUDE.md
 content/pages/*.json        page content: path, template, ACF fields (images are attachment IDs)
+content/case-studies/*.json case study content: path, post_type, terms (sector, location), ACF fields
 content/site-settings.json  Site Settings values (contact, logos, side panel, footer)
 docs/design-system.md       colour, type, components, rules (read before design work)
 docs/style-guide.html       every token and component, rendered with the theme CSS
-scripts/seed.php            pushes content/ into WordPress (never creates pages, never touches post_content)
+scripts/seed.php            pushes content/ into WordPress (never creates posts, never touches post_content; creates missing terms)
 scripts/check.sh            lint, JSON, render key pages, report new PHP errors
 scripts/preview.sh          fallback only: snapshot pages to localhost:8766 if the certificate stops being trusted
 theme/mackman-group-acf/
@@ -41,20 +42,22 @@ theme/mackman-group-acf/
   assets/css/tokens.css     design tokens
   assets/css/main.css       base styles and all components
   assets/css/article.css    article content (site and block editor)
-  assets/js/                menu.js (mobile panel), nav.js (drop-downs), video.js (hero video dialog)
-  inc/                      acf, editor, forms, helpers, nav (walker), news, tracking (GTM)
+  assets/js/                menu.js (mobile panel), nav.js (drop-downs), video.js (film dialog: home hero, case studies)
+  inc/                      acf, case-studies, editor, forms, helpers, nav (walker), news, tracking (GTM)
   page-templates/division.php
-  front-page.php, home.php (News), archive.php, single.php, page.php, index.php, 404.php
+  front-page.php, home.php (News), archive.php, single.php, single-case-study.php, page.php, index.php, 404.php
   template-parts/sections/  intro, hero, features, quote, closing, text-split, standards, news, cta
   template-parts/news/      card, lead, topics, related
+  template-parts/case-study/ opening, results, challenge, stage, panel, outcome, team, related, card
 ```
 
 ## Common tasks
 
 **Seed content** (from `app/public`, after sourcing `.envrc`):
 ```bash
-wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php                 # all pages and Site Settings
+wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php                 # all pages, case studies and Site Settings
 wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php mackman-research
+wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php disaster-care-brand-repositioning
 wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 ```
 
@@ -63,6 +66,8 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 2. `acf-json/group_mg_<name>.json` with location `page_template == page-templates/<name>.php`.
 3. Add `page_template != page-templates/<name>.php` to `group_mg_default.json`'s location.
 4. `content/pages/<slug>.json` with the original content (extract it from the page's blocks with `wp eval` and `parse_blocks`), then seed.
+
+**Move a case study into the template**: the `case-study` post type and its Sector and Location taxonomies are registered in the database through ACF (ACF > Post Types), not in the repo. Fields are in `acf-json/group_mg_case_study.json`. Write `content/case-studies/<slug>.json` (copy the Disaster Care file), extract the wording from the post's blocks, then seed. Until a case study has a challenge heading or a stage, `single-case-study.php` shows its old block content in the article layout. Testimonials only show to visitors once the Approved switch is on.
 
 **Check work**: `scripts/check.sh` after every change. For visual checks, open the page on https://mackmang-mackman-group.test in the browser pane. For small changes, a desktop check is enough; keep phone checks for layout work. Screenshots are expensive: prefer measuring with JavaScript.
 
@@ -79,10 +84,11 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 
 ## Status and open items
 
-Done: design system, theme scaffold, Division template (Mackman Research seeded), Home, drop-down navigation, footer and logos, side panel, card grid, News archive and articles.
+Done: design system, theme scaffold, Division template (Mackman Research seeded), Home, drop-down navigation, footer and logos, side panel, card grid, News archive and articles, case study template (Disaster Care Brand Repositioning seeded).
 
 Open:
-- Division template for Mackman, Red Kite and Training and Coaching; About, Values, Accreditations, Contact, case studies, team members.
+- Division template for Mackman, Red Kite and Training and Coaching; About, Values, Accreditations, Contact, team members.
+- Case studies: move William Blyth, The Property Institute, Disaster Care Three Month Strategic Programme and Holmes & Hills (draft) into the template; build a case studies index page and set it in Site Settings > Case studies. Disaster Care needs client sign-off on the testimonial and the Aviva line, and alt text on its photos.
 - Copy review: unevidenced claims and testimonial approvals flagged in earlier work.
 - Clean-up of the 56 posts (old spacers, columns, inline styles are only hidden by CSS).
 - Remove LearnDash and Oxygen data (back up the database first).

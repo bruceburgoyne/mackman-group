@@ -1,29 +1,34 @@
 <?php
 /**
  * Push content from the content/ folder into WordPress: page fields from
- * content/pages/*.json, and Site Settings from content/site-settings.json.
+ * content/pages/*.json, case study fields from content/case-studies/*.json,
+ * and Site Settings from content/site-settings.json.
  *
  * Run with WP-CLI from the site's app/public folder (Local's site shell):
  *
  *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php
  *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php mackman-research
+ *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php disaster-care-brand-repositioning
  *   wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
  *
- * With no argument, every page and Site Settings are pushed. Otherwise the
- * argument is a file name in content/pages (without .json) to push one page,
- * or "site-settings" to push Site Settings only.
+ * With no argument, every page, every case study and Site Settings are
+ * pushed. Otherwise the argument is a file name (without .json) in
+ * content/pages or content/case-studies, or "site-settings".
  *
  * Each JSON file has:
- * - path:     the page's path, for example "our-brands/mackman-research".
- *             The page must already exist: this script never creates pages.
- * - template: the page template file to assign.
- * - fields:   ACF values by field name. Images are attachment IDs from the
- *             media library. In link URLs, "{{page:path}}" becomes that page's
- *             permalink.
+ * - path:      the post's path, for example "our-brands/mackman-research".
+ *              The post must already exist: this script never creates posts.
+ * - post_type: optional, default "page" (case studies use "case-study").
+ * - template:  the page template file to assign (pages only).
+ * - terms:     optional, taxonomy => list of term names. Missing terms are
+ *              created; the post's terms in that taxonomy are replaced.
+ * - fields:    ACF values by field name. Images are attachment IDs from the
+ *              media library. In link URLs, "{{page:path}}" becomes that page's
+ *              permalink.
  *
  * Safe to run again. Values in the files overwrite those fields in
- * WordPress, so once editing moves to WP Admin, stop pushing that page.
- * The page's original block content (post_content) is never touched.
+ * WordPress, so once editing moves to WP Admin, stop pushing that post.
+ * The post's original block content (post_content) is never touched.
  *
  * @package mackman-group-acf
  */
@@ -37,13 +42,23 @@ if ( ! function_exists( 'acf_get_field_groups' ) ) {
 }
 
 $mg_content  = dirname( __DIR__ ) . '/content';
-$mg_dir      = $mg_content . '/pages';
+$mg_dirs     = array( $mg_content . '/pages', $mg_content . '/case-studies' );
 $mg_only     = isset( $args[0] ) ? sanitize_file_name( $args[0] ) : '';
 $mg_settings = ( '' === $mg_only || 'site-settings' === $mg_only );
-if ( 'site-settings' === $mg_only ) {
-	$mg_files = array();
-} else {
-	$mg_files = $mg_only ? array( "{$mg_dir}/{$mg_only}.json" ) : glob( "{$mg_dir}/*.json" );
+$mg_files    = array();
+if ( '' === $mg_only ) {
+	foreach ( $mg_dirs as $mg_dir ) {
+		$mg_files = array_merge( $mg_files, (array) glob( "{$mg_dir}/*.json" ) );
+	}
+} elseif ( 'site-settings' !== $mg_only ) {
+	foreach ( $mg_dirs as $mg_dir ) {
+		if ( is_readable( "{$mg_dir}/{$mg_only}.json" ) ) {
+			$mg_files[] = "{$mg_dir}/{$mg_only}.json";
+		}
+	}
+	if ( ! $mg_files ) {
+		WP_CLI::error( "No content file called {$mg_only}.json." );
+	}
 }
 
 /**
@@ -100,17 +115,39 @@ foreach ( $mg_files as $mg_file ) {
 
 	$mg_def = json_decode( file_get_contents( $mg_file ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions
 	if ( ! is_array( $mg_def ) || empty( $mg_def['path'] ) ) {
-		WP_CLI::error( "{$mg_file} is not valid page JSON: " . json_last_error_msg() );
+		WP_CLI::error( "{$mg_file} is not valid content JSON: " . json_last_error_msg() );
 	}
 
-	$mg_page = get_page_by_path( $mg_def['path'] );
+	$mg_type = ! empty( $mg_def['post_type'] ) ? $mg_def['post_type'] : 'page';
+	$mg_page = get_page_by_path( $mg_def['path'], OBJECT, $mg_type );
 	if ( ! $mg_page ) {
-		WP_CLI::warning( "No page at '{$mg_def['path']}'. Skipped." );
+		WP_CLI::warning( "No {$mg_type} at '{$mg_def['path']}'. Skipped." );
 		continue;
 	}
 
-	if ( ! empty( $mg_def['template'] ) ) {
+	if ( 'page' === $mg_type && ! empty( $mg_def['template'] ) ) {
 		update_post_meta( $mg_page->ID, '_wp_page_template', $mg_def['template'] );
+	}
+
+	foreach ( (array) ( $mg_def['terms'] ?? array() ) as $mg_tax => $mg_names ) {
+		if ( ! taxonomy_exists( $mg_tax ) ) {
+			WP_CLI::warning( "No taxonomy '{$mg_tax}'. Terms skipped." );
+			continue;
+		}
+		$mg_term_ids = array();
+		foreach ( (array) $mg_names as $mg_name ) {
+			$mg_term = term_exists( $mg_name, $mg_tax );
+			if ( ! $mg_term ) {
+				$mg_term = wp_insert_term( $mg_name, $mg_tax );
+				if ( is_wp_error( $mg_term ) ) {
+					WP_CLI::warning( "Could not add '{$mg_name}' to {$mg_tax}: " . $mg_term->get_error_message() );
+					continue;
+				}
+				WP_CLI::log( "Added '{$mg_name}' to {$mg_tax}." );
+			}
+			$mg_term_ids[] = (int) $mg_term['term_id'];
+		}
+		wp_set_object_terms( $mg_page->ID, $mg_term_ids, $mg_tax );
 	}
 
 	$mg_map = mg_seed_field_map( $mg_page->ID );
@@ -123,7 +160,7 @@ foreach ( $mg_files as $mg_file ) {
 	}
 
 	clean_post_cache( $mg_page->ID );
-	WP_CLI::success( "Updated {$mg_def['path']} (page {$mg_page->ID})." );
+	WP_CLI::success( "Updated {$mg_def['path']} ({$mg_type} {$mg_page->ID})." );
 }
 
 // Site Settings (the ACF options page).

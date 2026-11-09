@@ -89,6 +89,17 @@
         "side_logo": 1578,
         "side_logo_name": "Certified B Corporation",
         "side_logo_link": "{{page:mackman-group-values/b-corp}}",
-        "side_phone": true
+        "side_phone": true,
+        "case_studies_page": "",
+        "case_study_cta": {
+            "kicker": "",
+            "heading": "Together we grow",
+            "text": "",
+            "button": {
+                "title": "Contact our senior consultants",
+                "url": "{{page:contact-mackman-group}}",
+                "target": ""
+            }
+        }
     }
 }

@@ -59,14 +59,7 @@ $mg_video_id = ! empty( $mg_data['video_url'] ) ? mg_youtube_id( $mg_data['video
 	<?php endif; ?>
 </section>
 
-<?php if ( $mg_video_id ) : ?>
-	<dialog class="video-dialog" aria-label="<?php echo esc_attr( ! empty( $mg_data['video_label'] ) ? $mg_data['video_label'] : __( 'Video', 'mackman-group-acf' ) ); ?>">
-		<form method="dialog" class="video-dialog__bar">
-			<button class="video-dialog__close" type="submit">
-				<span class="screen-reader-text"><?php esc_html_e( 'Close video', 'mackman-group-acf' ); ?></span>
-				<span class="mobile-panel__close-icon" aria-hidden="true"></span>
-			</button>
-		</form>
-		<div class="video-dialog__frame"></div>
-	</dialog>
-<?php endif; ?>
+<?php
+if ( $mg_video_id ) {
+	get_template_part( 'template-parts/video-dialog', null, array( 'label' => ! empty( $mg_data['video_label'] ) ? $mg_data['video_label'] : '' ) );
+}
