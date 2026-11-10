@@ -2,8 +2,8 @@
 /**
  * ACF Pro integration: local JSON field groups and the Site Settings page.
  *
- * Field groups are stored as JSON in the theme's acf-json folder and kept in
- * Git. ACF loads them from there, and any edits made in WP Admin are written
+ * Field groups, post types and taxonomies are stored as JSON in the theme's
+ * acf-json folder and kept in Git. ACF loads them from there, and any edits made in WP Admin are written
  * back to the same folder so they can be committed.
  *
  * @package mackman-group-acf

@@ -1,8 +1,8 @@
 <?php
 /**
- * Team members: the team_members post type is registered in the database
- * through ACF (ACF > Post Types). Profile fields are in
- * acf-json/group_mg_team_member.json.
+ * Team members: the team_members post type is registered by ACF
+ * (ACF > Post Types) from acf-json/post_type_659574f4b00ea.json. Profile
+ * fields are in acf-json/group_mg_team_member.json.
  *
  * Post titles on the live site read "Name | Role", so the name and role
  * fall back to the two halves of the title until their fields are filled.

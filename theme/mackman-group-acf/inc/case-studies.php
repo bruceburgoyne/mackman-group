@@ -4,8 +4,10 @@
  * template-parts/case-study/.
  *
  * The case-study post type and its Sector and Location taxonomies are
- * registered in the database through ACF (ACF > Post Types), not here.
- * The fields are in acf-json/group_mg_case_study.json.
+ * registered by ACF (ACF > Post Types and Taxonomies), not here. Their
+ * definitions are kept as local JSON in acf-json/ (post_type_64b014ff8d5c3,
+ * taxonomy_67a5da55ceb0d, taxonomy_67a5da30e68a8). The fields are in
+ * acf-json/group_mg_case_study.json.
  *
  * @package mackman-group-acf
  */

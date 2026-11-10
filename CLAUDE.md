@@ -35,11 +35,12 @@ content/team/*.json         team member profiles (post type team_members)
 content/site-settings.json  Site Settings values (contact, logos, side panel, footer)
 docs/design-system.md       colour, type, components, rules (read before design work)
 docs/style-guide.html       every token and component, rendered with the theme CSS
+docs/handover.md            how the site is built, for a developer without AI tools (keep it current)
 scripts/seed.php            pushes content/ into WordPress (never creates posts, never touches post_content; creates missing terms)
 scripts/check.sh            lint, JSON, render key pages, report new PHP errors
 scripts/preview.sh          fallback only: snapshot pages to localhost:8766 if the certificate stops being trusted
 theme/mackman-group-acf/
-  acf-json/                 field groups (ACF local JSON, synced both ways)
+  acf-json/                 field groups, post types and taxonomies (ACF local JSON, synced both ways; keep ACF's file names)
   assets/css/tokens.css     design tokens
   assets/css/main.css       base styles and all components
   assets/css/article.css    article content (site and block editor)
@@ -71,7 +72,7 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 
 **Content page template**: pages that are not divisions (About, Trust, Our business consultants, Values, B Corp, Accreditations, Contact, Newsletter) use `page-templates/content.php`: the green intro, then a flexible list of sections (text, text and image with optional film, cards, quote, team, form, call to action band, closing). In content files, each section is an object with `acf_fc_layout`. `{{file:ID}}` in any text becomes a media library URL. Team profiles (`single-team_members.php`, fields in `group_mg_team_member.json`) take the name and role from the post title ("Name | Role") until their own fields are filled.
 
-**Move a case study into the template**: the `case-study` post type and its Sector and Location taxonomies are registered in the database through ACF (ACF > Post Types), not in the repo. Fields are in `acf-json/group_mg_case_study.json`. Write `content/case-studies/<slug>.json` (copy the Disaster Care file), extract the wording from the post's blocks, then seed. Until a case study has a challenge heading or a stage, `single-case-study.php` shows its old block content in the article layout. Testimonials only show to visitors once the Approved switch is on.
+**Move a case study into the template**: the `case-study` post type and its Sector and Location taxonomies are registered by ACF (ACF > Post Types and Taxonomies) from local JSON in `acf-json/` (`post_type_*.json`, `taxonomy_*.json`), as is `team_members`. Fields are in `acf-json/group_mg_case_study.json`. Write `content/case-studies/<slug>.json` (copy the Disaster Care file), extract the wording from the post's blocks, then seed. Until a case study has a challenge heading or a stage, `single-case-study.php` shows its old block content in the article layout. Testimonials only show to visitors once the Approved switch is on.
 
 **Check work**: `scripts/check.sh` after every change. For visual checks, open the page on https://mackmang-mackman-group.test in the browser pane. For small changes, a desktop check is enough; keep phone checks for layout work. Screenshots are expensive: prefer measuring with JavaScript.
 

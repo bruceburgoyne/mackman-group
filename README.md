@@ -2,6 +2,8 @@
 
 The rebuild of [mackmangroup.co.uk](https://mackmangroup.co.uk) as a classic WordPress theme driven by Advanced Custom Fields (ACF Pro), replacing the current block theme.
 
+For how the site is built and how to run it without AI tools, read [docs/handover.md](docs/handover.md).
+
 It follows the method proven in [wordpress-test](https://github.com/bruceburgoyne/wordpress-test):
 
 - Every content area on every page is an ACF field. Pages have no block editor, so the design stays in the theme and stays consistent.
