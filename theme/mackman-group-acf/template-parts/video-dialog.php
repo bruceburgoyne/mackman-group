@@ -3,10 +3,19 @@
  * The dialog that plays a YouTube film when a .video-link is pressed
  * (assets/js/video.js). Output once, on pages that have a video link.
  *
- * Optional $args['label']: the dialog's accessible name.
+ * Optional $args['label']: the dialog's accessible name. When a film
+ * opens, the script renames the dialog after the link that opened it.
+ *
+ * Safe to request more than once (the home page has a film in the hero
+ * and in the featured case study): only the first request outputs it.
  *
  * @package mackman-group-acf
  */
+
+if ( ! empty( $GLOBALS['mg_video_dialog_done'] ) ) {
+	return;
+}
+$GLOBALS['mg_video_dialog_done'] = true;
 
 $mg_label = ! empty( $args['label'] ) ? $args['label'] : __( 'Video', 'mackman-group-acf' );
 ?>

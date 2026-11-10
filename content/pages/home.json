@@ -17,6 +17,13 @@
             "video_label": "Watch our introduction video",
             "image": 929
         },
+        "featured_case": {
+            "kicker": "",
+            "case_study": 3753,
+            "heading": "",
+            "text": "",
+            "button": ""
+        },
         "about": {
             "kicker": "Who we are",
             "heading": "One business consultancy, three divisions",

@@ -102,6 +102,72 @@
             "instructions": "The opening of the page, on green."
         },
         {
+            "key": "field_mg_home_tab_featured",
+            "label": "Featured case study",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_home_featured",
+            "label": "Featured case study",
+            "name": "featured_case",
+            "type": "group",
+            "instructions": "Shown just below the hero. Pick a published case study; the image, client, sector and results come from the case study itself. Leave the case study empty to hide this section.",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_home_featured_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "placeholder": "Featured case study",
+                    "instructions": "Leave empty for \"Featured case study\"."
+                },
+                {
+                    "key": "field_mg_home_featured_post",
+                    "label": "Case study",
+                    "name": "case_study",
+                    "type": "post_object",
+                    "post_type": [
+                        "case-study"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "return_format": "id",
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 1
+                },
+                {
+                    "key": "field_mg_home_featured_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "Optional. Leave empty to use the case study's own heading."
+                },
+                {
+                    "key": "field_mg_home_featured_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3,
+                    "new_lines": "",
+                    "instructions": "Optional. Leave empty to use the case study's lead line."
+                },
+                {
+                    "key": "field_mg_home_featured_button",
+                    "label": "Button text",
+                    "name": "button",
+                    "type": "text",
+                    "placeholder": "Read the case study",
+                    "instructions": "Leave empty for \"Read the case study\"."
+                }
+            ]
+        },
+        {
             "key": "field_mg_home_tab_about",
             "label": "Who we are",
             "name": "",
@@ -510,5 +576,5 @@
     "active": true,
     "description": "The home page (set as the front page in Settings > Reading).",
     "show_in_rest": 0,
-    "modified": 1794000200
+    "modified": 1794321971
 }

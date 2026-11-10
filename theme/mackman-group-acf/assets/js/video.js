@@ -25,6 +25,7 @@
 			iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
 			iframe.allowFullscreen = true;
 			frame.replaceChildren( iframe );
+			dialog.setAttribute( 'aria-label', iframe.title );
 			dialog.showModal();
 		} );
 	} );
