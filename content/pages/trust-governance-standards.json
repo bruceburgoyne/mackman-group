@@ -1,0 +1,114 @@
+{
+    "path": "meet-the-mackman-group-business-consultants/trust-governance-standards",
+    "template": "page-templates/content.php",
+    "source": "Copied from the block content of page 3713 on 10 November 2026, with the masthead caption and featured image as the intro. Wording kept as on the live site, apart from sentence-case headings and the H1, which follows the menu label. Cards are plain text, so the links inside paragraphs become the card's link. The two ISO cards have no logo: the only IMS logo in the media library (3715) is white and does not show on a light background.",
+    "fields": {
+        "intro": {
+            "kicker": "About us",
+            "heading": "Trust, governance and standards",
+            "text": "<p>Clients trust Mackman Group with business strategy, research evidence, personal data, brand assets, digital systems, employee information and commercially sensitive plans. We support that trust through clear governance, recognised professional standards and management systems that are reviewed and improved over time.</p>",
+            "button": null,
+            "image": 3528
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "cards",
+                "kicker": "Certifications",
+                "heading": "Mackman Group certifications",
+                "intro": "",
+                "columns": "2",
+                "surface": "",
+                "items": [
+                    {
+                        "icon": null,
+                        "title": "ISO/IEC 42001 Artificial Intelligence Management",
+                        "text": "Mackman Group is certified to ISO/IEC 42001:2023 by Citation ISO Certification.\n\nISO/IEC 42001 specifies requirements for an artificial intelligence management system. It helps organisations establish policies, responsibilities and processes for responsible development or use of AI and for managing related risks and opportunities.\n\nAt Mackman Group this includes approved platforms, staff training, an AI register, risk and impact assessments, supplier review, data rules, prohibited uses, defined human oversight and consideration of ethical and environmental impacts.",
+                        "link": {
+                            "title": "About ISO/IEC 42001",
+                            "url": "https://www.iso.org/standard/42001",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": null,
+                        "title": "ISO/IEC 27001 Information Security Management",
+                        "text": "Mackman Group is certified to ISO/IEC 27001:2022 by Citation ISO Certification.\n\nThe standard provides a structured information security management system. It helps us identify and manage risks affecting the confidentiality, integrity and availability of information across people, processes and technology.\n\nOur system applies across Mackman Group and its divisions.",
+                        "link": {
+                            "title": "About ISO/IEC 27001",
+                            "url": "https://www.iso.org/standard/27001",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 1882,
+                        "title": "Cyber Essentials Plus",
+                        "text": "Mackman Group holds Cyber Essentials Plus certification.\n\nThe National Cyber Security Centre describes Cyber Essentials as the Government recommended minimum standard of cyber security for organisations of all sizes. Cyber Essentials Plus covers the same five core technical controls as Cyber Essentials and adds independent technical testing to verify that those controls work in practice.",
+                        "link": {
+                            "title": "About Cyber Essentials",
+                            "url": "https://www.ncsc.gov.uk/cyberessentials/overview",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 1334,
+                        "title": "Certified B Corporation",
+                        "text": "Mackman Group is a certified B Corporation. B Corp certification reflects a wider commitment to responsible business and consideration of the impact of decisions on workers, clients, communities and the environment.\n\nThis informs the ethical and environmental context within which we make technology decisions. B Corp is not an AI or information security standard, but it is an important part of why responsible governance matters to us.",
+                        "link": {
+                            "title": "Our B Corp certification",
+                            "url": "{{page:mackman-group-values/b-corp}}",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 973,
+                        "title": "Market Research Society Company Partner",
+                        "text": "Mackman Research is an MRS Company Partner. This commits the research division to recognised professional standards and supports responsible treatment of participants, clients, data and evidence.\n\nThe MRS Code and guidance on AI and related technologies sit alongside our Group management systems.",
+                        "link": {
+                            "title": "MRS accredited companies",
+                            "url": "https://www.mrs.org.uk/company-partner/Accredited-Companies",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 891,
+                        "title": "Chartered Institute of Marketing Company Affiliate",
+                        "text": "Mackman Group is a CIM Company Affiliate. Our marketing practice is also informed by the professional responsibilities held by individual Chartered and Fellow members of the Chartered Institute of Marketing.",
+                        "link": {
+                            "title": "About CIM Company Affiliates",
+                            "url": "https://www.cim.co.uk/for-business/company-affiliate/",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "Professional codes",
+                "text": "<p>Members of our team hold professional memberships and statuses associated with CIM, <a href=\"https://cipr.co.uk\">CIPR</a> and MRS. These carry obligations relating to competence, ethics, integrity, confidentiality and continuing professional development.</p>",
+                "button": null,
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "Scope",
+                "text": "<p>The ISO/IEC 42001 and ISO/IEC 27001 certifications apply to Mackman Group and its operating divisions: <a href=\"https://mackman.co.uk\">Mackman Branding and Marketing</a>, <a href=\"https://www.mackmanresearch.co.uk\">Mackman Research</a> and <a href=\"https://www.redkitehrservices.co.uk\">Red Kite HR Services</a>.</p>",
+                "button": null,
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "Certification body",
+                "text": "<p>Mackman Group is certified to ISO/IEC 42001:2023 and ISO/IEC 27001:2022 by <a href=\"https://www.qmsuk.com\">Citation ISO Certification</a>. Citation ISO Certification states that it is accredited through ASCB and is not UKAS accredited.</p>\n<p>Copies of current certificates and further information can be supplied to procurement teams as part of appropriate supplier due diligence. For procurement, data protection or supplier assurance enquiries, please contact us.</p>",
+                "button": {
+                    "title": "Contact us",
+                    "url": "{{page:contact-mackman-group}}",
+                    "target": ""
+                },
+                "surface": "surface-white"
+            }
+        ]
+    }
+}

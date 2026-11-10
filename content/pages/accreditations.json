@@ -1,0 +1,164 @@
+{
+    "path": "accreditations",
+    "template": "page-templates/content.php",
+    "source": "Copied from the block content of page 239 on 10 November 2026, with the masthead caption and featured image as the intro. Wording kept as on the live site, apart from sentence-case headings and a missing space. Cards are plain text, so the links inside paragraphs become the card's link. The live page had no label above the H1.",
+    "fields": {
+        "intro": {
+            "kicker": "",
+            "heading": "",
+            "text": "<p>We have obtained several firm-wide and individual awards, accreditations and memberships, demonstrating our high standard of client care, best practice methods in marketing and business management and our commitment to delivering quality insight. As a result, we are best placed to continually invest in our team’s ongoing professional development.</p>",
+            "button": null,
+            "image": 1146
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "cards",
+                "kicker": "",
+                "heading": "Accreditations",
+                "intro": "",
+                "columns": "3",
+                "surface": "",
+                "items": [
+                    {
+                        "icon": 1334,
+                        "title": "B Corp certified",
+                        "text": "Mackman Group is proud to be a Certified B Corporation. This global accreditation recognises our commitment to balancing profit with purpose, holding ourselves accountable to the highest standards of social and environmental performance, transparency, and governance.",
+                        "link": {
+                            "title": "Learn more about our B Corp Certification journey",
+                            "url": "{{page:mackman-group-values/b-corp}}",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 2326,
+                        "title": "Living Wage Employer",
+                        "text": "In August 2022, The Mackman Group became an accredited Living Wage Employer by the Living Wage Foundation. We are proud to be one of only a few Sudbury-based organisations accredited, demonstrating our commitment to being an ethical business and employer of choice.",
+                        "link": {
+                            "title": "Living Wage Foundation",
+                            "url": "https://www.livingwage.org.uk/",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 2883,
+                        "title": "Living Hours Employer",
+                        "text": "As a Living Hours Employer, we go beyond the Living Wage commitment to provide secure, predictable hours for our team. This accreditation demonstrates our dedication to fair working practices and building a supportive, sustainable workplace.",
+                        "link": {
+                            "title": "About Living Hours",
+                            "url": "https://www.livingwage.org.uk/living-hours",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 891,
+                        "title": "CIM Corporate Partner",
+                        "text": "The Mackman Group is a Corporate Partner of The Chartered Institute of Marketing. Our affiliation with the CIM sends a clear signal to both staff and clients that we are committed to the continued professional development of our people, using the training and memberships provided by the institute as a critical component in achieving that.",
+                        "link": {
+                            "title": "Chartered Institute of Marketing",
+                            "url": "https://www.cim.co.uk/for-business/company-affiliate/",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 973,
+                        "title": "Market Research Society (MRS) Company Partner",
+                        "text": "As an accredited Market Research Society (MRS) Company Partner, we are committed to delivering insight to consistently high standards. We adhere to the MRS' strict codes of conduct when delivering all aspects of our research projects, and further abide by Fair Data (MRS) principles when handling and analysing subsequent respondent data. We demonstrate our competence and expertise by providing meaningful results and recommendations to inform strategies that support the broader business aims and objectives.",
+                        "link": {
+                            "title": "Market Research Society",
+                            "url": "https://www.mrs.org.uk",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 1882,
+                        "title": "Cyber Essentials certified",
+                        "text": "The Mackman Group is proud to be Cyber Essentials certified, demonstrating our commitment to maintaining the highest standards of cybersecurity. This independent verification ensures that our systems and processes meet rigorous security measures, protecting both client data and internal operations against common cyber threats.",
+                        "link": {
+                            "title": "About Cyber Essentials",
+                            "url": "https://www.ncsc.gov.uk/cyberessentials",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "acf_fc_layout": "cards",
+                "kicker": "",
+                "heading": "Awards",
+                "intro": "We are proud to have been recognised by respected industry bodies and organisations. Over the years, we have won a variety of awards that celebrate our expertise, values, and impact. Below are a select few highlights that demonstrate our commitment to excellence.",
+                "columns": "3",
+                "surface": "surface-white",
+                "items": [
+                    {
+                        "icon": 454,
+                        "title": "Business Awards Suffolk",
+                        "text": "'Changing lives special recognition' award finalist at The East Anglian Daily Times Business Awards. At the awards ceremony, judges praised our company’s ethos of developing our people and giving back to the local community.",
+                        "link": {
+                            "title": "EADT Business Awards",
+                            "url": "https://www.eadtbusinessawards.co.uk",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 456,
+                        "title": "MRS Operations Awards",
+                        "text": "Best Data Collection Winner\n\nThe following project was selected as the ‘Best Data Collection – Interviewer Administered’ winner at the MRS Operations Awards 2021.\n\nEssex County Council needed to know how better to support the Essex business community in challenging times. Following a tender process, Mackman Research was commissioned by Essex County Council to conduct a time-sensitive and critical business support survey during the early stages of the Covid-19 pandemic in 2020. The research gathered would help to shape Essex County Council’s business support and economic growth strategy, helping its businesses to survive and recover from the effects of the pandemic.",
+                        "link": {
+                            "title": "About the MRS",
+                            "url": "https://www.mrs.org.uk/about",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 2884,
+                        "title": "CIM Marketing Excellence Awards",
+                        "text": "Education Category\n\nWe were recognised at the CIM Marketing Excellence Awards in the Education category for our collaboration with Harlow College. The integrated campaign celebrated the College’s number one status, combining creative messaging with research-led strategy to raise awareness and engage key audiences. This award demonstrates our ability to deliver marketing solutions that are both innovative and impactful, achieving measurable results for our clients.",
+                        "link": null
+                    }
+                ]
+            },
+            {
+                "acf_fc_layout": "cards",
+                "kicker": "",
+                "heading": "Membership",
+                "intro": "",
+                "columns": "2",
+                "surface": "",
+                "items": [
+                    {
+                        "icon": 891,
+                        "title": "CIM memberships and qualifications",
+                        "text": "Holding membership with the CIM ensures that we remain consistent with our professional development, work to best practice policies and demonstrate our commitment to the marketing industry.\n\nSeveral of our staff hold CIM qualifications in Professional Marketing, and all our remaining team members are completing ongoing professional development, minimum of 35 hours per year, within the criteria of strategic marketing through online courses and webinars.",
+                        "link": null
+                    },
+                    {
+                        "icon": 811,
+                        "title": "CIPD memberships and qualifications",
+                        "text": "One member of our HR team holds a level 7 CIPD qualification and a membership for ongoing professional development. The knowledge and tools gained by this membership are crucial to designing high-level workforce strategies, remaining current with the fast-paced developments in human resource practices and driving continuous organisational improvement.",
+                        "link": {
+                            "title": "CIPD",
+                            "url": "https://www.cipd.org/en/",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "icon": 973,
+                        "title": "Market Research Society (MRS) members",
+                        "text": "Several of our researchers are individual members of the Market Research Society. This reflects both our dedication to personal professional development and our alignment with industry best practice.",
+                        "link": null
+                    },
+                    {
+                        "icon": 1752,
+                        "title": "CIPR members",
+                        "text": "Our communications specialists hold memberships with the Chartered Institute of Public Relations, reinforcing our commitment to ethical, effective, and strategic communications.",
+                        "link": {
+                            "title": "Chartered Institute of Public Relations",
+                            "url": "https://cipr.co.uk",
+                            "target": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -105,6 +105,16 @@ function mg_text( $text ) {
 }
 
 /**
+ * Split plain text into paragraphs at blank lines.
+ *
+ * @param string|null $text Text from a textarea field.
+ * @return string[] Non-empty paragraphs.
+ */
+function mg_paragraphs( $text ) {
+	return array_values( array_filter( array_map( 'trim', preg_split( '/\R\s*\R/', (string) $text ) ) ) );
+}
+
+/**
  * The video ID from a YouTube URL (watch, youtu.be, embed or shorts).
  *
  * @param string $url YouTube URL.

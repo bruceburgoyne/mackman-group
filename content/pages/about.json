@@ -1,0 +1,79 @@
+{
+    "path": "meet-the-mackman-group-business-consultants",
+    "template": "page-templates/content.php",
+    "source": "Copied from the block content of page 934 on 10 November 2026, with the masthead (kicker, caption, featured image) as the intro. Wording kept as on the live site, apart from sentence-case headings. The Certified B Corp block had a label but no heading on the live site, so its heading repeats the label.",
+    "fields": {
+        "intro": {
+            "kicker": "Meet the Mackman Group",
+            "heading": "",
+            "text": "<p>What unites The Mackman Group is our focus on supporting organisations to go further and achieve more, offering a unique perspective honed over 20 years in business.</p>",
+            "button": null,
+            "image": 1069
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "media",
+                "kicker": "Together we grow",
+                "heading": "Mackman Group senior business consultants",
+                "text": "<p>Drawing from the Directors of each of our divisions, our senior business consultants come together into one powerful blended team. We pride ourselves on offering a unique combination of professional consultancy expertise and best practice advice, blending market research, marketing strategies, brand expertise, and HR services. Our aim is to become an extension of your business, collaborating closely with you to develop and implement effective strategies that drive growth and success. Whether you want to expand your reach, improve your brand recognition, improve recruitment, or build a stronger brand or culture, we have the skills and experience to help you achieve your goals.</p>",
+                "button": {
+                    "title": "Meet our business consultants",
+                    "url": "{{page:senior-business-consultants}}",
+                    "target": ""
+                },
+                "image": 826,
+                "video_url": "",
+                "video_label": "",
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "About us",
+                "heading": "Mission statement",
+                "text": "<p>Mackman Group is a consultancy business with divisions specialising in market research, branding, marketing, and HR services. We provide strategic consultancy support and focused tactical management to premium brands as an important element of their growth strategy, specialising in a collaborative approach that bridges resource or knowledge gaps.</p>\n<p>Our clients value our ethical, plain-speaking approach, underpinned by best practice knowledge and experience. We offer a responsive service that ensures continuity and a guiding hand to ambitious organisations.</p>\n<p>We aim to achieve a high level of respect by demonstrating that our business is a force for good, with services provided pro-bono to selected purpose driven organisations that benefit the disadvantaged. We minimise our environmental impact upon the planet and promote leading environmental and sustainability values. Valuing our independence and the need to secure a future for our company and planet, we see continuous professional development as an essential element of our growth.</p>",
+                "button": null,
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "quote",
+                "quote": "The Mackman Group business consultants have been absolutely incredible. Our story hasn’t got any voice until it gets out into the community and The Mackman Group has been that voice for us.",
+                "name": "Dave Jackson",
+                "role": "The Bridge Project"
+            },
+            {
+                "acf_fc_layout": "media",
+                "kicker": "",
+                "heading": "Certified B Corp",
+                "text": "<p>As a certified <a href=\"https://bcorporation.uk\">B Corp</a>, we prioritise social and environmental responsibility in every aspect of our operations. We strive to make a positive impact on the world, focusing on the triple bottom line of people, planet and profit, proving that business can be a force for good.</p>",
+                "button": {
+                    "title": "Our B Corp certification",
+                    "url": "{{page:mackman-group-values/b-corp}}",
+                    "target": ""
+                },
+                "image": 1334,
+                "video_url": "",
+                "video_label": "",
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "Our story",
+                "heading": "Mackman Group: two decades of collaborative brand building",
+                "text": "<p>Back in December 2003, Gemma Mackman and her husband Paul embarked on their consultancy journey in Colchester. Combining Gemma’s market research skills with Paul’s marketing expertise, they set up their home office, with their newborn son by their side.</p>\n<blockquote><p>The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed.</p><cite>Carl Gustav Jung</cite></blockquote>\n<p>As their business grew, so did their family, prompting Gemma’s father, Merv, to join as the financial controller in 2005, stationed in the attic office of Twinkle Star House.</p>\n<p>With the family expanding and the home office bursting at the seams, they decided to rent a dedicated office space in late 2006, settling in The Old Press Rooms in Sudbury. This move marked the beginning of a restructuring phase and the start of scaling up operations by hiring more staff, notably Bruce Burgoyne, Creative Director.</p>\n<blockquote><p>In those early days, we operated on a shoestring budget, driven by our vision of creating a business that would positively impact our family and community.</p><cite>Paul Mackman</cite></blockquote>\n<p>By 2012, the team had grown to 10 employees, prompting another move to Meadow House for additional space, and establishing a satellite office for research at the University of Essex. Today, as the business continues to evolve and expand, our unwavering commitment to our core values remains steadfast, guiding our journey forward. In 2023, a third division joined the Group in the form of Red Kite HR Services managed by Lydia Boyden. Our unifying strapline “together we grow” is as relevant today as it was in the beginning.</p>\n<p>The future of our company is intricately woven into its past, motivating us to reflect on the milestones that have shaped our growth.</p>\n<blockquote><p>Coming together is a beginning, staying together is progress, and working together is success.</p><cite>Henry Ford</cite></blockquote>",
+                "button": null,
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "closing",
+                "heading": "",
+                "image": 830,
+                "text": "<p>We aim to become an extension of your business applying the expertise of our skilled business consultants, delivering full-service programmes to meet your organisational objectives.</p>",
+                "button": {
+                    "title": "Contact our senior business consultants to future-proof your business",
+                    "url": "{{page:contact-mackman-group}}",
+                    "target": ""
+                }
+            }
+        ]
+    }
+}

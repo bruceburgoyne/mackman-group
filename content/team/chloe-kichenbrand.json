@@ -1,0 +1,24 @@
+{
+    "path": "chloe-kichenbrand",
+    "post_type": "team_members",
+    "source": "Copied from the block content of team member 2753 on 10 November 2026. Wording kept as on the live site; the quotation marks and the name after each quote are left out because the design adds them. Testimonials are carried over as published; check each has the client's approval.",
+    "fields": {
+        "name": "Chloe Kichenbrand",
+        "role": "Group Operations Manager",
+        "intro": "As Group Operations Manager at Mackman Group, Chloe plays a central role in keeping the business running efficiently and effectively. She ensures that systems, resources, and processes support the smooth delivery of client projects while maintaining the Group’s commitment to quality, compliance, and service excellence.",
+        "quote": "Strong operations are the backbone of great client service. I focus on removing friction so our teams can do their best work—collaboratively, clearly, and with purpose.",
+        "profile": "<p>Chloe is responsible for the day-to-day operational coordination of the Mackman Group, overseeing internal systems, resource planning, and project process management. With a background in client services and operational support, she brings structure, consistency, and attention to detail to every aspect of delivery.</p>\n<p>Chloe is also a key point of contact for many clients—coordinating project progress updates, scheduling reviews, and ensuring clear communication throughout each stage of a project. Her involvement ensures that expectations are aligned and that projects remain on track, both in terms of timelines and deliverables.</p>\n<p>As a central interface between project teams and senior leadership, Chloe plays a critical role in ensuring that Mackman’s client work is delivered efficiently and to the highest standard. She supports compliance and audit activity, manages internal workflows, and contributes to supplier coordination and continuous improvement initiatives across the Group.</p>\n<p>Colleagues and clients alike value Chloe for her responsiveness, organisational clarity, and calm, solutions-focused approach. Her oversight allows the wider team to focus on specialist delivery while she ensures momentum, quality, and communication are maintained.</p>",
+        "expertise": "Operational and resource planning\nProject process management\nClient communications & project updates\nInternal systems & scheduling\nWorkflow coordination across teams\nSupplier management & commercial support\nCompliance, quality & risk tracking\nInternal communications & reporting\nCross-functional collaboration\nProcess optimisation & continuous improvement",
+        "testimonials": [
+            {
+                "quote": "Chloe instrumental in keeping our project on track. Her communication was clear, timely, and always reassuring—we knew exactly where we stood throughout.",
+                "source": "Marketing Manager, Higher Education Institution"
+            },
+            {
+                "quote": "From our first interaction, Chloe provided a calm and professional presence. She ensured the process ran smoothly, kept us updated at every stage, and was always quick to respond to queries.",
+                "source": "Head of Communications, National Charity"
+            }
+        ],
+        "linkedin": "https://www.linkedin.com/in/chloe-kichenbrand/"
+    }
+}

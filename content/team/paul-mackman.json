@@ -1,0 +1,24 @@
+{
+    "path": "paul-mackman",
+    "post_type": "team_members",
+    "source": "Copied from the block content of team member 2751 on 10 November 2026. Wording kept as on the live site; the quotation marks and the name after each quote are left out because the design adds them. Testimonials are carried over as published; check each has the client's approval.",
+    "fields": {
+        "name": "Paul Mackman",
+        "role": "Co-founder & Senior Marketing Consultant",
+        "intro": "As Managing Director and co-founder of Mackman Group, Paul leads the organisation with a commitment to purposeful business, strategic clarity, and collaborative consultancy. A Chartered Marketer and Chartered PR practitioner, he has over 25 years’ experience advising senior leaders and business owners on how to build ethical, high-performing brands that stand the test of time.",
+        "quote": "Effective strategy isn’t just about growth—it’s about alignment. When a brand’s values, actions, and message are coherent, it builds trust, resilience, and long-term impact.",
+        "profile": "<p>Paul Mackman is an experienced strategic consultant, non-executive director, and business leader specialising in brand, organisational development, and purposeful growth. As co-founder and Managing Director of Mackman Group—a <a href=\"{{page:mackman-group-values/b-corp}}\">B Corp certified organisation</a>—Paul has spent over two decades helping ambitious organisations navigate change, define their purpose, and build meaningful relationships with their audiences.</p>\n<p>A <strong>Fellow of the Chartered Institute of Marketing (FCIM)</strong> and <strong>Fellow of the Chartered Institute of Public Relations (FCIPR)</strong>, Paul combines strategic insight with a values-led approach. His consultancy work spans branding, stakeholder engagement, impact measurement, and the alignment of internal and external messaging. He is also a regular contributor to thought leadership on ethical marketing, regulation, and the evolving role of business in society.</p>\n<p>Paul leads many of Mackman Group’s flagship client projects, often working directly with Boards, CEOs, and senior teams. He brings together cross-functional insight from research, marketing, HR, and communications to develop integrated strategies that balance short-term results with long-term brand health.</p>\n<p>He also serves as a <strong>Non-Executive Director</strong> and as a <strong>trustee</strong> across several organisations, including the <a href=\"https://www.cim.co.uk\">Chartered Institute of Marketing</a> and the charity sector, and is a vocal advocate for sustainable, inclusive business practices. Clients and partners alike value his clarity of thinking, ability to create momentum, and commitment to doing business as a force for good.</p>",
+        "expertise": "Brand strategy & positioning\nOrganisational development & change\nPurpose-led business consultancy\nImpact measurement frameworks\nStakeholder engagement & communications\nLeadership facilitation & board-level consultancy\nStrategic marketing & communication planning\nRegulatory insight & ethical branding\nFractional Chief Marketing Officer (CMO) / Marketing Director / Strategic Advisor",
+        "testimonials": [
+            {
+                "quote": "Paul's ability to cut through complexity and bring clarity to our strategic challenges was transformative. His input helped us move from insight to action—and gave the leadership team renewed confidence in our direction.",
+                "source": "CEO, National Education Organisation"
+            },
+            {
+                "quote": "Paul is a trusted advisor who brings energy, integrity, and real strategic intelligence to the table. He listens carefully, challenges constructively, and consistently helps us raise our ambition.",
+                "source": "Chair, Charitable Trust"
+            }
+        ],
+        "linkedin": "https://www.linkedin.com/in/paulmackman/"
+    }
+}

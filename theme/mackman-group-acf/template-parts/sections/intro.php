@@ -10,7 +10,8 @@
  * example a division's overview): an H2, on the surface in
  * $args['surface'], hidden when the heading is empty.
  *
- * $args['data'] is an ACF group with: kicker, heading, text, button, image.
+ * $args['data'] is an ACF group with: kicker, heading, text, button, image,
+ * and optionally video_url and video_label.
  *
  * @package mackman-group-acf
  */
@@ -19,6 +20,11 @@ $mg_data    = isset( $args['data'] ) && is_array( $args['data'] ) ? $args['data'
 $mg_level   = isset( $args['level'] ) && 2 === (int) $args['level'] ? 2 : 1;
 $mg_surface = ! empty( $args['surface'] ) ? $args['surface'] : 'surface-green';
 $mg_image   = ! empty( $mg_data['image'] ) ? $mg_data['image'] : null;
+// Optional film (the Content page's text and image section). The page
+// template outputs the video dialog.
+$mg_video_id = ! empty( $mg_data['video_url'] ) ? mg_youtube_id( $mg_data['video_url'] ) : '';
+// Logos and illustrations (PNG or SVG) are shown whole, not cropped like photos.
+$mg_is_logo  = ! empty( $mg_image['ID'] ) && in_array( get_post_mime_type( $mg_image['ID'] ), array( 'image/png', 'image/svg+xml' ), true );
 
 if ( 1 === $mg_level ) {
 	$mg_heading = ! empty( $mg_data['heading'] ) ? $mg_data['heading'] : get_the_title();
@@ -44,12 +50,20 @@ if ( 1 === $mg_level ) {
 			<?php if ( ! empty( $mg_data['text'] ) ) : ?>
 				<div class="intro__body soft"><?php echo wp_kses_post( $mg_data['text'] ); ?></div>
 			<?php endif; ?>
-			<?php if ( ! empty( $mg_data['button']['url'] ) ) : ?>
-				<div class="button-row"><?php echo mg_link( $mg_data['button'], 1 === $mg_level ? 'button button--gold' : 'button', true ); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
+			<?php if ( ! empty( $mg_data['button']['url'] ) || $mg_video_id ) : ?>
+				<div class="button-row">
+					<?php echo mg_link( $mg_data['button'] ?? null, 1 === $mg_level ? 'button button--gold' : 'button', true ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+					<?php if ( $mg_video_id ) : ?>
+						<a class="text-link video-link" href="<?php echo esc_url( 'https://www.youtube.com/watch?v=' . $mg_video_id ); ?>" data-video-id="<?php echo esc_attr( $mg_video_id ); ?>">
+							<span class="video-link__icon" aria-hidden="true"></span>
+							<?php echo esc_html( ! empty( $mg_data['video_label'] ) ? $mg_data['video_label'] : __( 'Watch the video', 'mackman-group-acf' ) ); ?>
+						</a>
+					<?php endif; ?>
+				</div>
 			<?php endif; ?>
 		</div>
 		<?php if ( $mg_image ) : ?>
-			<figure class="intro__media">
+			<figure class="intro__media<?php echo $mg_is_logo ? ' intro__media--logo' : ''; ?>">
 				<?php
 				echo mg_image( // phpcs:ignore WordPress.Security.EscapeOutput
 					$mg_image,

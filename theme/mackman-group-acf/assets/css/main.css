@@ -2729,3 +2729,290 @@ html:not(.has-js) .site-nav .menu-item-has-children:focus-within > .sub-menu {
 	font-size: var(--step--1);
 	font-weight: var(--weight-bold);
 }
+
+/* ======================================================================
+ * Content pages (page-templates/content.php) and team profiles
+ * Added on 10 November 2026. Built from the existing components; only
+ * the pieces below are new.
+ * ====================================================================== */
+
+/* Running text: short quotations inside a text section */
+.prose blockquote {
+	margin: var(--space-l) 0;
+	padding-left: var(--space-m);
+	border-left: var(--rule-thick) solid var(--surface-accent);
+}
+
+.prose blockquote p {
+	color: var(--surface-heading);
+	font-family: var(--font-heading);
+	font-size: var(--step-1);
+	font-style: italic;
+	line-height: 1.45;
+}
+
+.prose blockquote cite {
+	display: block;
+	margin-top: var(--space-2xs);
+	font-size: var(--step--1);
+	font-style: normal;
+	font-weight: var(--weight-bold);
+}
+
+.prose h3 {
+	font-size: var(--step-2);
+}
+
+.text-split__body .button-row,
+.intro__body + .button-row {
+	margin-top: var(--space-l);
+}
+
+/* Text and image sections can hold several paragraphs and sub-headings */
+.intro--h2 .intro__body > * + * {
+	margin-top: var(--space-s);
+}
+
+.intro--h2 .intro__body h3 {
+	margin-top: var(--space-l);
+	font-size: var(--step-2);
+}
+
+/* Team: photo cards */
+.team-card__media {
+	aspect-ratio: 4 / 5;
+	overflow: hidden;
+	background: var(--mg-mint);
+}
+
+.team-card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.team-card .kicker {
+	margin-bottom: var(--space-2xs);
+}
+
+/* Form section: text and contact details beside a white form panel */
+.form-panel {
+	padding: var(--space-xl) var(--space-l);
+	border-top: var(--rule-thick) solid var(--mg-gold);
+	background: var(--surface-bg);
+}
+
+.contact-details {
+	display: grid;
+	gap: var(--space-m);
+	margin: var(--space-xl) 0 0;
+}
+
+.contact-details > div {
+	padding-top: var(--space-s);
+	border-top: var(--rule-thin) solid var(--surface-line);
+}
+
+.contact-details dt {
+	color: var(--surface-kicker);
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.contact-details dd {
+	margin: var(--space-3xs) 0 0;
+	font-size: var(--step-1);
+}
+
+.contact-details address {
+	font-style: normal;
+}
+
+/* Checkbox with its label beside it */
+.field--check {
+	grid-template-columns: auto 1fr;
+	align-items: start;
+	gap: var(--space-s);
+}
+
+.field--check input {
+	width: 1.5rem;
+	min-height: 0;
+	height: 1.5rem;
+	margin: 0.125rem 0 0;
+	accent-color: var(--mg-green);
+}
+
+.field--check label {
+	font-weight: var(--weight-regular);
+}
+
+.newsletter-form .field__hint {
+	margin-bottom: var(--space-m);
+}
+
+/* Mailchimp's spam trap: off screen, never focused */
+.newsletter-form__trap {
+	position: absolute;
+	left: -5000px;
+}
+
+/* Contact Form 7, styled to match .field. The form's own markup (labels
+ * wrapping the fields) is edited in WP Admin > Contact. */
+.wpcf7-form p {
+	margin: 0 0 var(--space-m);
+}
+
+.wpcf7-form label {
+	display: grid;
+	gap: var(--space-2xs);
+	font-weight: var(--weight-bold);
+}
+
+.wpcf7-form input:where([type="text"], [type="email"], [type="tel"]),
+.wpcf7-form textarea {
+	width: 100%;
+	min-height: var(--tap-min);
+	padding: 0.625rem 0.875rem;
+	border: 1px solid var(--mg-border-input);
+	border-radius: var(--radius);
+	background: var(--mg-white);
+	color: var(--mg-green);
+	font: inherit;
+	font-weight: var(--weight-regular);
+}
+
+.wpcf7-form textarea {
+	min-height: 8rem;
+	resize: vertical;
+}
+
+.wpcf7-form input:focus-visible,
+.wpcf7-form textarea:focus-visible {
+	border-color: var(--mg-green);
+	outline: var(--focus-width) solid var(--mg-green);
+	outline-offset: 0;
+}
+
+/* The consent checkbox (Mailchimp for WordPress) and the privacy note */
+.wpcf7-form .mc4wp-checkbox label {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-s);
+	font-weight: var(--weight-regular);
+}
+
+.wpcf7-form input[type="checkbox"] {
+	flex: none;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 0.125rem 0 0;
+	accent-color: var(--mg-green);
+}
+
+.wpcf7-form .wpcf7-submit {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--tap-min);
+	padding: 0.75rem 1.5rem;
+	border: 0;
+	border-radius: var(--radius);
+	background: var(--mg-green);
+	color: var(--mg-white);
+	font: inherit;
+	font-weight: var(--weight-bold);
+	cursor: pointer;
+	transition: background-color var(--duration-fast) var(--ease);
+}
+
+.wpcf7-form .wpcf7-submit:hover {
+	background: var(--mg-green-hover);
+}
+
+.wpcf7-not-valid {
+	border: 2px solid var(--mg-error) !important;
+}
+
+.wpcf7-not-valid-tip,
+.wpcf7-form .wpcf7-response-output {
+	display: block;
+	margin-top: var(--space-2xs);
+	color: var(--mg-error);
+	font-size: var(--step--1);
+	font-weight: var(--weight-bold);
+}
+
+.wpcf7-form.sent .wpcf7-response-output {
+	color: var(--mg-green);
+}
+
+.wpcf7-spinner {
+	margin-left: var(--space-s);
+}
+
+/* Profile: expertise as rule-divided columns, testimonials side by side */
+.profile__photo {
+	aspect-ratio: 4 / 5;
+}
+
+.expertise {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+	gap: 0 var(--grid-gap);
+	margin: var(--space-xl) 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.expertise li {
+	padding: var(--space-s) 0;
+	border-top: var(--rule-thin) solid var(--surface-line);
+}
+
+.testimonials {
+	display: grid;
+	gap: var(--space-xl) var(--grid-gap);
+	margin-top: var(--space-xl);
+}
+
+@media (min-width: 60rem) {
+	.testimonials {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.testimonials .quote p {
+	font-size: var(--step-1);
+}
+
+/* Logos and illustrations in a text and image section: whole, not cropped */
+.intro__media--logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: auto;
+	padding: var(--space-xl);
+	background: transparent;
+}
+
+.intro__media--logo .intro__img {
+	width: auto;
+	max-width: min(100%, 24rem);
+	height: auto;
+	max-height: 22rem;
+	object-fit: contain;
+}
+
+@media (min-width: 60rem) {
+	.intro__media--logo {
+		aspect-ratio: auto;
+	}
+}
+
+/* A label in a Contact Form 7 form that holds no field (a privacy note) */
+.wpcf7-form label:not(:has(input, textarea, select)) {
+	font-weight: var(--weight-regular);
+	font-size: var(--step--1);
+}

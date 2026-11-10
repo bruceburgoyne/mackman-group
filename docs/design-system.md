@@ -136,3 +136,13 @@ Hover and focus only: colour, underline thickness and a 3px arrow nudge, over 15
 - **Fonts:** the style guide loads EB Garamond and Lato from Google Fonts. The theme will self-host them as WOFF2 files, because Google Fonts sends visitor IP addresses to Google (a UK GDPR consideration).
 - **Icons:** the catalogue recommends SVG icons (Lucide or Heroicons) and no emoji. To confirm when the first icons are needed.
 - **Logos:** `logo-lockup.svg` (green, for the header) and `logo-stacked-reversed.svg` (white, for the footer) are copied from the current theme. Division logos are still to collect.
+
+### Content page and team profiles
+
+Added on 10 November 2026 (`page-templates/content.php`, `single-team_members.php`). No new visual language: the Content page is the division intro followed by sections editors choose from the existing components. New pieces only where a page needed one:
+
+- **Text and image** is the division overview with an optional film link (gold play mark, opens the video dialog). PNG and SVG images (logos, illustrations) sit whole on the surface instead of being cropped to a portrait frame.
+- **Short quotations inside running text** use a gold rule on the left and italic Garamond at H4 size, smaller than the feature quote.
+- **Team cards** are the hairline card grid with a 4:5 photo, the role as a kicker and the name as the link.
+- **Form section:** text and rule-divided contact details (from Site Settings) beside a white panel with a gold top rule. Contact Form 7 and the newsletter form use the `.field` styles.
+- **Profile:** the green intro with breadcrumb, role, name and photo; the person's own quote on mint; expertise as rule-divided columns; testimonials side by side.

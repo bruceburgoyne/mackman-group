@@ -54,9 +54,9 @@ $mg_id      = 'features-' . wp_unique_id();
 							<?php echo esc_html( $mg_item['title'] ); ?>
 						<?php endif; ?>
 					</h3>
-					<?php if ( ! empty( $mg_item['text'] ) ) : ?>
-						<p class="card__text"><?php echo mg_text( $mg_item['text'] ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
-					<?php endif; ?>
+					<?php foreach ( mg_paragraphs( $mg_item['text'] ?? '' ) as $mg_para ) : ?>
+						<p class="card__text"><?php echo mg_text( $mg_para ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
+					<?php endforeach; ?>
 					<?php if ( $mg_has_link ) : ?>
 						<span class="card__more" aria-hidden="true"><?php echo esc_html( ! empty( $mg_item['link']['title'] ) ? $mg_item['link']['title'] : __( 'Find out more', 'mackman-group-acf' ) ); ?><span class="arrow">&rarr;</span></span>
 					<?php endif; ?>

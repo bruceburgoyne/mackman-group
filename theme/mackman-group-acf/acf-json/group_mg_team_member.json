@@ -1,0 +1,129 @@
+{
+    "key": "group_mg_team_member",
+    "title": "Team member profile",
+    "fields": [
+        {
+            "key": "field_mg_team_name",
+            "label": "Name",
+            "name": "name",
+            "type": "text",
+            "instructions": "As shown on the profile. Leave blank to use the part of the title before the bar (|).",
+            "wrapper": {
+                "width": "50"
+            },
+            "maxlength": 80
+        },
+        {
+            "key": "field_mg_team_role",
+            "label": "Role",
+            "name": "role",
+            "type": "text",
+            "instructions": "Leave blank to use the part of the title after the bar (|).",
+            "wrapper": {
+                "width": "50"
+            },
+            "maxlength": 100
+        },
+        {
+            "key": "field_mg_team_intro",
+            "label": "Introduction",
+            "name": "intro",
+            "type": "textarea",
+            "rows": 4,
+            "new_lines": "",
+            "instructions": "Two or three sentences, beside the photo."
+        },
+        {
+            "key": "field_mg_team_quote",
+            "label": "Their quote",
+            "name": "quote",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": "",
+            "instructions": "In their own words, without quotation marks."
+        },
+        {
+            "key": "field_mg_team_profile",
+            "label": "Profile",
+            "name": "profile",
+            "type": "wysiwyg",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_mg_team_expertise",
+            "label": "Key areas of expertise",
+            "name": "expertise",
+            "type": "textarea",
+            "rows": 8,
+            "new_lines": "",
+            "instructions": "One per line."
+        },
+        {
+            "key": "field_mg_team_testimonials",
+            "label": "Client testimonials",
+            "name": "testimonials",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add testimonial",
+            "instructions": "Only add testimonials the client has approved for publication.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_team_testimonials_quote",
+                    "label": "Quote",
+                    "name": "quote",
+                    "type": "textarea",
+                    "rows": 4,
+                    "new_lines": "",
+                    "required": 1,
+                    "parent_repeater": "field_mg_team_testimonials"
+                },
+                {
+                    "key": "field_mg_team_testimonials_source",
+                    "label": "Who said it",
+                    "name": "source",
+                    "type": "text",
+                    "parent_repeater": "field_mg_team_testimonials",
+                    "maxlength": 120
+                }
+            ]
+        },
+        {
+            "key": "field_mg_team_linkedin",
+            "label": "LinkedIn profile",
+            "name": "linkedin",
+            "type": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "team_members"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "Profile page for a member of the team. The photo is the featured image.",
+    "show_in_rest": 0,
+    "modified": 1794319678
+}

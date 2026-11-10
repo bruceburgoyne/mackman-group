@@ -1,0 +1,24 @@
+{
+    "path": "bruce-burgoyne",
+    "post_type": "team_members",
+    "source": "Copied from the block content of team member 2750 on 10 November 2026. Wording kept as on the live site; the quotation marks and the name after each quote are left out because the design adds them. Testimonials are carried over as published; check each has the client's approval.",
+    "fields": {
+        "name": "Bruce Burgoyne",
+        "role": "Creative & Digital Director",
+        "intro": "As Creative & Digital Director at Mackman Group, Bruce leads the strategic development and delivery of brand, design, and digital communications across client engagements. With over two decades of experience, he brings a rare balance of creative vision and technical precision—ensuring that every output is not only beautifully executed but firmly aligned with brand strategy, commercial objectives, and emerging digital capabilities.",
+        "quote": "Effective design is where strategy and creativity meet. It must inform, inspire, and most importantly—deliver clarity and confidence.",
+        "profile": "<p>Bruce Burgoyne is a senior creative and digital strategist with a proven track record of delivering impactful brand and digital solutions that help organisations thrive. As Creative &amp; Digital Director at Mackman Group, he oversees brand identity, campaign development, UX/UI design, and digital build—bringing together strategic thinking, creativity, and innovation to deliver work that performs.</p>\n<p>A <strong><a href=\"https://www.cim.co.uk/membership/our-community/fellow-fcim/\">Fellow of the Chartered Institute of Marketing (FCIM)</a></strong>, Bruce brings deep experience across sectors including professional services, education, heritage, manufacturing, and not-for-profits. He leads high-stakes brand and digital projects, working closely with leadership teams to support them in shaping and elevating their brand presence.</p>\n<p>A passionate advocate for meaningful innovation, Bruce also leads Mackman Group’s <strong>Marketing AI consultancy</strong> services—helping clients leverage emerging technologies responsibly to enhance creative processes, campaign delivery, and digital experience. His guidance ensures AI is applied with intent, compliance, and a clear link to business value.</p>\n<p>Bruce is known for his collaborative approach, clarity of thought, and design integrity. He works closely with researchers, consultants, and developers to ensure a seamless flow from insight to execution. Clients value his ability to translate complex ideas into bold, coherent visual and digital outputs.</p>",
+        "expertise": "Brand identity & visual systems\nCreative direction & art direction\nFractional Chief Creative Officer (CCO)/Brand Consultant/Creative Director support\nDigital strategy & website design\nUX/UI design & accessibility compliance\nCampaign development\nBrand governance\nCross-functional creative leadership\nIntegrated brand & digital delivery\nMarketing AI consultancy & creative automation",
+        "testimonials": [
+            {
+                "quote": "Bruce quickly understood our brand and sector, and translated that into a visual identity and digital experience that not only reflected who we are, but elevated how we communicate. His guidance throughout the project was invaluable, and the result is something we’re genuinely proud of.",
+                "source": "Communications Lead, UK Educational Institution"
+            },
+            {
+                "quote": "Bruce’s manner and professionalism were instrumental in fostering internal buy-in for the changes necessary to achieve our desired growth. I wholeheartedly recommend Bruce and his team for any future branding and strategic marketing initiatives for your organisation.",
+                "source": "Becketts Financial Services"
+            }
+        ],
+        "linkedin": "https://www.linkedin.com/in/bruce-burgoyne-fcim-7458311b/"
+    }
+}

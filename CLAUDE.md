@@ -31,6 +31,7 @@ ACF Pro is active (the free ACF plugin is installed but inactive). The live site
 CLAUDE.md
 content/pages/*.json        page content: path, template, ACF fields (images are attachment IDs)
 content/case-studies/*.json case study content: path, post_type, terms (sector, location), ACF fields
+content/team/*.json         team member profiles (post type team_members)
 content/site-settings.json  Site Settings values (contact, logos, side panel, footer)
 docs/design-system.md       colour, type, components, rules (read before design work)
 docs/style-guide.html       every token and component, rendered with the theme CSS
@@ -43,10 +44,11 @@ theme/mackman-group-acf/
   assets/css/main.css       base styles and all components
   assets/css/article.css    article content (site and block editor)
   assets/js/                menu.js (mobile panel), nav.js (drop-downs), video.js (film dialog: home hero, case studies)
-  inc/                      acf, case-studies, editor, forms, helpers, nav (walker), news, tracking (GTM)
-  page-templates/division.php
-  front-page.php, home.php (News), archive.php, single.php, single-case-study.php, page.php, index.php, 404.php
-  template-parts/sections/  intro, hero, features, quote, closing, text-split, standards, news, cta
+  inc/                      acf, case-studies, editor, forms, helpers, nav (walker), news, team, tracking (GTM)
+  page-templates/division.php, content.php (Content page: intro plus flexible sections)
+  front-page.php, home.php (News), archive.php, single.php, single-case-study.php, single-team_members.php, page.php, index.php, 404.php
+  template-parts/sections/  intro, hero, features, quote, closing, text-split, standards, news, cta, team, form
+  template-parts/forms/     newsletter (posts straight to Mailchimp)
   template-parts/news/      card, lead, topics, related
   template-parts/case-study/ opening, results, challenge, stage, panel, outcome, team, related, card
 ```
@@ -67,6 +69,8 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 3. Add `page_template != page-templates/<name>.php` to `group_mg_default.json`'s location.
 4. `content/pages/<slug>.json` with the original content (extract it from the page's blocks with `wp eval` and `parse_blocks`), then seed.
 
+**Content page template**: pages that are not divisions (About, Trust, Our business consultants, Values, B Corp, Accreditations, Contact, Newsletter) use `page-templates/content.php`: the green intro, then a flexible list of sections (text, text and image with optional film, cards, quote, team, form, call to action band, closing). In content files, each section is an object with `acf_fc_layout`. `{{file:ID}}` in any text becomes a media library URL. Team profiles (`single-team_members.php`, fields in `group_mg_team_member.json`) take the name and role from the post title ("Name | Role") until their own fields are filled.
+
 **Move a case study into the template**: the `case-study` post type and its Sector and Location taxonomies are registered in the database through ACF (ACF > Post Types), not in the repo. Fields are in `acf-json/group_mg_case_study.json`. Write `content/case-studies/<slug>.json` (copy the Disaster Care file), extract the wording from the post's blocks, then seed. Until a case study has a challenge heading or a stage, `single-case-study.php` shows its old block content in the article layout. Testimonials only show to visitors once the Approved switch is on.
 
 **Check work**: `scripts/check.sh` after every change. For visual checks, open the page on https://mackmang-mackman-group.test in the browser pane. For small changes, a desktop check is enough; keep phone checks for layout work. Screenshots are expensive: prefer measuring with JavaScript.
@@ -84,10 +88,10 @@ wp eval-file ~/Documents/GitHub/mackman-group/scripts/seed.php site-settings
 
 ## Status and open items
 
-Done: design system, theme scaffold, Division template (all four brand pages seeded: Mackman Research, Mackman, Red Kite HR Services, Training and Coaching), Home, drop-down navigation, footer and logos, side panel, card grid, News archive and articles, case study template (Disaster Care Brand Repositioning seeded).
+Done: design system, theme scaffold, Division template (all four brand pages seeded: Mackman Research, Mackman, Red Kite HR Services, Training and Coaching), Home, drop-down navigation, footer and logos, side panel, card grid, News archive and articles, case study template (Disaster Care Brand Repositioning seeded), Content page template (About, Trust governance and standards, Our business consultants, Values, B Corp, Accreditations, Contact, Newsletter seeded on 10 November 2026), team profiles (all five seeded), Privacy policy (standard page body).
 
 Open:
-- About, Values, Accreditations, Contact, team members.
+- Content pages: the IMS ISO logo is needed in a version for light backgrounds (3715 and 3730 are white, so the ISO cards on Trust have no logo); alt text missing on 826, 830, 857, 1133, 1146, 1374, 3528 and several accreditation logos; the old database field group "Team Members" (job title, division, both empty) still shows on team members and can be deactivated; Our Brands (164) is still an empty parent page; the privacy policy does not mention Google Tag Manager, Cloudflare Turnstile, YouTube or Google Fonts.
 - Brand pages: Red Kite's service cards have titles only (no descriptions on the live page); Training and Coaching's second testimonial was not carried over (the template has one); photos 821, 827, 830 and 1133 have no alt text in the media library. The intro (green, H1) holds the live site's masthead (kicker and caption fields, page title, featured image); the Overview below it holds the first block of the old page content.
 - Case studies: move William Blyth, The Property Institute, Disaster Care Three Month Strategic Programme and Holmes & Hills (draft) into the template; build a case studies index page and set it in Site Settings > Case studies. Disaster Care needs client sign-off on the testimonial and the Aviva line, and alt text on its photos.
 - Copy review: unevidenced claims and testimonial approvals flagged in earlier work.

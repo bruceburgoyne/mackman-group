@@ -1,0 +1,25 @@
+{
+    "path": "newsletter",
+    "template": "page-templates/content.php",
+    "source": "Copied from page 2028 on 10 November 2026. The live page's H2 (Consulting newsletter) becomes the H1. The Mailchimp embed is replaced by the theme's own form (template-parts/forms/newsletter.php), which posts to the same audience.",
+    "fields": {
+        "intro": {
+            "kicker": "",
+            "heading": "Consulting newsletter",
+            "text": "<p>Stay informed with the latest consultancy insights, industry trends, and updates from across the Mackman Group. Sign up below to receive our newsletter.</p>",
+            "button": null,
+            "image": null
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "form",
+                "kicker": "",
+                "heading": "Sign up",
+                "text": "",
+                "details": false,
+                "form": "newsletter",
+                "shortcode": ""
+            }
+        ]
+    }
+}

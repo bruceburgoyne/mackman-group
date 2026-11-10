@@ -1,0 +1,33 @@
+{
+    "path": "senior-business-consultants",
+    "template": "page-templates/content.php",
+    "source": "Copied from page 2881 on 10 November 2026: masthead as the intro, then the team (the live page listed team members with a query block). The closing reuses the About page's call to action.",
+    "fields": {
+        "intro": {
+            "kicker": "Meet the team",
+            "heading": "",
+            "text": "<p>Many of our leadership staff are experienced teachers and lecturers, combined with a background in industry best practice marketing. We work closely with the Chartered Institute of Marketing (CIM) to stay ahead of the latest changes in our sector.</p>",
+            "button": null,
+            "image": 1133
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "team",
+                "kicker": "",
+                "heading": "",
+                "intro": ""
+            },
+            {
+                "acf_fc_layout": "closing",
+                "heading": "",
+                "image": 830,
+                "text": "<p>We aim to become an extension of your business applying the expertise of our skilled business consultants, delivering full-service programmes to meet your organisational objectives.</p>",
+                "button": {
+                    "title": "Contact our senior business consultants to future-proof your business",
+                    "url": "{{page:contact-mackman-group}}",
+                    "target": ""
+                }
+            }
+        ]
+    }
+}

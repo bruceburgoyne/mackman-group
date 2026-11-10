@@ -1,0 +1,674 @@
+{
+    "key": "group_mg_content",
+    "title": "Content page",
+    "fields": [
+        {
+            "key": "field_mg_content_intro",
+            "label": "Intro",
+            "name": "intro",
+            "type": "group",
+            "layout": "block",
+            "instructions": "The top of the page, on green: a label, the page's main heading, a short introduction and a photo.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_content_intro_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "instructions": "Short label above the heading.",
+                    "maxlength": 60
+                },
+                {
+                    "key": "field_mg_content_intro_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "The page's main heading (H1). Leave blank to use the page title.",
+                    "maxlength": 80
+                },
+                {
+                    "key": "field_mg_content_intro_text",
+                    "label": "Introduction",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "instructions": "One or two sentences."
+                },
+                {
+                    "key": "field_mg_content_intro_button",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "return_format": "array",
+                    "instructions": "Optional.",
+                    "wrapper": {
+                        "width": "50"
+                    }
+                },
+                {
+                    "key": "field_mg_content_intro_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "library": "all",
+                    "instructions": "A photo, shown beside the text. It is cropped to portrait on wide screens, so keep the subject near the centre.",
+                    "wrapper": {
+                        "width": "50"
+                    },
+                    "preview_size": "medium"
+                }
+            ]
+        },
+        {
+            "key": "field_mg_content_sections",
+            "label": "Sections",
+            "name": "sections",
+            "type": "flexible_content",
+            "button_label": "Add section",
+            "instructions": "The rest of the page, top to bottom. Drag to reorder.",
+            "layouts": {
+                "layout_mg_content_text": {
+                    "key": "layout_mg_content_text",
+                    "name": "text",
+                    "label": "Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_text_kicker",
+                            "label": "Label",
+                            "name": "kicker",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "maxlength": 60
+                        },
+                        {
+                            "key": "field_mg_content_s_text_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "required": 1,
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_text_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "tabs": "visual",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0,
+                            "instructions": "Running text. Use Heading 3 for sub-headings and the quote button for short quotations."
+                        },
+                        {
+                            "key": "field_mg_content_s_text_button",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "return_format": "array",
+                            "instructions": "Optional.",
+                            "wrapper": {
+                                "width": "67"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_text_surface",
+                            "label": "Background",
+                            "name": "surface",
+                            "type": "select",
+                            "choices": {
+                                "": "Page background",
+                                "surface-white": "White",
+                                "surface-mint": "Mint"
+                            },
+                            "default_value": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_media": {
+                    "key": "layout_mg_content_media",
+                    "name": "media",
+                    "label": "Text and image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_media_kicker",
+                            "label": "Label",
+                            "name": "kicker",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "maxlength": 60
+                        },
+                        {
+                            "key": "field_mg_content_s_media_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "required": 1,
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_media_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "tabs": "visual",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_mg_content_s_media_button",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "return_format": "array",
+                            "instructions": "Optional.",
+                            "wrapper": {
+                                "width": "50"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_media_image",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "instructions": "Optional. Shown beside the text.",
+                            "wrapper": {
+                                "width": "50"
+                            },
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_mg_content_s_media_video_url",
+                            "label": "Video",
+                            "name": "video_url",
+                            "type": "url",
+                            "instructions": "Optional YouTube link. A play link opens it in a window on the page.",
+                            "wrapper": {
+                                "width": "50"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_media_video_label",
+                            "label": "Video link text",
+                            "name": "video_label",
+                            "type": "text",
+                            "instructions": "For example Watch the film.",
+                            "wrapper": {
+                                "width": "50"
+                            },
+                            "maxlength": 80
+                        },
+                        {
+                            "key": "field_mg_content_s_media_surface",
+                            "label": "Background",
+                            "name": "surface",
+                            "type": "select",
+                            "choices": {
+                                "": "Page background",
+                                "surface-white": "White",
+                                "surface-mint": "Mint"
+                            },
+                            "default_value": "surface-white",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_cards": {
+                    "key": "layout_mg_content_cards",
+                    "name": "cards",
+                    "label": "Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_cards_kicker",
+                            "label": "Label",
+                            "name": "kicker",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "maxlength": 60
+                        },
+                        {
+                            "key": "field_mg_content_s_cards_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_cards_intro",
+                            "label": "Introduction",
+                            "name": "intro",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_mg_content_s_cards_columns",
+                            "label": "Columns",
+                            "name": "columns",
+                            "type": "select",
+                            "choices": {
+                                "2": "Two",
+                                "3": "Three"
+                            },
+                            "default_value": "3",
+                            "return_format": "value",
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_cards_surface",
+                            "label": "Background",
+                            "name": "surface",
+                            "type": "select",
+                            "choices": {
+                                "": "Page background",
+                                "surface-white": "White",
+                                "surface-mint": "Mint"
+                            },
+                            "default_value": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_cards_items",
+                            "label": "Cards",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Add card",
+                            "collapsed": "field_mg_content_s_cards_items_title",
+                            "sub_fields": [
+                                {
+                                    "key": "field_mg_content_s_cards_items_icon",
+                                    "label": "Icon or logo",
+                                    "name": "icon",
+                                    "type": "image",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "instructions": "Optional. Shown at 88px.",
+                                    "preview_size": "thumbnail",
+                                    "wrapper": {
+                                        "width": "25"
+                                    },
+                                    "parent_repeater": "field_mg_content_s_cards_items"
+                                },
+                                {
+                                    "key": "field_mg_content_s_cards_items_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "required": 1,
+                                    "wrapper": {
+                                        "width": "75"
+                                    },
+                                    "parent_repeater": "field_mg_content_s_cards_items",
+                                    "maxlength": 80
+                                },
+                                {
+                                    "key": "field_mg_content_s_cards_items_text",
+                                    "label": "Description",
+                                    "name": "text",
+                                    "type": "textarea",
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "instructions": "Leave a blank line between paragraphs.",
+                                    "parent_repeater": "field_mg_content_s_cards_items"
+                                },
+                                {
+                                    "key": "field_mg_content_s_cards_items_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "return_format": "array",
+                                    "instructions": "Optional. The link text shows at the foot of the card; leave it blank for Find out more.",
+                                    "parent_repeater": "field_mg_content_s_cards_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_quote": {
+                    "key": "layout_mg_content_quote",
+                    "name": "quote",
+                    "label": "Quote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_quote_quote",
+                            "label": "Quote",
+                            "name": "quote",
+                            "type": "textarea",
+                            "rows": 4,
+                            "new_lines": "",
+                            "required": 1,
+                            "instructions": "Without quotation marks. Client testimonials need the client's approval before they are published."
+                        },
+                        {
+                            "key": "field_mg_content_s_quote_name",
+                            "label": "Name",
+                            "name": "name",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "50"
+                            },
+                            "maxlength": 80
+                        },
+                        {
+                            "key": "field_mg_content_s_quote_role",
+                            "label": "Role or organisation",
+                            "name": "role",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "50"
+                            },
+                            "maxlength": 120
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_team": {
+                    "key": "layout_mg_content_team",
+                    "name": "team",
+                    "label": "Team",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_team_message",
+                            "label": "",
+                            "name": "message",
+                            "type": "message",
+                            "message": "Lists every published team member (Team Members in the menu), in their menu order."
+                        },
+                        {
+                            "key": "field_mg_content_s_team_kicker",
+                            "label": "Label",
+                            "name": "kicker",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "maxlength": 60
+                        },
+                        {
+                            "key": "field_mg_content_s_team_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_team_intro",
+                            "label": "Introduction",
+                            "name": "intro",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_form": {
+                    "key": "layout_mg_content_form",
+                    "name": "form",
+                    "label": "Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_form_kicker",
+                            "label": "Label",
+                            "name": "kicker",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "maxlength": 60
+                        },
+                        {
+                            "key": "field_mg_content_s_form_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_form_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_mg_content_s_form_details",
+                            "label": "Show contact details",
+                            "name": "details",
+                            "type": "true_false",
+                            "ui": 1,
+                            "instructions": "Address, phone and email from Site Settings, beside the form.",
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_form_form",
+                            "label": "Form",
+                            "name": "form",
+                            "type": "select",
+                            "choices": {
+                                "contact": "Contact form (Contact Form 7)",
+                                "newsletter": "Newsletter sign-up (Mailchimp)"
+                            },
+                            "default_value": "contact",
+                            "return_format": "value",
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        },
+                        {
+                            "key": "field_mg_content_s_form_shortcode",
+                            "label": "Contact Form 7 shortcode",
+                            "name": "shortcode",
+                            "type": "text",
+                            "instructions": "For the contact form, for example [contact-form-7 id=\"22\"].",
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_mg_content_s_form_form",
+                                        "operator": "==",
+                                        "value": "contact"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "33"
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_cta": {
+                    "key": "layout_mg_content_cta",
+                    "name": "cta",
+                    "label": "Call to action band",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_cta_kicker",
+                            "label": "Label",
+                            "name": "kicker",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "33"
+                            },
+                            "maxlength": 60
+                        },
+                        {
+                            "key": "field_mg_content_s_cta_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "required": 1,
+                            "wrapper": {
+                                "width": "67"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_cta_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_mg_content_s_cta_button",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_mg_content_closing": {
+                    "key": "layout_mg_content_closing",
+                    "name": "closing",
+                    "label": "Closing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_content_s_closing_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "wrapper": {
+                                "width": "50"
+                            },
+                            "maxlength": 100
+                        },
+                        {
+                            "key": "field_mg_content_s_closing_image",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "instructions": "Optional.",
+                            "wrapper": {
+                                "width": "50"
+                            },
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_mg_content_s_closing_text",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_mg_content_s_closing_button",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/content.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "About, Values, B Corp, Accreditations, Trust, Contact, Newsletter, Our business consultants.",
+    "show_in_rest": 0,
+    "modified": 1794319678
+}

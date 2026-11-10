@@ -1,0 +1,73 @@
+{
+    "path": "mackman-group-values/b-corp",
+    "template": "page-templates/content.php",
+    "source": "Copied from the block content of page 1322 on 10 November 2026, with the masthead as the intro. Wording kept as on the live site, apart from sentence-case headings, bold removed and quotation marks removed from quotes (the design adds its own). The film was an embed; it now opens in the video window. The impact report was a file block; it is now a button.",
+    "fields": {
+        "intro": {
+            "kicker": "People, planet, profit",
+            "heading": "",
+            "text": "<p>As a B Corp, we prioritise social and environmental responsibility in every aspect of our operations. We strive to make a positive impact on the world, focusing on the triple bottom line of people, planet and profit, proving that business can be a force for good.</p>",
+            "button": null,
+            "image": 1333
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "media",
+                "kicker": "Business as a force for good",
+                "heading": "There's no Planet B",
+                "text": "<p>B Corp is a global movement comprising of businesses dedicated to demonstrating high social and environmental performance.</p>\n<p>B Corp businesses consider the triple bottom line of people, planet, profit and demonstrate that business can be a force for good.</p>",
+                "button": null,
+                "image": 1334,
+                "video_url": "",
+                "video_label": "",
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "quote",
+                "quote": "As we approached our 20th year in business, instead of looking back over past achievements, we wanted to focus our vision towards the future. Our ethos ‘Together We Grow’ has guided us to assist people, brands and the community. Achieving B Corp status is a great way of evidencing things we were already doing. We are proud to be recognised for our efforts and we hope to inspire others to join along on such an important journey proving that business can be a force for good.",
+                "name": "Paul Mackman",
+                "role": "Managing Director, Mackman Group"
+            },
+            {
+                "acf_fc_layout": "media",
+                "kicker": "Our journey to B Corp certification",
+                "heading": "Becoming a B Corp business",
+                "text": "<p>The Mackman Group stands as the first B Corp Business Consultancy in Suffolk.</p>\n<p>Following an extensive year long accreditation process, The Mackman Group was certified by B Lab, the not-for-profit behind the B Corp movement, as having met rigorous social and environmental standards. Applicants are required to reach a benchmark score of over 80, and The Mackman Group proudly achieved a score of 91.7 by evidencing responsible practices relating to; energy supplies, waste and water use, worker compensation, diversity and corporate transparency, demonstrating commitment to goals outside of shareholder profit.</p>\n<p>View our full <a href=\"https://www.bcorporation.net/en-us/find-a-b-corp/company/mackman-group/\">B Corp profile</a> with a breakdown of our score.</p>",
+                "button": null,
+                "image": null,
+                "video_url": "https://youtu.be/X8YA5BiIGrk",
+                "video_label": "Watch: Mackman Group is a proud certified B Corp",
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "media",
+                "kicker": "Together we grow",
+                "heading": "Aligned values",
+                "text": "<p>Our unifying strapline 'Together We Grow' speaks about the relationships that we have with our customers, our people and the wider community, which aligns perfectly with B Corps ethos.</p>\n<p>We are committed to future improvements and hope to inspire other businesses to follow in our footsteps.</p>\n<p>Read more about our ethical approach and community impact on our <a href=\"{{page:mackman-group-values}}\">Values</a> page.</p>",
+                "button": null,
+                "image": 1374,
+                "video_url": "",
+                "video_label": "",
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "quote",
+                "quote": "We are delighted to welcome The Mackman Group to the B Corp community. This is a movement of companies who are committed to changing how business operates and believe business really can be a force for good. We know that The Mackman Group are going to be a fantastic addition to the community and will continue driving the conversation forward.",
+                "name": "Chris Turner",
+                "role": "Executive Director of B Lab UK"
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "Accountability and transparency",
+                "heading": "Impact report",
+                "text": "<p>View and download our 2023 positive impact report here:</p>",
+                "button": {
+                    "title": "Mackman Group 2023 Positive Impact Report (PDF)",
+                    "url": "{{file:1348}}",
+                    "target": ""
+                },
+                "surface": ""
+            }
+        ]
+    }
+}

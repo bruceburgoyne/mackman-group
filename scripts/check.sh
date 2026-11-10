@@ -46,6 +46,15 @@ paths=(
 	/category/news/
 	/iso-42001-and-iso-27001-certification/
 	/contact-mackman-group/
+	/meet-the-mackman-group-business-consultants/
+	/meet-the-mackman-group-business-consultants/trust-governance-standards/
+	/senior-business-consultants/
+	/our-team/paul-mackman/
+	/mackman-group-values/
+	/mackman-group-values/b-corp/
+	/accreditations/
+	/newsletter/
+	/privacy-policy/
 	/case-study/disaster-care-brand-repositioning/
 	/case-study/william-blyth/
 	/no-such-page/

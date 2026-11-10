@@ -1,0 +1,24 @@
+{
+    "path": "dr-gemma-mackman",
+    "post_type": "team_members",
+    "source": "Copied from the block content of team member 2748 on 10 November 2026. Wording kept as on the live site; the quotation marks and the name after each quote are left out because the design adds them. Testimonials are carried over as published; check each has the client's approval.",
+    "fields": {
+        "name": "Dr Gemma Mackman",
+        "role": "Co-founder & Market Research Consultant",
+        "intro": "A co-founder of Mackman Group, Dr Gemma Mackman is a senior insight professional with a PhD in Criminology and over 20 years’ experience delivering strategic research that drives business decisions. She leads with a focus on quality, ethics, and practical impact—helping clients uncover meaningful insight through rigorous, values-led methods.",
+        "quote": "The most valuable insights come not just from what people say, but from understanding the context behind it. Good research listens—and then asks better questions.",
+        "profile": "<p>Dr Gemma Mackman is the co-founder of Mackman Group and the driving force behind its specialist research consultancy division, <a href=\"https://www.mackmanresearch.co.uk\">Mackman Research</a>. A seasoned and respected insight professional, she blends academic rigour with commercial acuity—empowering organisations to act on evidence with confidence.</p>\n<p>With a PhD in Criminology and a background in applied social science, Gemma designs and delivers high-quality research programmes across sectors including manufacturing, education, public services, and purpose-driven enterprises. Her work regularly informs brand strategy, stakeholder engagement, and impact reporting at Board and executive level.</p>\n<p>Gemma is a long-standing member of the <a href=\"https://www.mrs.org.uk\">Market Research Society</a> and has helped shape Mackman Group’s reputation for integrity, inclusion, and excellence. Her leadership ensures that all research meets the highest ethical standards while remaining sharply aligned with clients’ strategic priorities.</p>\n<p>From global brands to regional charities, clients value Gemma for her analytical depth, clear thinking, and collaborative style. She is particularly skilled at drawing out nuanced insights in complex or sensitive environments, and translating them into clear, actionable recommendations.</p>",
+        "expertise": "Customer & stakeholder insight\nBrand perception & reputation tracking\nSegmentation & audience profiling\nEmployee engagement & experience\nStrategic impact measurement\nFractional Chief Research Officer (CRO) support\nResearch ethics & quality standards\nMixed-method research design\nBoard-level consultancy",
+        "testimonials": [
+            {
+                "quote": "The Newt in Somerset worked with Mackman Research to undertake a customer survey. Dr Gemma Mackman was an excellent project lead, who provided expert guidance through the process of creating a survey, undertaking interviews and providing powerful customer insights. I would not hesitate to work with Mackman again, and indeed hope to in the future.",
+                "source": "The Newt in Somerset"
+            },
+            {
+                "quote": "The charity I work for was recommended Mackman by a contact and thank goodness we were. We had a better experience than I've ever had with the 'bigger' providers: the team at Mackman really took the time to understand the brief and what we were trying to achieve, set out and delivered to a clear plan, and ultimately offered us clear, actionable insight that has allowed us to make decisions and move forward. Would thoroughly recommend this talented, thoughtful and professional team for high-quality work.",
+                "source": "Senior Leader, National Charity Client"
+            }
+        ],
+        "linkedin": "https://www.linkedin.com/in/dr-gemma-mackman-phd-cmrs-07542837/"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "path": "contact-mackman-group",
+    "template": "page-templates/content.php",
+    "source": "Copied from page 171 on 10 November 2026: masthead as the intro, then the address and the same Contact Form 7 form (id 22). The address, phone and email now come from Site Settings, so they match the footer.",
+    "fields": {
+        "intro": {
+            "kicker": "Speak to an expert",
+            "heading": "",
+            "text": "<p>Our clients value our plain speaking collaborative approach, our problem solving capabilities and our ability to generate long-term growth. Contact our team today and start building a stronger business.</p>",
+            "button": null,
+            "image": 823
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "form",
+                "kicker": "",
+                "heading": "Mackman Group",
+                "text": "",
+                "details": true,
+                "form": "contact",
+                "shortcode": "[contact-form-7 id=\"22\" title=\"Contact form 1\"]"
+            }
+        ]
+    }
+}

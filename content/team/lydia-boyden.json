@@ -1,0 +1,24 @@
+{
+    "path": "lydia-boyden",
+    "post_type": "team_members",
+    "source": "Copied from the block content of team member 2752 on 10 November 2026. Wording kept as on the live site; the quotation marks and the name after each quote are left out because the design adds them. Testimonials are carried over as published; check each has the client's approval.",
+    "fields": {
+        "name": "Lydia Boyden",
+        "role": "Group HR & People Lead",
+        "intro": "As Group HR & People Lead at Mackman Group, Lydia ensures a values-driven, inclusive, and compliant culture across the organisation. With over a decade of specialist experience as a HR consultant, she enables our people to thrive and supports senior leaders in delivering positive organisational outcomes.",
+        "quote": "Good HR is about creating the conditions for people to do their best work—clarity, trust, and a shared sense of purpose.",
+        "profile": "<p>Lydia leads the HR and people function at Mackman Group, guiding policy, culture, and wellbeing across the organisation. A <a href=\"https://www.cipd.org/en/\">CIPD-qualified practitioner</a> and founder of <a href=\"https://www.redkitehrservices.co.uk\">Red Kite HR Services</a>, she brings more than ten years’ experience advising private and public sector leaders on employee relations, policy development, culture change, and legal compliance.</p>\n<p>Lydia also plays an important role in blended client projects delivered by Mackman Group, particularly where brand, research, and marketing activity interfaces with internal culture, people strategy, or organisational development. She contributes HR insight to ensure that solutions are not only externally aligned but also internally sustainable, compliant, and in tune with workplace dynamics.</p>\n<p>At Mackman, Lydia provides trusted counsel to the leadership team on all aspects of people strategy, including recruitment, onboarding, learning and development, performance management, and adherence to employment legislation. She is also instrumental in advancing equality, diversity, inclusion (EDI), and wellbeing initiatives.</p>\n<p>Colleagues appreciate Lydia’s empathetic, structured approach and her ability to simplify complex HR issues. She brings clarity and consistency to sensitive situations, ensuring both compliance and care are at the heart of our people practices.</p>",
+        "expertise": "Strategic HR leadership\nEmployee relations & wellbeing\nRecruitment & onboarding\nHR policy development & implementation\nLearning & development coordination\nOrganisational culture & internal communications\nEquality, diversity & inclusion (EDI)\nPerformance management & coaching support\nEmployment law compliance\nStaff engagement & retention strategies",
+        "testimonials": [
+            {
+                "quote": "The support we get from Lydia and the team gives us the confidence that we are doing the right thing legally and ethically for our staff. The Red Kite HR team are professional, thorough and we are now in a position where our HR processes are robust and compliant. I couldn’t be happier.",
+                "source": "Dave Jackson, CEO, The Bridge Project"
+            },
+            {
+                "quote": "Lydia’s guidance through a complex people restructuring was sensitive and supportive. She gave us clarity on legal requirements and helped our team feel secure and informed throughout. Her approach was simply excellent.",
+                "source": "Managing Director, Professional Services Client"
+            }
+        ],
+        "linkedin": "https://www.linkedin.com/in/lydiaboyden/"
+    }
+}

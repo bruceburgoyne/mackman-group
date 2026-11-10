@@ -1,0 +1,87 @@
+{
+    "path": "mackman-group-values",
+    "template": "page-templates/content.php",
+    "source": "Copied from the block content of page 1136 on 10 November 2026, with the masthead as the intro. Wording kept as on the live site, apart from sentence-case headings, full stops on the list and quotation marks removed from quotes (the design adds its own). The pledge video was an embed; it now opens in the video window. Quotes inside a section are short quotations in the text. The closing line had no heading or button on the live site; the Contact us button is new.",
+    "fields": {
+        "intro": {
+            "kicker": "Together we grow",
+            "heading": "",
+            "text": "<p>As a business, we strive to impact our community positively, and we are committed to valuing people and the planet in all that we do. Our approach to community and sustainability is a key consideration in the delivery of our services and the way we engage with our audience.</p>",
+            "button": null,
+            "image": 1147
+        },
+        "sections": [
+            {
+                "acf_fc_layout": "media",
+                "kicker": "Positive impact",
+                "heading": "Our pledge",
+                "text": "<p>When you work with The Mackman Group, you amplify our positive impact in the community by supporting our pledge to give 10% of our annual turnover to non-profit organisations. We are formally committed to donate the equivalent of 5% or more of our time through pro-bono services. In 2023, our donated time and resources amounted to £113,724, exceeding our target of £80,000.</p>\n<p><strong>What does this mean?</strong> In short, for every £10 you spend with The Mackman Group, we give back £1 through our pro bono work and fundraising initiatives, supporting charities and good causes which share our mission to do good.</p>",
+                "button": null,
+                "image": null,
+                "video_url": "https://youtu.be/Ddz-ToTb6hc",
+                "video_label": "Watch: Defining our values",
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "media",
+                "kicker": "",
+                "heading": "Sustainable marketing",
+                "text": "<blockquote><p>Sustainable marketing needs to become the essence of the business. When we take responsibility for promoting socially responsible products, services, and practices, we create a better future for our community and planet.</p></blockquote>\n<p>Our mission and values statement has stood the test of time, proving its robust and ethical origins. The statement was drafted 20 years ago when the business began. Yet, it continues to demonstrate our focus on the long-term future-proofing of The Mackman Group to impact the organisations that comprise our community directly.</p>\n<h3>Together we grow: more than just a strapline</h3>\n<p>The core pillars upon which the company values rest; people and planet lend themselves to our long-term sustainable goals of employee retention and company growth to enable us to continue supporting our charity affiliates. Ensuring our work encourages and facilitates growth and development for our clients truly represents our strapline of \"Together we grow\".</p>\n<p>The Mackman Group of companies strive to maintain outstanding and innovative services, however, without the right ethics our services may not make the right impact. Having clear and concise ethics means we are building a reputation for consistently being ethical in how we source our products, and how we treat our employees, our customers, and the community.</p>\n<h3>General principles</h3>\n<p>Mackman Group demonstrate the highest level of integrity and transparency to uphold corporate and personal reputations. We follow our code of ethics that are People and Planet centric. By actively choosing sustainable and ethical products, and choosing to work with ethical organisations, we will continually strive to make a difference to people and the planet.</p>",
+                "button": null,
+                "image": 857,
+                "video_url": "",
+                "video_label": "",
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "quote",
+                "quote": "We know that by working together, we can achieve great things and make a meaningful difference in the lives of those around us.",
+                "name": "",
+                "role": ""
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "Our journey to B Corp status",
+                "text": "<p>As part of our commitment to our core pillars, in 2023, we achieved B Corp Certification, focusing on the triple bottom line of people, planet, profit, proving that business can be used as a force for good. Visit our dedicated <a href=\"{{page:mackman-group-values/b-corp}}\">B Corp page</a> to learn more about our journey to certification.</p>\n<h3>Carbon Neutral Scheme</h3>\n<p>To reduce our carbon emissions to become Net Zero, we are committed to reducing waste, using less electricity, and sourcing sustainably. We have signed up to the <a href=\"https://carbonneutralbritain.org/\">Carbon Neutral Scheme</a> to be transparent and share the results of the measures we take to reduce carbon emissions and publicise the proactive steps we are taking to Carbon Offsetting and to become Carbon Neutral.</p>\n<p>The Mackman Group has been granted the Bronze level of the Suffolk Carbon Charter in recognition of our steps to become Carbon Neutral. As members of the <a href=\"https://carboncharter.org/\">Carbon Charter</a>, we are committed to actively offset our carbon emissions and make continuous improvements.</p>\n<h3>Other steps we are taking</h3>\n<ul>\n<li>We have electric company cars and a charging station installed at our Sudbury office.</li>\n<li>We have installed LED light bulbs in all office spaces.</li>\n<li>Water-saving cisterns have been installed in our bathrooms and kitchen.</li>\n<li>We recycle all waste materials appropriately by providing specific bins, including recycling for paper and plastic, landfill, compost, and shredded paper bin.</li>\n<li>Our Company equipment includes low-energy Apple MacBooks and cloud storage across the Company for office and home-based workers.</li>\n<li>We purchase environmentally friendly and community-conscious products when buying any equipment for the Mackman Group.</li>\n<li>Building lighter and faster websites.</li>\n<li>Reducing our paper usage.</li>\n<li>Utilising a hybrid approach to client meetings.</li>\n<li>Reducing business miles travelled.</li>\n</ul>",
+                "button": null,
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "Community",
+                "text": "<p>We work to ethical practices to ensure we support charities with their future growth for generations to come. In 2019 we provided St Peter's Cultural Venue with pro-bono support, securing a £1.6 million grant from The National Lottery Fund. The regeneration project not only restores the heritage of the building and ensures that the integrity of the historic property is maintained. But it also provides the community with an inclusive and welcoming venue to unite people of all ages while reaching and engaging a national audience from which to bring money into the community.</p>\n<p>With the funding granted, the charity could commercialise its offering further and garner sufficient volunteer and community interest. As former Development Officer Allison Burke states:</p>\n<blockquote><p>It [the website] has enabled us to run important campaigns to fundraise and to recruit new volunteers, and the site integrates seamlessly with other third party software which has enabled us to sell tickets to events and link to our social media platforms, significantly widening the reach of our audiences, all which is crucial to our success.</p><cite>Alli Burke</cite></blockquote>\n<p>As members of <a href=\"https://www.suffolkprohelp.org.uk\">Suffolk ProHelp</a>, we provide vital expertise to voluntary and community groups. We have provided services to Suffolk Mind, TLC, Grassroots, Age Concern, Essex Wildlife Trust, and Nuffield Health.</p>\n<p>The Bridge Project is our charity of choice. We support them with marketing efforts to cement themselves within the community further and grow their visibility. In turn, it facilitates the charity to hit its yearly targets and garners interest with volunteers and fundraisers.</p>\n<blockquote><p>Mackman Group have been invaluable in their support, Pro Bono work, advice and understanding. This has had a lasting impact on the charity. Their commitment to the community and the charity is invaluable.</p><cite>Dave Jackson, CEO, The Bridge Project</cite></blockquote>\n<p>Over the last 20 years, we have supported several charitable and social enterprises through pro bono work and fundraising. These have included Foodbank donations, Help for Ukraine, and donated professional services. Our professional service pro bono work saw us work with Greenfields Community Housing, a Registered Provider that owns nearly 9,000 homes in Essex and South Suffolk, with a consumer-led and responsive website, encouraging users and residents to move to digital. We also supported the Smile of Arran Trust in developing a website to raise funds and help children and young adults with brain cancer.</p>\n<blockquote><p>Hosting a fundraiser or providing pro bono work is not just about raising funds or handing over a product; by working together, we create a sense of community, stability and legacy.</p></blockquote>\n<h3>Customers</h3>\n<p>Mackman will seek to build long-term partnerships with its customers by being honest, plain-speaking and always straightforward in its dealings. We will respect the confidentiality of any information that it might obtain in relation to its customers. Customer ethics must align with ours and we seek to collaborate with like-minded businesses across all ethical sectors. We will not work for organisations that we deem unethical. Our priorities lie at the heart of our community, and we have a formal commitment to deliver at least 75% of our business locally and with independent clients and customers.</p>\n<h3>Suppliers</h3>\n<p>As a business aiming to be B-corporate certified, we need to be consistent in our choices. This means only choosing suppliers that have equal standards of practice as us, this being a local business; if they are fairtrade; having their own B-corporate certificate or if they have 100% recyclable/biodegradable packaging; or better yet zero packaging. We believe in supporting our local community through our procurement decisions. We are committed to sourcing at least 50% of our costs from local, independent suppliers.</p>",
+                "button": null,
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "People",
+                "text": "<p>Our company culture is central to our ethical position. We work together to ensure that we are all treated fairly, with kindness and respect. We encourage a collaborative community where we all contribute to the overall health and wellbeing of our business, one another, and our planet. We are proud of our team and aim to support one another outside of the working environment in our hobbies and passions.</p>\n<p>Our accreditations and memberships are critical in achieving our commitment to the continued professional development of our people, business and community. We are one of only three Sudbury-based businesses accredited by <a href=\"https://www.livingwage.org.uk\">The Living Wage Foundation</a> and <a href=\"https://www.livingwage.org.uk/living-hours\">Living Hours</a> Employer. We are also committed to the <a href=\"https://www.mrs.org.uk/resources/ceo-inclusion-pledge\">MRS Inclusion Pledge</a>, promoting diversity and fostering an inclusive workplace environment for all team members.</p>\n<p>We are proud to be the first Corporate Partner of the <a href=\"https://www.cim.co.uk\">Chartered Institute of Marketing</a> (CIM). As a result of our partnership, we have unlocked additional resources and opportunities for our teams through webinars, mentoring schemes, content templates and continued CPD.</p>\n<p>We offer internships and work experience placements to junior-level staff. Internally we host lunch and learn sessions, bringing our teams together to upskill colleagues in the latest developments in marketing, digital and creative. Our mentoring approach encourages our members to thrive with practical toolkits and knowledge.</p>\n<h3>Health and safety</h3>\n<p>Wellbeing is a foundation for everything we do here at Mackman. Everyone is responsible for proactively identifying and managing all risks within the workplace, to avoid harm. This means looking out for us, our employees, visitors, contractors, and the public. We will take responsibility for safety at our workplace while empowering our people to make considered safety choices.</p>",
+                "button": null,
+                "surface": "surface-white"
+            },
+            {
+                "acf_fc_layout": "text",
+                "kicker": "",
+                "heading": "Planet",
+                "text": "<p>Protecting the environment is a key priority. Mackman promotes conscious choices within the workplace as well as encouraging it where possible. We are continually seeking to improve our environmental performance by managing our energy consumption and measuring our output of used goods and services. We regularly review our Environmental Policy to make changes for the better.</p>",
+                "button": null,
+                "surface": ""
+            },
+            {
+                "acf_fc_layout": "closing",
+                "heading": "",
+                "image": null,
+                "text": "<p>To receive our help with your marketing needs, please get in touch with us at <a href=\"tel:01787388038\">01787 388038</a> or email us at <a href=\"mailto:customerservice@mackmangroup.co.uk\">customerservice@mackmangroup.co.uk</a>.</p>",
+                "button": {
+                    "title": "Contact us",
+                    "url": "{{page:contact-mackman-group}}",
+                    "target": ""
+                }
+            }
+        ]
+    }
+}

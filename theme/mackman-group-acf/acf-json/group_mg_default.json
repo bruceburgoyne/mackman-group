@@ -62,6 +62,11 @@
                 "value": "page-templates/division.php"
             },
             {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates/content.php"
+            },
+            {
                 "param": "page_type",
                 "operator": "!=",
                 "value": "front_page"

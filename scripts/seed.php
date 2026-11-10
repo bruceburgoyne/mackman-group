@@ -2,7 +2,8 @@
 /**
  * Push content from the content/ folder into WordPress: page fields from
  * content/pages/*.json, case study fields from content/case-studies/*.json,
- * and Site Settings from content/site-settings.json.
+ * team member fields from content/team/*.json, and Site Settings from
+ * content/site-settings.json.
  *
  * Run with WP-CLI from the site's app/public folder (Local's site shell):
  *
@@ -13,18 +14,19 @@
  *
  * With no argument, every page, every case study and Site Settings are
  * pushed. Otherwise the argument is a file name (without .json) in
- * content/pages or content/case-studies, or "site-settings".
+ * content/pages, content/case-studies or content/team, or "site-settings".
  *
  * Each JSON file has:
  * - path:      the post's path, for example "our-brands/mackman-research".
  *              The post must already exist: this script never creates posts.
- * - post_type: optional, default "page" (case studies use "case-study").
+ * - post_type: optional, default "page" (case studies use "case-study",
+ *              team members "team_members").
  * - template:  the page template file to assign (pages only).
  * - terms:     optional, taxonomy => list of term names. Missing terms are
  *              created; the post's terms in that taxonomy are replaced.
  * - fields:    ACF values by field name. Images are attachment IDs from the
- *              media library. In link URLs, "{{page:path}}" becomes that page's
- *              permalink.
+ *              media library. In any text, "{{page:path}}" becomes that page's
+ *              permalink and "{{file:ID}}" the URL of that media library file.
  *
  * Safe to run again. Values in the files overwrite those fields in
  * WordPress, so once editing moves to WP Admin, stop pushing that post.
@@ -42,7 +44,7 @@ if ( ! function_exists( 'acf_get_field_groups' ) ) {
 }
 
 $mg_content  = dirname( __DIR__ ) . '/content';
-$mg_dirs     = array( $mg_content . '/pages', $mg_content . '/case-studies' );
+$mg_dirs     = array( $mg_content . '/pages', $mg_content . '/case-studies', $mg_content . '/team' );
 $mg_only     = isset( $args[0] ) ? sanitize_file_name( $args[0] ) : '';
 $mg_settings = ( '' === $mg_only || 'site-settings' === $mg_only );
 $mg_files    = array();
@@ -62,7 +64,8 @@ if ( '' === $mg_only ) {
 }
 
 /**
- * Replace {{page:path}} tokens with permalinks, recursively.
+ * Replace {{page:path}} tokens with permalinks and {{file:ID}} tokens with
+ * media library URLs, recursively.
  *
  * @param mixed $value Field value.
  * @return mixed
@@ -74,6 +77,18 @@ function mg_seed_resolve( $value ) {
 	if ( ! is_string( $value ) ) {
 		return $value;
 	}
+	$value = preg_replace_callback(
+		'/\{\{file:(\d+)\}\}/',
+		function ( $m ) {
+			$url = wp_get_attachment_url( (int) $m[1] );
+			if ( ! $url ) {
+				WP_CLI::warning( "No media library file {$m[1]}; link left as '#'." );
+				return '#';
+			}
+			return $url;
+		},
+		$value
+	);
 	return preg_replace_callback(
 		'/\{\{page:([a-z0-9\-\/]+)\}\}/',
 		function ( $m ) {
