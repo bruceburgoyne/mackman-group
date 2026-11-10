@@ -14,7 +14,7 @@
  * 5. Testimonial (mint), shown to visitors only once approved
  * 6. Outcome
  * 7. Who was involved: the parts of the Group and what each did
- * 8. More case studies
+ * 8. More case studies (can be hidden per case study)
  * 9. Call to action (green), falling back to Site Settings
  *
  * Case studies not yet moved into these fields show their original block
@@ -78,7 +78,10 @@ while ( have_posts() ) :
 		?>
 	</article>
 	<?php
-	get_template_part( 'template-parts/case-study/related' );
+	// "More case studies" can be hidden per case study (End of page tab).
+	if ( ! mg_field( 'hide_related' ) ) {
+		get_template_part( 'template-parts/case-study/related' );
+	}
 
 	$mg_cta = mg_field( 'cta' );
 	if ( empty( $mg_cta['heading'] ) ) {

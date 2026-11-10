@@ -875,11 +875,21 @@
         },
         {
             "key": "field_mg_cs_tab_cta",
-            "label": "Call to action",
+            "label": "End of page",
             "name": "",
             "type": "tab",
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_mg_cs_hide_related",
+            "label": "More case studies",
+            "name": "hide_related",
+            "type": "true_false",
+            "instructions": "Below the case study we show up to three others, from the same sector first. Tick to hide them on this page.",
+            "message": "Hide the More case studies section on this page",
+            "default_value": 0,
+            "ui": 1
         },
         {
             "key": "field_mg_cs_cta",
@@ -953,5 +963,5 @@
     "active": true,
     "description": "Case studies: opening, results, challenge, the work by stage, testimonial, outcome, who was involved, call to action.",
     "show_in_rest": 0,
-    "modified": 1794200000
+    "modified": 1794322436
 }
