@@ -1,15 +1,15 @@
 {
     "path": "homepage",
     "template": "",
-    "source": "Copied on 6 November 2026 from page 38's block content and the old theme's front-page template (hero). Wording kept as on the live site, apart from sentence-case headings and splitting Who we are into paragraphs. New copy, for review: the Standards heading and label, and the call to action heading.",
+    "source": "Copied on 6 November 2026 from page 38's block content and the old theme's front-page template (hero). Wording kept as on the live site, apart from sentence-case headings and splitting Who we are into paragraphs. New copy, for review: the Standards heading and label, and the call to action heading. Updated on 10 November 2026 with wording from the July 2026 concept site (mgdevjul): hero, credentials, capabilities, why one firm, method, FAQs, call to action and the featured case study text. For review before going live: the CIM \"first-ever\" and MRS Company Partner claims, \"since 2003\", and the comparative claims in the FAQs (cost, coordination overhead).",
     "fields": {
         "hero": {
-            "kicker": "Full service business consultancy",
-            "heading": "Building stronger brands through",
-            "heading_emphasis": "combined expertise",
-            "text": "Mackman Group combine business consultancy, market research, brand expertise, marketing strategies and HR into an extension of your business.",
+            "kicker": "Integrated strategic growth consultancy",
+            "heading": "Strategic growth consultancy for organisations",
+            "heading_emphasis": "growing beyond instinct",
+            "text": "We help ambitious, independently owned organisations grow responsibly, by bringing brand and marketing, research and insight, and people and culture together under one roof.",
             "button": {
-                "title": "How can we help you?",
+                "title": "Start with a conversation",
                 "url": "{{page:contact-mackman-group}}",
                 "target": ""
             },
@@ -17,62 +17,89 @@
             "video_label": "Watch our introduction video",
             "image": 929
         },
+        "credentials": {
+            "heading": "In partnership with clients who value substance over noise since 2003",
+            "items": [
+                {
+                    "figure": "B Corp",
+                    "label": "Certified. Verified on people, planet and profit."
+                },
+                {
+                    "figure": "First-ever",
+                    "label": "The first-ever CIM Company Affiliate."
+                },
+                {
+                    "figure": "MRS",
+                    "label": "Company Partner, held to industry standards."
+                }
+            ]
+        },
         "featured_case": {
             "kicker": "",
             "case_study": 3753,
             "heading": "",
-            "text": "",
-            "button": ""
-        },
-        "about": {
-            "kicker": "Who we are",
-            "heading": "One business consultancy, three divisions",
-            "text": "<p>Mackman Group is a premier full-service business consultancy dedicated to the growth of premium brands and the individuals within them. We specialise in developing bespoke programs tailored for ambitious brands seeking growth, whether through upscaling, mergers and acquisitions, preparing for sale, or attracting investment.</p>\n<p>With a foundation built on strategy, insight, and expertise, we empower brands to reach new heights, surpass their goals and develop stronger relationships with key audiences. What sets Mackman Group Business Consultancy apart is our unwavering commitment to delivering exceptional results, honed over two decades of industry experience.</p>\n<p>Our blended business consultancy projects bring together the diverse talents of our divisional directors, ensuring a holistic approach to every project. Key specialisms include market research, brand strategies, strategic marketing, and human resources.</p>\n<p>At Mackman Group, we take pride in our ethical approach, demonstrating that profitability and social responsibility can go hand in hand. We operate with a triple bottom line perspective, considering the impacts on People, Planet, and Profit in all that we do.</p>"
+            "text": "A national leader in disaster recovery needed its brand, the evidence behind it, and the work that carried it to move as one.",
+            "button": "See the whole story"
         },
         "divisions": {
-            "kicker": "",
-            "heading": "Our brands",
-            "intro": "",
+            "kicker": "Our capabilities",
+            "heading": "Three capabilities, one firm",
+            "intro": "Each leads its own discipline. They do their strongest work when they work as one.",
+            "numbered": true,
             "items": [
                 {
-                    "icon": 379,
-                    "title": "Market research consultancy services",
-                    "text": "Mackman Research Market Research Agency is East Anglia's leading market research company, conducting employee research, customer research, perception and satisfaction surveys, engagement benchmarking, and recommending strategies to improve organisational excellence. Our data-driven insights drive business growth and bring brands closer to their audiences.",
-                    "link": {
-                        "title": "Find out more",
-                        "url": "{{page:our-brands/mackman-research}}",
-                        "target": ""
-                    }
-                },
-                {
                     "icon": 399,
-                    "title": "Branding and marketing consultancy services",
-                    "text": "Mackman Branding & Marketing Agency is our targeted and strategic-led branding & marketing agency. The multidisciplinary team provides a full-service partner that can act as a complete outsourced marketing department or interface with existing in-house resources.",
+                    "title": "Brand and marketing",
+                    "text": "How you are positioned, understood, and chosen. Strategy through to delivery, as one capability.",
                     "link": {
-                        "title": "Find out more",
+                        "title": "Explore",
                         "url": "{{page:our-brands/strategic-marketing-consultants}}",
                         "target": ""
                     }
                 },
                 {
-                    "icon": 372,
-                    "title": "HR consultancy services",
-                    "text": "Red Kite HR Services provides all the benefits of an in-house professional with the flexibility of an expert consultant. Our HR specialist offers reliable, personalised, practical HR support with clear direction to work seamlessly with internal management.",
+                    "icon": 379,
+                    "title": "Research and insight",
+                    "text": "How decisions get tested and measured, so direction rests on evidence rather than assumption.",
                     "link": {
-                        "title": "Find out more",
-                        "url": "{{page:our-brands/red-kite-hr-services}}",
+                        "title": "Explore",
+                        "url": "{{page:our-brands/mackman-research}}",
                         "target": ""
                     }
                 },
                 {
-                    "icon": 392,
-                    "title": "Training and coaching",
-                    "text": "Training is delivered across our range of divisional specialisms with bespoke programmes directly aligned with your business needs. They are designed to unlock the full potential of internal teams and embed best practice.",
+                    "icon": 372,
+                    "title": "People and culture",
+                    "text": "How your people are engaged and supported to deliver on the strategy.",
                     "link": {
-                        "title": "Find out more",
-                        "url": "{{page:our-brands/training-and-coaching}}",
+                        "title": "Explore",
+                        "url": "{{page:our-brands/red-kite-hr-services}}",
                         "target": ""
                     }
+                }
+            ]
+        },
+        "about": {
+            "kicker": "Why one firm, not several",
+            "heading": "The difference is structural, not a claim",
+            "text": "<p>Most firms assemble this model across several agencies. We deliver it as one integrated firm, with strategy and delivery in the same place, often in the same conversation.</p>\n<p>When strategy and delivery live in the same firm, there is no handover to manage between agencies, and no gap where the thinking and the work drift apart.</p>\n<p>The coherence is the point. The speed is a by-product of it. And one integrated firm removes much of the coordination overhead the multi-firm model builds in.</p>"
+        },
+        "method": {
+            "kicker": "The method",
+            "heading": "Define. Activate. Measure.",
+            "text": "We define the strategy on evidence, activate it across brand, research and people as one, and measure what changes. The method is the same whichever discipline leads, which is how the disciplines stay joined up rather than running in parallel.",
+            "steps": [
+                {
+                    "name": "Define",
+                    "text": "The strategy, on evidence."
+                },
+                {
+                    "name": "Activate",
+                    "text": "Across brand, research and people, as one."
+                },
+                {
+                    "name": "Measure",
+                    "text": "What changes."
                 }
             ]
         },
@@ -95,6 +122,40 @@
             "name": "Paul Mackman",
             "role": "Mackman Group"
         },
+        "faqs": {
+            "kicker": "FAQs",
+            "heading": "Questions prospects ask, answered plainly",
+            "items": [
+                {
+                    "question": "What is a strategic growth consultancy?",
+                    "answer": "A strategic growth consultancy works at the level where direction is set, then carries that thinking through to delivery. Mackman Group does this as one integrated firm: brand and marketing, research and insight, and people and culture under one roof, rather than a lead consultant coordinating separate agencies. The result is strategy and delivery that stay joined up from the first conversation to the work that reaches the market."
+                },
+                {
+                    "question": "What makes Mackman Group different from other consultancies?",
+                    "answer": "Most firms that describe themselves as integrated coordinate the model across several agencies. Mackman delivers it inside one firm, so strategy and delivery sit in the same place with no handover between them. That structure is the difference. It produces coherence first and speed as a consequence, and it works at proportionate cost against the multi-firm model it replaces."
+                },
+                {
+                    "question": "Who does Mackman Group work with?",
+                    "answer": "Mackman works with ambitious, independently owned organisations, most often mid-market businesses with a long view and values that matter to how they grow. Many are owner-managed or family businesses, and a growing share are purpose-led. They tend to arrive when growth has moved ahead of how the organisation presents itself, or when a decision needs strategy and delivery to move as one."
+                },
+                {
+                    "question": "Is Mackman Group a B Corp?",
+                    "answer": "Yes. Mackman Group is a certified B Corp, which means its social and environmental performance, accountability, and transparency are independently verified. It is also the first-ever CIM Company Affiliate and an MRS Company Partner. These are Group-level credentials, held at the entity that genuinely carries them, and they sit behind the firm's commitment to growing organisations responsibly."
+                },
+                {
+                    "question": "What does an integrated strategic consultancy actually do?",
+                    "answer": "An integrated strategic consultancy brings the disciplines that shape growth into one piece of work rather than running them separately. In practice, research informs brand and direction, brand strategy shapes how the organisation is expressed and how it positions itself as an employer, and people and culture make sure the organisation can deliver on the promise. The disciplines meet from the outset, not after the fact."
+                },
+                {
+                    "question": "How does Mackman Group charge for its work?",
+                    "answer": "Mackman is a senior, selective firm rather than a volume business, so engagements are scoped to the decision in front of the client. Because strategy and delivery sit in one firm, clients do not pay several firms to manage the coordination between them. The framing is proportionate rather than cheap: senior thinking and the delivery that makes it real, from one place."
+                },
+                {
+                    "question": "Where is Mackman Group based?",
+                    "answer": "Mackman Group is based in Suffolk and works with organisations across the UK. The firm has worked in partnership with clients who value substance over noise since 2003."
+                }
+            ]
+        },
         "news": {
             "heading": "Latest news",
             "count": 3
@@ -102,9 +163,9 @@
         "cta": {
             "kicker": "",
             "heading": "Together we grow",
-            "text": "",
+            "text": "Get in touch with a member of the team today.",
             "button": {
-                "title": "Contact our senior consultants",
+                "title": "Start with a conversation",
                 "url": "{{page:contact-mackman-group}}",
                 "target": ""
             }

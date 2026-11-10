@@ -4,7 +4,8 @@
  * division's services, the divisions on the home page and accreditations.
  *
  * $args['data'] is an ACF group with: kicker, heading, intro, items
- * (repeater of icon, title, text, link).
+ * (repeater of icon, title, text, link), and optionally numbered (true
+ * to label the cards 01, 02, 03).
  * $args['surface'] optionally sets the section surface (default: none).
  *
  * @package mackman-group-acf
@@ -24,6 +25,7 @@ if ( ! $mg_items ) {
 
 $mg_surface = ! empty( $args['surface'] ) ? ' ' . sanitize_html_class( $args['surface'] ) : '';
 $mg_grid    = ' grid--' . ( ! empty( $args['columns'] ) ? (int) $args['columns'] : 3 );
+$mg_number  = ! empty( $mg_data['numbered'] ) ? 0 : false;
 $mg_id      = 'features-' . wp_unique_id();
 ?>
 <section class="section features<?php echo esc_attr( $mg_surface ); ?>"<?php echo ! empty( $mg_data['heading'] ) ? ' aria-labelledby="' . esc_attr( $mg_id ) . '"' : ''; ?>>
@@ -46,6 +48,9 @@ $mg_id      = 'features-' . wp_unique_id();
 				<article class="card<?php echo $mg_has_link ? '' : ' card--static'; ?>">
 					<?php if ( ! empty( $mg_item['icon'] ) ) : ?>
 						<div class="card__icon"><?php echo mg_image( $mg_item['icon'], 'thumbnail', '', array( 'alt' => '' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
+					<?php endif; ?>
+					<?php if ( false !== $mg_number ) : ?>
+						<p class="kicker card__number"><?php echo esc_html( sprintf( '%02d', ++$mg_number ) ); ?></p>
 					<?php endif; ?>
 					<h3 class="card__title">
 						<?php if ( $mg_has_link ) : ?>

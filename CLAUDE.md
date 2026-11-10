@@ -48,7 +48,7 @@ theme/mackman-group-acf/
   inc/                      acf, case-studies, editor, forms, helpers, nav (walker), news, team, tracking (GTM)
   page-templates/division.php, content.php (Content page: intro plus flexible sections)
   front-page.php, home.php (News), archive.php, single.php, single-case-study.php, single-team_members.php, page.php, index.php, 404.php
-  template-parts/sections/  intro, hero, features, quote, closing, text-split, standards, news, cta, team, form
+  template-parts/sections/  intro, hero, credentials, featured-case, features, method, quote, faq, closing, text-split, standards, news, cta, team, form
   template-parts/forms/     newsletter (posts straight to Mailchimp)
   template-parts/news/      card, lead, topics, related
   template-parts/case-study/ opening, results, challenge, stage, panel, outcome, team, related, card

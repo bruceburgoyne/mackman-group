@@ -102,6 +102,57 @@
             "instructions": "The opening of the page, on green."
         },
         {
+            "key": "field_mg_home_tab_credentials",
+            "label": "Credentials",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_home_credentials",
+            "label": "Credentials",
+            "name": "credentials",
+            "type": "group",
+            "layout": "block",
+            "instructions": "A short strip of credentials just below the hero. Only use credentials we can evidence. Hidden when there are no items.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_home_credentials_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "Shown as a small label above the figures."
+                },
+                {
+                    "key": "field_mg_home_credentials_items",
+                    "label": "Credentials",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "table",
+                    "min": 0,
+                    "max": 4,
+                    "button_label": "Add credential",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_home_credentials_figure",
+                            "label": "Figure",
+                            "name": "figure",
+                            "type": "text",
+                            "instructions": "Large, for example \"B Corp\"."
+                        },
+                        {
+                            "key": "field_mg_home_credentials_label",
+                            "label": "Line",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "One short sentence under it."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "field_mg_home_tab_featured",
             "label": "Featured case study",
             "name": "",
@@ -168,55 +219,8 @@
             ]
         },
         {
-            "key": "field_mg_home_tab_about",
-            "label": "Who we are",
-            "name": "",
-            "type": "tab",
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_mg_home_about",
-            "label": "Who we are",
-            "name": "about",
-            "type": "group",
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_mg_home_about_kicker",
-                    "label": "Label",
-                    "name": "kicker",
-                    "type": "text",
-                    "maxlength": 60,
-                    "wrapper": {
-                        "width": "33"
-                    }
-                },
-                {
-                    "key": "field_mg_home_about_heading",
-                    "label": "Heading",
-                    "name": "heading",
-                    "type": "text",
-                    "maxlength": 80,
-                    "wrapper": {
-                        "width": "67"
-                    }
-                },
-                {
-                    "key": "field_mg_home_about_text",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "wysiwyg",
-                    "tabs": "visual",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
-                }
-            ]
-        },
-        {
             "key": "field_mg_home_tab_divisions",
-            "label": "Our brands",
+            "label": "Capabilities",
             "name": "",
             "type": "tab",
             "placement": "top",
@@ -224,7 +228,7 @@
         },
         {
             "key": "field_mg_home_divisions",
-            "label": "Our brands",
+            "label": "Capabilities",
             "name": "divisions",
             "type": "group",
             "layout": "block",
@@ -256,6 +260,14 @@
                     "type": "textarea",
                     "rows": 2,
                     "new_lines": ""
+                },
+                {
+                    "key": "field_mg_home_divisions_numbered",
+                    "label": "Number the cards",
+                    "name": "numbered",
+                    "type": "true_false",
+                    "ui": 1,
+                    "default_value": 0
                 },
                 {
                     "key": "field_mg_home_divisions_items",
@@ -314,6 +326,116 @@
                 }
             ],
             "instructions": "A card for each division, linking to its page."
+        },
+        {
+            "key": "field_mg_home_tab_about",
+            "label": "Why one firm",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_home_about",
+            "label": "Why one firm",
+            "name": "about",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_mg_home_about_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text",
+                    "maxlength": 60,
+                    "wrapper": {
+                        "width": "33"
+                    }
+                },
+                {
+                    "key": "field_mg_home_about_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "maxlength": 80,
+                    "wrapper": {
+                        "width": "67"
+                    }
+                },
+                {
+                    "key": "field_mg_home_about_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_mg_home_tab_method",
+            "label": "Method",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_home_method",
+            "label": "Method",
+            "name": "method",
+            "type": "group",
+            "layout": "block",
+            "instructions": "How we work, as numbered steps. Hidden when there are no steps.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_home_method_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text"
+                },
+                {
+                    "key": "field_mg_home_method_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_mg_home_method_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_mg_home_method_steps",
+                    "label": "Steps",
+                    "name": "steps",
+                    "type": "repeater",
+                    "layout": "table",
+                    "min": 0,
+                    "max": 5,
+                    "button_label": "Add step",
+                    "instructions": "Numbered automatically.",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_home_method_step_name",
+                            "label": "Name",
+                            "name": "name",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_mg_home_method_step_text",
+                            "label": "Line",
+                            "name": "text",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "key": "field_mg_home_tab_standards",
@@ -453,6 +575,62 @@
             ]
         },
         {
+            "key": "field_mg_home_tab_faqs",
+            "label": "FAQs",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mg_home_faqs",
+            "label": "FAQs",
+            "name": "faqs",
+            "type": "group",
+            "layout": "block",
+            "instructions": "Questions that open to show the answer. Hidden when there are no questions.",
+            "sub_fields": [
+                {
+                    "key": "field_mg_home_faqs_kicker",
+                    "label": "Label",
+                    "name": "kicker",
+                    "type": "text"
+                },
+                {
+                    "key": "field_mg_home_faqs_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_mg_home_faqs_items",
+                    "label": "Questions",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "block",
+                    "min": 0,
+                    "button_label": "Add question",
+                    "sub_fields": [
+                        {
+                            "key": "field_mg_home_faqs_question",
+                            "label": "Question",
+                            "name": "question",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_mg_home_faqs_answer",
+                            "label": "Answer",
+                            "name": "answer",
+                            "type": "textarea",
+                            "rows": 4,
+                            "new_lines": "",
+                            "instructions": "A blank line starts a new paragraph."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "field_mg_home_tab_news",
             "label": "Latest news",
             "name": "",
@@ -576,5 +754,5 @@
     "active": true,
     "description": "The home page (set as the front page in Settings > Reading).",
     "show_in_rest": 0,
-    "modified": 1794321971
+    "modified": 1794328736
 }
