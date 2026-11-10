@@ -61,7 +61,7 @@
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "A photo, shown beside the text. It is cropped to portrait on wide screens, so keep the subject near the centre.",
+                    "instructions": "A photo, shown beside the text. It is cropped to a square on wide screens, so keep the subject near the centre.",
                     "return_format": "array",
                     "preview_size": "medium",
                     "library": "all",
