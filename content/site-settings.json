@@ -34,6 +34,16 @@
                 "logo": 2928,
                 "name": "Chartered Institute of Public Relations (CIPR)",
                 "url": "https://cipr.co.uk"
+            },
+            {
+                "logo": 1611,
+                "name": "Certified B Corporation",
+                "url": "https://www.bcorporation.net/en-us/"
+            },
+            {
+                "logo": 3715,
+                "name": "ISO 27001:2022 and ISO 42001:2023 certified",
+                "url": ""
             }
         ],
         "accreditations": [

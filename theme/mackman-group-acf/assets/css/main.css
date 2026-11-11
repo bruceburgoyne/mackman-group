@@ -797,7 +797,7 @@ a:hover {
 	margin-top: var(--space-l);
 }
 
-/* Logo strip above the footer: professional bodies, then accreditations
+/* Logo strip above the footer: certifications and professional bodies, then accreditations
  * and awards, in full colour on white. */
 .logo-strip {
 	padding-block: var(--space-2xl);
@@ -818,7 +818,7 @@ a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: var(--space-l) clamp(1.5rem, 3vw, 3rem);
+	gap: var(--space-l) clamp(1rem, 2.2vw, 2rem);
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -827,6 +827,17 @@ a:hover {
 .logo-strip__item {
 	display: flex;
 	align-items: center;
+}
+
+/* Wide screens: one line per row. Logos shrink together if they must. */
+@media (min-width: 80rem) {
+	.logo-strip__list {
+		flex-wrap: nowrap;
+	}
+
+	.logo-strip__item {
+		min-width: 0;
+	}
 }
 
 .logo-strip__link {
@@ -838,9 +849,9 @@ a:hover {
 
 .logo-strip__img {
 	width: auto;
-	max-width: 13rem;
+	max-width: 14rem;
 	height: auto;
-	max-height: 4.5rem;
+	max-height: 5rem;
 	object-fit: contain;
 }
 

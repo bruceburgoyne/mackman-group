@@ -163,10 +163,10 @@
         },
         {
             "key": "field_mg_site_settings_professional_bodies",
-            "label": "Professional bodies",
+            "label": "Certifications and professional bodies",
             "name": "professional_bodies",
             "type": "repeater",
-            "instructions": "Shown in the white strip above the footer. Only list current memberships we can evidence.",
+            "instructions": "Shown in the white strip above the footer. Only list current certifications and memberships we can evidence. Use logos that read on white.",
             "layout": "table",
             "button_label": "Add logo",
             "collapsed": "field_mg_site_settings_professional_bodies_name",

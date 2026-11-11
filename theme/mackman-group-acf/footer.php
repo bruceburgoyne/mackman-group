@@ -3,7 +3,7 @@
  * Site footer. Content comes from Site Settings and two menus (Our brands,
  * Footer links).
  *
- * 1. A white strip of logos: professional bodies, then accreditations and awards.
+ * 1. A white strip of logos: certifications and professional bodies, then accreditations and awards.
  * 2. The green footer: logo and address, contact, our brands, useful links.
  * 3. The copyright line (current year, automatically), small print and a
  *    certification logo.
@@ -21,7 +21,7 @@ $mg_certs      = mg_option( 'certifications' );
 $mg_logo_rows  = array(
 	array(
 		'id'    => 'footer-bodies',
-		'title' => __( 'Professional bodies', 'mackman-group-acf' ),
+		'title' => __( 'Certifications & professional bodies', 'mackman-group-acf' ),
 		'items' => mg_option( 'professional_bodies' ),
 	),
 	array(
